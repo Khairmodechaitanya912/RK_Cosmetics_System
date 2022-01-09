@@ -38,8 +38,13 @@ namespace RK_Cosmetics_System
         void Clear_Controls()
         {
             tb_Brand_ID.Clear();
+            tb_Brand_ID.Enabled = true;
+            btn_Search.Enabled = false;
+            cmb_Status.ResetText();
             tb_Brand_Name.Clear();
-            tb_Brand_Name.Focus();
+            
+            tb_Brand_ID.Focus();
+
 
         }
 
@@ -50,17 +55,72 @@ namespace RK_Cosmetics_System
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
+            Con_Open();
+
+            SqlCommand Cmd = new SqlCommand();
+
+            Cmd.Connection = Con;
+
+            Cmd.CommandText = "Select * from Brand_Details Where Brand_ID = " + tb_Brand_ID.Text + "";
+
+            var Obj = Cmd.ExecuteReader();
+
+            if (Obj.Read())
+            {
+                tb_Brand_Name.Text = Obj.GetString(Obj.GetOrdinal("Brand_Name"));
+                cmb_Status.Text = Obj.GetString(Obj.GetOrdinal("Status"));
+
+            }
+            else
+            {
+                MessageBox.Show("Information is not Available...", "No Record Found", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                Clear_Controls();
+            }
+
+            btn_Search.Enabled = false;
+            tb_Brand_ID.Enabled = false;
+            Con_Close();
 
         }
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
+            if (tb_Brand_Name.Text != "" && cmb_Status.Text != "")
+            {
+                Con_Open();
+
+                SqlCommand Cmd = new SqlCommand();
+
+                Cmd.Connection = Con;
+
+                Cmd.CommandText = "Update Brand_Details set Brand_Name = @B_Name,Status = @Stat where Brand_ID = @B_ID";
+
+                Cmd.Parameters.Add("B_ID", SqlDbType.Int).Value = tb_Brand_ID.Text;
+                Cmd.Parameters.Add("B_Name", SqlDbType.NVarChar).Value = tb_Brand_Name.Text;
+                Cmd.Parameters.Add("Stat", SqlDbType.NVarChar).Value = cmb_Status.Text;
+
+                Cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Brand Details Updated Successfully !!!", "Updating", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Clear_Controls();
+
+            }
+            else
+            {
+                MessageBox.Show("Incomplete Information !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
 
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
             Clear_Controls();
+        }
+
+        private void tb_Brand_ID_TextChanged(object sender, EventArgs e)
+        {
+            btn_Search.Enabled = true;
         }
 
         

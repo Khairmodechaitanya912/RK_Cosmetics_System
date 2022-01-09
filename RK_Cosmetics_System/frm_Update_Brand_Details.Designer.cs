@@ -30,9 +30,6 @@
         {
             this.gb_Brand_Details = new System.Windows.Forms.GroupBox();
             this.btn_Search = new System.Windows.Forms.Button();
-            this.gb_Gender = new System.Windows.Forms.GroupBox();
-            this.rbtn_In_Not_In_Use = new System.Windows.Forms.RadioButton();
-            this.rbtn_In_Use = new System.Windows.Forms.RadioButton();
             this.lbl_Status = new System.Windows.Forms.Label();
             this.tb_Brand_Name = new System.Windows.Forms.TextBox();
             this.lbl_Brand_Name = new System.Windows.Forms.Label();
@@ -40,14 +37,14 @@
             this.lbl_Brand_ID = new System.Windows.Forms.Label();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
+            this.cmb_Status = new System.Windows.Forms.ComboBox();
             this.gb_Brand_Details.SuspendLayout();
-            this.gb_Gender.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_Brand_Details
             // 
+            this.gb_Brand_Details.Controls.Add(this.cmb_Status);
             this.gb_Brand_Details.Controls.Add(this.btn_Search);
-            this.gb_Brand_Details.Controls.Add(this.gb_Gender);
             this.gb_Brand_Details.Controls.Add(this.lbl_Status);
             this.gb_Brand_Details.Controls.Add(this.tb_Brand_Name);
             this.gb_Brand_Details.Controls.Add(this.lbl_Brand_Name);
@@ -72,40 +69,6 @@
             this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = false;
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
-            // 
-            // gb_Gender
-            // 
-            this.gb_Gender.Controls.Add(this.rbtn_In_Not_In_Use);
-            this.gb_Gender.Controls.Add(this.rbtn_In_Use);
-            this.gb_Gender.Location = new System.Drawing.Point(558, 300);
-            this.gb_Gender.Name = "gb_Gender";
-            this.gb_Gender.Size = new System.Drawing.Size(320, 60);
-            this.gb_Gender.TabIndex = 3;
-            this.gb_Gender.TabStop = false;
-            // 
-            // rbtn_In_Not_In_Use
-            // 
-            this.rbtn_In_Not_In_Use.AutoSize = true;
-            this.rbtn_In_Not_In_Use.Font = new System.Drawing.Font("Sitka Small", 11F, System.Drawing.FontStyle.Bold);
-            this.rbtn_In_Not_In_Use.Location = new System.Drawing.Point(174, 23);
-            this.rbtn_In_Not_In_Use.Name = "rbtn_In_Not_In_Use";
-            this.rbtn_In_Not_In_Use.Size = new System.Drawing.Size(145, 32);
-            this.rbtn_In_Not_In_Use.TabIndex = 1;
-            this.rbtn_In_Not_In_Use.TabStop = true;
-            this.rbtn_In_Not_In_Use.Text = "Not In Use ";
-            this.rbtn_In_Not_In_Use.UseVisualStyleBackColor = true;
-            // 
-            // rbtn_In_Use
-            // 
-            this.rbtn_In_Use.AutoSize = true;
-            this.rbtn_In_Use.Font = new System.Drawing.Font("Sitka Small", 11F, System.Drawing.FontStyle.Bold);
-            this.rbtn_In_Use.Location = new System.Drawing.Point(44, 23);
-            this.rbtn_In_Use.Name = "rbtn_In_Use";
-            this.rbtn_In_Use.Size = new System.Drawing.Size(102, 32);
-            this.rbtn_In_Use.TabIndex = 0;
-            this.rbtn_In_Use.TabStop = true;
-            this.rbtn_In_Use.Text = "In Use ";
-            this.rbtn_In_Use.UseVisualStyleBackColor = true;
             // 
             // lbl_Status
             // 
@@ -148,6 +111,7 @@
             this.tb_Brand_ID.Name = "tb_Brand_ID";
             this.tb_Brand_ID.Size = new System.Drawing.Size(320, 41);
             this.tb_Brand_ID.TabIndex = 1;
+            this.tb_Brand_ID.TextChanged += new System.EventHandler(this.tb_Brand_ID_TextChanged);
             // 
             // lbl_Brand_ID
             // 
@@ -185,6 +149,17 @@
             this.btn_Update.UseVisualStyleBackColor = false;
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
+            // cmb_Status
+            // 
+            this.cmb_Status.FormattingEnabled = true;
+            this.cmb_Status.Items.AddRange(new object[] {
+            "In Use",
+            "Not In Use"});
+            this.cmb_Status.Location = new System.Drawing.Point(558, 302);
+            this.cmb_Status.Name = "cmb_Status";
+            this.cmb_Status.Size = new System.Drawing.Size(320, 42);
+            this.cmb_Status.TabIndex = 30;
+            // 
             // frm_Update_Brand_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -201,8 +176,6 @@
             this.Load += new System.EventHandler(this.frm_Update_Brand_Details_Load);
             this.gb_Brand_Details.ResumeLayout(false);
             this.gb_Brand_Details.PerformLayout();
-            this.gb_Gender.ResumeLayout(false);
-            this.gb_Gender.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -210,9 +183,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gb_Brand_Details;
-        private System.Windows.Forms.GroupBox gb_Gender;
-        private System.Windows.Forms.RadioButton rbtn_In_Not_In_Use;
-        private System.Windows.Forms.RadioButton rbtn_In_Use;
         private System.Windows.Forms.Label lbl_Status;
         private System.Windows.Forms.TextBox tb_Brand_Name;
         private System.Windows.Forms.Label lbl_Brand_Name;
@@ -221,5 +191,6 @@
         private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Button btn_Update;
+        private System.Windows.Forms.ComboBox cmb_Status;
     }
 }

@@ -350,6 +350,7 @@
             this.btn_Save.TabIndex = 13;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Refresh
             // 
@@ -361,6 +362,7 @@
             this.btn_Refresh.TabIndex = 14;
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // frm_Add_New_Product
             // 
@@ -374,6 +376,7 @@
             this.Controls.Add(this.btn_Refresh);
             this.Name = "frm_Add_New_Product";
             this.Text = "Add New Product";
+            this.Load += new System.EventHandler(this.frm_Add_New_Product_Load);
             this.gb_Product_Details.ResumeLayout(false);
             this.gb_Product_Details.PerformLayout();
             this.ResumeLayout(false);
