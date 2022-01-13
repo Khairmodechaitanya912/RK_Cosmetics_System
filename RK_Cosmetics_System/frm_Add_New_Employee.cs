@@ -171,7 +171,7 @@ namespace RK_Cosmetics_System
             }
 
             DWN:
-            Clear_Control();
+            Clear_Control(); 
 
             Con_Close();
         }

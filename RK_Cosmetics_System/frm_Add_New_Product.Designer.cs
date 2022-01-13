@@ -103,6 +103,7 @@
             // 
             // cmb_Distributor_Name
             // 
+            this.cmb_Distributor_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Distributor_Name.FormattingEnabled = true;
             this.cmb_Distributor_Name.Location = new System.Drawing.Point(1402, 334);
             this.cmb_Distributor_Name.Name = "cmb_Distributor_Name";
@@ -111,6 +112,7 @@
             // 
             // cmb_Brand_Name
             // 
+            this.cmb_Brand_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Brand_Name.FormattingEnabled = true;
             this.cmb_Brand_Name.Location = new System.Drawing.Point(370, 154);
             this.cmb_Brand_Name.Name = "cmb_Brand_Name";
@@ -159,6 +161,7 @@
             this.tb_Stock.Name = "tb_Stock";
             this.tb_Stock.Size = new System.Drawing.Size(320, 41);
             this.tb_Stock.TabIndex = 6;
+            this.tb_Stock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numerics);
             // 
             // tb_Purchase_Price
             // 
@@ -168,6 +171,7 @@
             this.tb_Purchase_Price.Name = "tb_Purchase_Price";
             this.tb_Purchase_Price.Size = new System.Drawing.Size(320, 41);
             this.tb_Purchase_Price.TabIndex = 4;
+            this.tb_Purchase_Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numerics);
             // 
             // tb_Selling_Price
             // 
@@ -177,6 +181,7 @@
             this.tb_Selling_Price.Name = "tb_Selling_Price";
             this.tb_Selling_Price.Size = new System.Drawing.Size(320, 41);
             this.tb_Selling_Price.TabIndex = 5;
+            this.tb_Selling_Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numerics);
             // 
             // tb_GST
             // 
@@ -186,6 +191,7 @@
             this.tb_GST.Name = "tb_GST";
             this.tb_GST.Size = new System.Drawing.Size(320, 41);
             this.tb_GST.TabIndex = 11;
+            this.tb_GST.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numerics);
             // 
             // lbl_Description
             // 
@@ -321,6 +327,7 @@
             // 
             // tb_Product_ID
             // 
+            this.tb_Product_ID.Enabled = false;
             this.tb_Product_ID.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Product_ID.Location = new System.Drawing.Point(370, 70);
             this.tb_Product_ID.MaxLength = 5;

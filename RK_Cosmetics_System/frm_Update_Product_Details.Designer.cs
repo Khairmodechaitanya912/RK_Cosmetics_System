@@ -94,6 +94,7 @@
             this.btn_Update.TabIndex = 3;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = false;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // btn_Search
             // 
@@ -105,6 +106,7 @@
             this.btn_Search.TabIndex = 2;
             this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // groupBox1
             // 
@@ -183,6 +185,7 @@
             // 
             // cmb_Brand_Name
             // 
+            this.cmb_Brand_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Brand_Name.FormattingEnabled = true;
             this.cmb_Brand_Name.Location = new System.Drawing.Point(465, 236);
             this.cmb_Brand_Name.Name = "cmb_Brand_Name";
@@ -265,6 +268,7 @@
             this.btn_Refresh.TabIndex = 10;
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // frm_Update_Product_Details
             // 
@@ -277,6 +281,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_Update_Product_Details";
             this.Text = "Update Product Details";
+            this.Load += new System.EventHandler(this.frm_Update_Product_Details_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

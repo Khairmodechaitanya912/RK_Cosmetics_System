@@ -75,6 +75,7 @@
             // 
             // cmb_Brand_Name
             // 
+            this.cmb_Brand_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Brand_Name.FormattingEnabled = true;
             this.cmb_Brand_Name.Location = new System.Drawing.Point(394, 29);
             this.cmb_Brand_Name.Name = "cmb_Brand_Name";
@@ -103,6 +104,7 @@
             this.btn_Search.TabIndex = 2;
             this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // btn_Refresh
             // 
@@ -127,6 +129,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_View_Product_Details";
             this.Text = "View Product Details";
+            this.Load += new System.EventHandler(this.frm_View_Product_Details_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_View_Product_Details)).EndInit();
             this.pnl_Customer_Details.ResumeLayout(false);

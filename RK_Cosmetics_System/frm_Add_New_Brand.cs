@@ -86,16 +86,16 @@ namespace RK_Cosmetics_System
         {
             Con_Open();
 
-            string Status = " ";
+            string Stat = " ";
 
             if (rbtn_In_Use.Checked)
             {
-                Status = rbtn_In_Use.Text;
+                Stat = rbtn_In_Use.Text;
 
             }
             else if (rbtn_Not_In_Use.Checked)
             {
-                Status = rbtn_Not_In_Use.Text; 
+                Stat = rbtn_Not_In_Use.Text; 
             }
 
             if (tb_Brand_ID.Text != "" && tb_Brand_Name.Text != "")
@@ -104,7 +104,7 @@ namespace RK_Cosmetics_System
 
                 Cmd.Connection = Con;
 
-                Cmd.CommandText = "Insert into Brand_Details (Brand_ID,Brand_Name,Status) Values (@B_ID,@B_Name,'" + Status + "')";
+                Cmd.CommandText = "Insert into Brand_Details (Brand_ID,Brand_Name,Status) Values (@B_ID,@B_Name,'" + Stat + "')";
 
                 Cmd.Parameters.Add("B_ID", SqlDbType.Int).Value = tb_Brand_ID.Text;
                 Cmd.Parameters.Add("B_Name", SqlDbType.NVarChar).Value = tb_Brand_Name.Text;
