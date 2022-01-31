@@ -58,7 +58,19 @@ namespace RK_Cosmetics_System
         }
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
+            cmb_Brand_Name.Text = "";
+            cmb_Brand_Name.Focus();
 
+            SqlDataAdapter SDA = new SqlDataAdapter("Select * from Product_Details", Con);
+
+            DataTable dt = new DataTable();
+
+            SDA.Fill(dt);
+
+            dgv_View_Product_Details.DataSource = dt;
+
+            btn_Search.Enabled = false;
+            cmb_Brand_Name.Enabled = true;
         }
 
         private void frm_View_Product_Details_Load(object sender, EventArgs e)
@@ -70,7 +82,22 @@ namespace RK_Cosmetics_System
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
+            Con_Open();
 
+            SqlDataAdapter SDA = new SqlDataAdapter("Select * from Product_Details where Brand_Name = '" + cmb_Brand_Name.Text + "' ", Con);
+
+            DataTable dt = new DataTable();
+
+            SDA.Fill(dt);
+
+            dgv_View_Product_Details.DataSource = dt;
+            cmb_Brand_Name.Enabled = false;
+            Con_Close();
+        }
+
+        private void cmb_Brand_Name_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btn_Search.Enabled = true;
         }
     }
 }

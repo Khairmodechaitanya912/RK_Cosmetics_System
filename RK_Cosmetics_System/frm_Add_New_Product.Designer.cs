@@ -32,8 +32,6 @@
             this.tb_Product_Name = new System.Windows.Forms.TextBox();
             this.cmb_Distributor_Name = new System.Windows.Forms.ComboBox();
             this.cmb_Brand_Name = new System.Windows.Forms.ComboBox();
-            this.dtp_Expiry_Date = new System.Windows.Forms.DateTimePicker();
-            this.dtp_Mfg_Date = new System.Windows.Forms.DateTimePicker();
             this.dtp_Date = new System.Windows.Forms.DateTimePicker();
             this.tb_Description = new System.Windows.Forms.TextBox();
             this.tb_Stock = new System.Windows.Forms.TextBox();
@@ -42,8 +40,6 @@
             this.tb_GST = new System.Windows.Forms.TextBox();
             this.lbl_Description = new System.Windows.Forms.Label();
             this.lbl_Date = new System.Windows.Forms.Label();
-            this.lbl_Expiry_Date = new System.Windows.Forms.Label();
-            this.lbl_Mfg_Date = new System.Windows.Forms.Label();
             this.lbl_Distributor_Name = new System.Windows.Forms.Label();
             this.lbl_GST = new System.Windows.Forms.Label();
             this.lbl_Stock = new System.Windows.Forms.Label();
@@ -63,8 +59,6 @@
             this.gb_Product_Details.Controls.Add(this.tb_Product_Name);
             this.gb_Product_Details.Controls.Add(this.cmb_Distributor_Name);
             this.gb_Product_Details.Controls.Add(this.cmb_Brand_Name);
-            this.gb_Product_Details.Controls.Add(this.dtp_Expiry_Date);
-            this.gb_Product_Details.Controls.Add(this.dtp_Mfg_Date);
             this.gb_Product_Details.Controls.Add(this.dtp_Date);
             this.gb_Product_Details.Controls.Add(this.tb_Description);
             this.gb_Product_Details.Controls.Add(this.tb_Stock);
@@ -73,8 +67,6 @@
             this.gb_Product_Details.Controls.Add(this.tb_GST);
             this.gb_Product_Details.Controls.Add(this.lbl_Description);
             this.gb_Product_Details.Controls.Add(this.lbl_Date);
-            this.gb_Product_Details.Controls.Add(this.lbl_Expiry_Date);
-            this.gb_Product_Details.Controls.Add(this.lbl_Mfg_Date);
             this.gb_Product_Details.Controls.Add(this.lbl_Distributor_Name);
             this.gb_Product_Details.Controls.Add(this.lbl_GST);
             this.gb_Product_Details.Controls.Add(this.lbl_Stock);
@@ -95,7 +87,7 @@
             // tb_Product_Name
             // 
             this.tb_Product_Name.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Product_Name.Location = new System.Drawing.Point(370, 240);
+            this.tb_Product_Name.Location = new System.Drawing.Point(370, 293);
             this.tb_Product_Name.MaxLength = 50;
             this.tb_Product_Name.Name = "tb_Product_Name";
             this.tb_Product_Name.Size = new System.Drawing.Size(320, 41);
@@ -105,7 +97,7 @@
             // 
             this.cmb_Distributor_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Distributor_Name.FormattingEnabled = true;
-            this.cmb_Distributor_Name.Location = new System.Drawing.Point(1402, 334);
+            this.cmb_Distributor_Name.Location = new System.Drawing.Point(1402, 298);
             this.cmb_Distributor_Name.Name = "cmb_Distributor_Name";
             this.cmb_Distributor_Name.Size = new System.Drawing.Size(320, 42);
             this.cmb_Distributor_Name.TabIndex = 10;
@@ -114,26 +106,10 @@
             // 
             this.cmb_Brand_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Brand_Name.FormattingEnabled = true;
-            this.cmb_Brand_Name.Location = new System.Drawing.Point(370, 154);
+            this.cmb_Brand_Name.Location = new System.Drawing.Point(370, 182);
             this.cmb_Brand_Name.Name = "cmb_Brand_Name";
             this.cmb_Brand_Name.Size = new System.Drawing.Size(320, 42);
             this.cmb_Brand_Name.TabIndex = 2;
-            // 
-            // dtp_Expiry_Date
-            // 
-            this.dtp_Expiry_Date.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_Expiry_Date.Location = new System.Drawing.Point(1402, 241);
-            this.dtp_Expiry_Date.Name = "dtp_Expiry_Date";
-            this.dtp_Expiry_Date.Size = new System.Drawing.Size(320, 43);
-            this.dtp_Expiry_Date.TabIndex = 9;
-            // 
-            // dtp_Mfg_Date
-            // 
-            this.dtp_Mfg_Date.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_Mfg_Date.Location = new System.Drawing.Point(1402, 154);
-            this.dtp_Mfg_Date.Name = "dtp_Mfg_Date";
-            this.dtp_Mfg_Date.Size = new System.Drawing.Size(320, 43);
-            this.dtp_Mfg_Date.TabIndex = 8;
             // 
             // dtp_Date
             // 
@@ -146,7 +122,7 @@
             // tb_Description
             // 
             this.tb_Description.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Description.Location = new System.Drawing.Point(1402, 516);
+            this.tb_Description.Location = new System.Drawing.Point(1402, 512);
             this.tb_Description.MaxLength = 50;
             this.tb_Description.Multiline = true;
             this.tb_Description.Name = "tb_Description";
@@ -156,7 +132,7 @@
             // tb_Stock
             // 
             this.tb_Stock.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Stock.Location = new System.Drawing.Point(370, 516);
+            this.tb_Stock.Location = new System.Drawing.Point(1402, 183);
             this.tb_Stock.MaxLength = 5;
             this.tb_Stock.Name = "tb_Stock";
             this.tb_Stock.Size = new System.Drawing.Size(320, 41);
@@ -166,7 +142,7 @@
             // tb_Purchase_Price
             // 
             this.tb_Purchase_Price.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Purchase_Price.Location = new System.Drawing.Point(370, 329);
+            this.tb_Purchase_Price.Location = new System.Drawing.Point(370, 402);
             this.tb_Purchase_Price.MaxLength = 5;
             this.tb_Purchase_Price.Name = "tb_Purchase_Price";
             this.tb_Purchase_Price.Size = new System.Drawing.Size(320, 41);
@@ -176,7 +152,7 @@
             // tb_Selling_Price
             // 
             this.tb_Selling_Price.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Selling_Price.Location = new System.Drawing.Point(370, 421);
+            this.tb_Selling_Price.Location = new System.Drawing.Point(370, 516);
             this.tb_Selling_Price.MaxLength = 5;
             this.tb_Selling_Price.Name = "tb_Selling_Price";
             this.tb_Selling_Price.Size = new System.Drawing.Size(320, 41);
@@ -186,7 +162,7 @@
             // tb_GST
             // 
             this.tb_GST.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_GST.Location = new System.Drawing.Point(1402, 421);
+            this.tb_GST.Location = new System.Drawing.Point(1402, 402);
             this.tb_GST.MaxLength = 5;
             this.tb_GST.Name = "tb_GST";
             this.tb_GST.Size = new System.Drawing.Size(320, 41);
@@ -199,7 +175,7 @@
             this.lbl_Description.BackColor = System.Drawing.Color.Pink;
             this.lbl_Description.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Description.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Description.Location = new System.Drawing.Point(1077, 520);
+            this.lbl_Description.Location = new System.Drawing.Point(1077, 516);
             this.lbl_Description.Name = "lbl_Description";
             this.lbl_Description.Size = new System.Drawing.Size(180, 39);
             this.lbl_Description.TabIndex = 27;
@@ -217,37 +193,13 @@
             this.lbl_Date.TabIndex = 27;
             this.lbl_Date.Text = "Date";
             // 
-            // lbl_Expiry_Date
-            // 
-            this.lbl_Expiry_Date.AutoSize = true;
-            this.lbl_Expiry_Date.BackColor = System.Drawing.Color.Pink;
-            this.lbl_Expiry_Date.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Expiry_Date.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Expiry_Date.Location = new System.Drawing.Point(1077, 245);
-            this.lbl_Expiry_Date.Name = "lbl_Expiry_Date";
-            this.lbl_Expiry_Date.Size = new System.Drawing.Size(180, 39);
-            this.lbl_Expiry_Date.TabIndex = 27;
-            this.lbl_Expiry_Date.Text = "Expiry Date";
-            // 
-            // lbl_Mfg_Date
-            // 
-            this.lbl_Mfg_Date.AutoSize = true;
-            this.lbl_Mfg_Date.BackColor = System.Drawing.Color.Pink;
-            this.lbl_Mfg_Date.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Mfg_Date.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Mfg_Date.Location = new System.Drawing.Point(1077, 158);
-            this.lbl_Mfg_Date.Name = "lbl_Mfg_Date";
-            this.lbl_Mfg_Date.Size = new System.Drawing.Size(152, 39);
-            this.lbl_Mfg_Date.TabIndex = 27;
-            this.lbl_Mfg_Date.Text = "Mfg Date";
-            // 
             // lbl_Distributor_Name
             // 
             this.lbl_Distributor_Name.AutoSize = true;
             this.lbl_Distributor_Name.BackColor = System.Drawing.Color.Pink;
             this.lbl_Distributor_Name.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Distributor_Name.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Distributor_Name.Location = new System.Drawing.Point(1077, 334);
+            this.lbl_Distributor_Name.Location = new System.Drawing.Point(1077, 298);
             this.lbl_Distributor_Name.Name = "lbl_Distributor_Name";
             this.lbl_Distributor_Name.Size = new System.Drawing.Size(265, 39);
             this.lbl_Distributor_Name.TabIndex = 27;
@@ -259,7 +211,7 @@
             this.lbl_GST.BackColor = System.Drawing.Color.Pink;
             this.lbl_GST.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_GST.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_GST.Location = new System.Drawing.Point(1077, 421);
+            this.lbl_GST.Location = new System.Drawing.Point(1077, 402);
             this.lbl_GST.Name = "lbl_GST";
             this.lbl_GST.Size = new System.Drawing.Size(73, 39);
             this.lbl_GST.TabIndex = 27;
@@ -271,7 +223,7 @@
             this.lbl_Stock.BackColor = System.Drawing.Color.Pink;
             this.lbl_Stock.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Stock.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Stock.Location = new System.Drawing.Point(68, 518);
+            this.lbl_Stock.Location = new System.Drawing.Point(1077, 187);
             this.lbl_Stock.Name = "lbl_Stock";
             this.lbl_Stock.Size = new System.Drawing.Size(95, 39);
             this.lbl_Stock.TabIndex = 27;
@@ -283,7 +235,7 @@
             this.lbl_Purchase_Price.BackColor = System.Drawing.Color.Pink;
             this.lbl_Purchase_Price.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Purchase_Price.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Purchase_Price.Location = new System.Drawing.Point(68, 329);
+            this.lbl_Purchase_Price.Location = new System.Drawing.Point(68, 402);
             this.lbl_Purchase_Price.Name = "lbl_Purchase_Price";
             this.lbl_Purchase_Price.Size = new System.Drawing.Size(223, 39);
             this.lbl_Purchase_Price.TabIndex = 27;
@@ -295,7 +247,7 @@
             this.lbl_Selling_Price.BackColor = System.Drawing.Color.Pink;
             this.lbl_Selling_Price.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Selling_Price.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Selling_Price.Location = new System.Drawing.Point(68, 421);
+            this.lbl_Selling_Price.Location = new System.Drawing.Point(68, 516);
             this.lbl_Selling_Price.Name = "lbl_Selling_Price";
             this.lbl_Selling_Price.Size = new System.Drawing.Size(190, 39);
             this.lbl_Selling_Price.TabIndex = 27;
@@ -307,7 +259,7 @@
             this.lbl_Brand_Name.BackColor = System.Drawing.Color.Pink;
             this.lbl_Brand_Name.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Brand_Name.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Brand_Name.Location = new System.Drawing.Point(68, 153);
+            this.lbl_Brand_Name.Location = new System.Drawing.Point(68, 181);
             this.lbl_Brand_Name.Name = "lbl_Brand_Name";
             this.lbl_Brand_Name.Size = new System.Drawing.Size(196, 39);
             this.lbl_Brand_Name.TabIndex = 27;
@@ -319,7 +271,7 @@
             this.lbl_Product_Name.BackColor = System.Drawing.Color.Pink;
             this.lbl_Product_Name.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Product_Name.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Product_Name.Location = new System.Drawing.Point(68, 240);
+            this.lbl_Product_Name.Location = new System.Drawing.Point(68, 293);
             this.lbl_Product_Name.Name = "lbl_Product_Name";
             this.lbl_Product_Name.Size = new System.Drawing.Size(223, 39);
             this.lbl_Product_Name.TabIndex = 27;
@@ -402,8 +354,6 @@
         private System.Windows.Forms.TextBox tb_GST;
         private System.Windows.Forms.Label lbl_Description;
         private System.Windows.Forms.Label lbl_Date;
-        private System.Windows.Forms.Label lbl_Expiry_Date;
-        private System.Windows.Forms.Label lbl_Mfg_Date;
         private System.Windows.Forms.Label lbl_Distributor_Name;
         private System.Windows.Forms.Label lbl_GST;
         private System.Windows.Forms.Label lbl_Stock;
@@ -411,8 +361,6 @@
         private System.Windows.Forms.Label lbl_Selling_Price;
         private System.Windows.Forms.Label lbl_Brand_Name;
         private System.Windows.Forms.Label lbl_Product_Name;
-        private System.Windows.Forms.DateTimePicker dtp_Expiry_Date;
-        private System.Windows.Forms.DateTimePicker dtp_Mfg_Date;
         private System.Windows.Forms.DateTimePicker dtp_Date;
         private System.Windows.Forms.ComboBox cmb_Distributor_Name;
         private System.Windows.Forms.ComboBox cmb_Brand_Name;

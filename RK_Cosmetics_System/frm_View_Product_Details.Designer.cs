@@ -31,14 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgv_View_Product_Details = new System.Windows.Forms.DataGridView();
-            this.pnl_Customer_Details = new System.Windows.Forms.Panel();
-            this.cmb_Brand_Name = new System.Windows.Forms.ComboBox();
-            this.lbl_Brand_Name = new System.Windows.Forms.Label();
-            this.btn_Search = new System.Windows.Forms.Button();
-            this.btn_Refresh = new System.Windows.Forms.Button();
-            this.dB_RK_Cosmetics_SystemDataSet3 = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet3();
-            this.productDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.product_DetailsTableAdapter = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet3TableAdapters.Product_DetailsTableAdapter();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brandNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,11 +40,19 @@
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gSTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_RK_Cosmetics_SystemDataSet3 = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet3();
+            this.pnl_Customer_Details = new System.Windows.Forms.Panel();
+            this.cmb_Brand_Name = new System.Windows.Forms.ComboBox();
+            this.lbl_Brand_Name = new System.Windows.Forms.Label();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.btn_Refresh = new System.Windows.Forms.Button();
+            this.product_DetailsTableAdapter = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet3TableAdapters.Product_DetailsTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_View_Product_Details)).BeginInit();
-            this.pnl_Customer_Details.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet3)).BeginInit();
+            this.pnl_Customer_Details.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -92,76 +92,6 @@
             this.dgv_View_Product_Details.RowTemplate.Height = 24;
             this.dgv_View_Product_Details.Size = new System.Drawing.Size(1941, 441);
             this.dgv_View_Product_Details.TabIndex = 23;
-            // 
-            // pnl_Customer_Details
-            // 
-            this.pnl_Customer_Details.BackColor = System.Drawing.Color.MistyRose;
-            this.pnl_Customer_Details.Controls.Add(this.cmb_Brand_Name);
-            this.pnl_Customer_Details.Controls.Add(this.lbl_Brand_Name);
-            this.pnl_Customer_Details.Controls.Add(this.btn_Search);
-            this.pnl_Customer_Details.Location = new System.Drawing.Point(271, 53);
-            this.pnl_Customer_Details.Name = "pnl_Customer_Details";
-            this.pnl_Customer_Details.Size = new System.Drawing.Size(1269, 91);
-            this.pnl_Customer_Details.TabIndex = 2;
-            // 
-            // cmb_Brand_Name
-            // 
-            this.cmb_Brand_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_Brand_Name.FormattingEnabled = true;
-            this.cmb_Brand_Name.Location = new System.Drawing.Point(394, 29);
-            this.cmb_Brand_Name.Name = "cmb_Brand_Name";
-            this.cmb_Brand_Name.Size = new System.Drawing.Size(320, 42);
-            this.cmb_Brand_Name.TabIndex = 1;
-            // 
-            // lbl_Brand_Name
-            // 
-            this.lbl_Brand_Name.AutoSize = true;
-            this.lbl_Brand_Name.BackColor = System.Drawing.Color.Pink;
-            this.lbl_Brand_Name.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Brand_Name.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Brand_Name.Location = new System.Drawing.Point(73, 28);
-            this.lbl_Brand_Name.Name = "lbl_Brand_Name";
-            this.lbl_Brand_Name.Size = new System.Drawing.Size(196, 39);
-            this.lbl_Brand_Name.TabIndex = 42;
-            this.lbl_Brand_Name.Text = "Brand Name";
-            // 
-            // btn_Search
-            // 
-            this.btn_Search.BackColor = System.Drawing.Color.Yellow;
-            this.btn_Search.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Search.Location = new System.Drawing.Point(1071, 23);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(142, 52);
-            this.btn_Search.TabIndex = 2;
-            this.btn_Search.Text = "Search";
-            this.btn_Search.UseVisualStyleBackColor = false;
-            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
-            // 
-            // btn_Refresh
-            // 
-            this.btn_Refresh.BackColor = System.Drawing.Color.Yellow;
-            this.btn_Refresh.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Refresh.Location = new System.Drawing.Point(831, 910);
-            this.btn_Refresh.Name = "btn_Refresh";
-            this.btn_Refresh.Size = new System.Drawing.Size(142, 52);
-            this.btn_Refresh.TabIndex = 3;
-            this.btn_Refresh.Text = "Refresh";
-            this.btn_Refresh.UseVisualStyleBackColor = false;
-            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
-            // 
-            // dB_RK_Cosmetics_SystemDataSet3
-            // 
-            this.dB_RK_Cosmetics_SystemDataSet3.DataSetName = "DB_RK_Cosmetics_SystemDataSet3";
-            this.dB_RK_Cosmetics_SystemDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productDetailsBindingSource
-            // 
-            this.productDetailsBindingSource.DataMember = "Product_Details";
-            this.productDetailsBindingSource.DataSource = this.dB_RK_Cosmetics_SystemDataSet3;
-            // 
-            // product_DetailsTableAdapter
-            // 
-            this.product_DetailsTableAdapter.ClearBeforeFill = true;
             // 
             // productIDDataGridViewTextBoxColumn
             // 
@@ -226,6 +156,78 @@
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // productDetailsBindingSource
+            // 
+            this.productDetailsBindingSource.DataMember = "Product_Details";
+            this.productDetailsBindingSource.DataSource = this.dB_RK_Cosmetics_SystemDataSet3;
+            // 
+            // dB_RK_Cosmetics_SystemDataSet3
+            // 
+            this.dB_RK_Cosmetics_SystemDataSet3.DataSetName = "DB_RK_Cosmetics_SystemDataSet3";
+            this.dB_RK_Cosmetics_SystemDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pnl_Customer_Details
+            // 
+            this.pnl_Customer_Details.BackColor = System.Drawing.Color.MistyRose;
+            this.pnl_Customer_Details.Controls.Add(this.cmb_Brand_Name);
+            this.pnl_Customer_Details.Controls.Add(this.lbl_Brand_Name);
+            this.pnl_Customer_Details.Controls.Add(this.btn_Search);
+            this.pnl_Customer_Details.Location = new System.Drawing.Point(271, 53);
+            this.pnl_Customer_Details.Name = "pnl_Customer_Details";
+            this.pnl_Customer_Details.Size = new System.Drawing.Size(1269, 91);
+            this.pnl_Customer_Details.TabIndex = 2;
+            // 
+            // cmb_Brand_Name
+            // 
+            this.cmb_Brand_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Brand_Name.FormattingEnabled = true;
+            this.cmb_Brand_Name.Location = new System.Drawing.Point(394, 29);
+            this.cmb_Brand_Name.Name = "cmb_Brand_Name";
+            this.cmb_Brand_Name.Size = new System.Drawing.Size(320, 42);
+            this.cmb_Brand_Name.TabIndex = 1;
+            this.cmb_Brand_Name.SelectedIndexChanged += new System.EventHandler(this.cmb_Brand_Name_SelectedIndexChanged);
+            // 
+            // lbl_Brand_Name
+            // 
+            this.lbl_Brand_Name.AutoSize = true;
+            this.lbl_Brand_Name.BackColor = System.Drawing.Color.Pink;
+            this.lbl_Brand_Name.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Brand_Name.ForeColor = System.Drawing.Color.Maroon;
+            this.lbl_Brand_Name.Location = new System.Drawing.Point(73, 28);
+            this.lbl_Brand_Name.Name = "lbl_Brand_Name";
+            this.lbl_Brand_Name.Size = new System.Drawing.Size(196, 39);
+            this.lbl_Brand_Name.TabIndex = 42;
+            this.lbl_Brand_Name.Text = "Brand Name";
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.BackColor = System.Drawing.Color.Yellow;
+            this.btn_Search.Enabled = false;
+            this.btn_Search.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search.Location = new System.Drawing.Point(1071, 23);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(142, 52);
+            this.btn_Search.TabIndex = 2;
+            this.btn_Search.Text = "Search";
+            this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.BackColor = System.Drawing.Color.Yellow;
+            this.btn_Refresh.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Refresh.Location = new System.Drawing.Point(831, 910);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(142, 52);
+            this.btn_Refresh.TabIndex = 3;
+            this.btn_Refresh.Text = "Refresh";
+            this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
+            // 
+            // product_DetailsTableAdapter
+            // 
+            this.product_DetailsTableAdapter.ClearBeforeFill = true;
+            // 
             // frm_View_Product_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -240,10 +242,10 @@
             this.Load += new System.EventHandler(this.frm_View_Product_Details_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_View_Product_Details)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productDetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet3)).EndInit();
             this.pnl_Customer_Details.ResumeLayout(false);
             this.pnl_Customer_Details.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productDetailsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
