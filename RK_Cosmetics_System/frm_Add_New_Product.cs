@@ -162,11 +162,24 @@ namespace RK_Cosmetics_System
 
                 Cmd.ExecuteNonQuery();
 
+                SqlCommand Cmd1 = new SqlCommand();
+
+                Cmd1.Connection = Con;
+
+                Cmd1.CommandText = "Insert into Product_Stock_Details (Product_Id, Mfg_Date, Expiry_Date, Date, Stock) Values (@P_ID, @MFG, @EXP, @DATE, @STOCK)";
+
+                Cmd1.Parameters.Add("P_ID", SqlDbType.Int).Value = tb_Product_ID.Text;
+                Cmd1.Parameters.Add("MFG", SqlDbType.Date).Value = dtp_Mfg_Date.Value.Date;
+                Cmd1.Parameters.Add("EXP", SqlDbType.Date).Value = dtp_Expiry_Date.Value.Date;
+                Cmd1.Parameters.Add("DATE", SqlDbType.Date).Value = dtp_Date.Value.Date;
+                Cmd1.Parameters.Add("STOCK", SqlDbType.Int).Value = tb_Stock.Text;
+
+                Cmd1.ExecuteNonQuery();
+
                 MessageBox.Show("Product Details Saved Successfully !!!", "Saving", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 Clear_Control();
             }
-             
             else
             {
                 MessageBox.Show("Incomplete Information !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);

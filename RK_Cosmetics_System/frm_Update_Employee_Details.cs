@@ -50,12 +50,7 @@ namespace RK_Cosmetics_System
 
             tb_First_Name.Focus();
 
-        }
-
-        private void frm_Add_New_Employee_Load(object sender, EventArgs e)
-        {
-            Clear_Control();
-        }
+        } 
             
         private void btn_Search_Click(object sender, EventArgs e)
         {

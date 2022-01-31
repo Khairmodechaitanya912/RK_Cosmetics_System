@@ -63,6 +63,8 @@ namespace RK_Cosmetics_System
 
         private void frm_View_Product_Details_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dB_RK_Cosmetics_SystemDataSet3.Product_Details' table. You can move, or remove it, as needed.
+            this.product_DetailsTableAdapter.Fill(this.dB_RK_Cosmetics_SystemDataSet3.Product_Details);
             Bind_Brand_Name_To_Combobox();
         }
 

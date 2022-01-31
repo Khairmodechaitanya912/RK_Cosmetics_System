@@ -71,6 +71,8 @@
             this.tb_Product_ID.Name = "tb_Product_ID";
             this.tb_Product_ID.Size = new System.Drawing.Size(320, 41);
             this.tb_Product_ID.TabIndex = 1;
+            this.tb_Product_ID.TextChanged += new System.EventHandler(this.tb_Product_ID_TextChanged);
+            this.tb_Product_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numerics);
             // 
             // lbl_Product_ID
             // 
@@ -87,6 +89,7 @@
             // btn_Update
             // 
             this.btn_Update.BackColor = System.Drawing.Color.Yellow;
+            this.btn_Update.Enabled = false;
             this.btn_Update.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Update.Location = new System.Drawing.Point(1192, 20);
             this.btn_Update.Name = "btn_Update";
@@ -99,6 +102,7 @@
             // btn_Search
             // 
             this.btn_Search.BackColor = System.Drawing.Color.Yellow;
+            this.btn_Search.Enabled = false;
             this.btn_Search.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Search.Location = new System.Drawing.Point(848, 15);
             this.btn_Search.Name = "btn_Search";
@@ -158,6 +162,7 @@
             this.tb_Stock.Name = "tb_Stock";
             this.tb_Stock.Size = new System.Drawing.Size(320, 41);
             this.tb_Stock.TabIndex = 8;
+            this.tb_Stock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numerics);
             // 
             // lbl_Description
             // 
@@ -200,6 +205,7 @@
             this.tb_Purchase_Price.Name = "tb_Purchase_Price";
             this.tb_Purchase_Price.Size = new System.Drawing.Size(320, 41);
             this.tb_Purchase_Price.TabIndex = 6;
+            this.tb_Purchase_Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numerics);
             // 
             // tb_Selling_Price
             // 
@@ -209,6 +215,7 @@
             this.tb_Selling_Price.Name = "tb_Selling_Price";
             this.tb_Selling_Price.Size = new System.Drawing.Size(320, 41);
             this.tb_Selling_Price.TabIndex = 7;
+            this.tb_Selling_Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numerics);
             // 
             // lbl_Purchase_Price
             // 
