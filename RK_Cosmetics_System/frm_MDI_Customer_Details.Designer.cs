@@ -74,6 +74,7 @@
             this.btn_Log_Out.TabIndex = 2;
             this.btn_Log_Out.Text = "Log Out";
             this.btn_Log_Out.UseVisualStyleBackColor = false;
+            this.btn_Log_Out.Click += new System.EventHandler(this.btn_Log_Out_Click);
             // 
             // btn_Back
             // 
@@ -141,7 +142,7 @@
             this.ViewCustomerDetailstoolStripMenuItem1});
             this.menuStrip2.Location = new System.Drawing.Point(1337, 121);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(445, 49);
+            this.menuStrip2.Size = new System.Drawing.Size(353, 49);
             this.menuStrip2.TabIndex = 5;
             this.menuStrip2.Text = "Add New Customer";
             // 

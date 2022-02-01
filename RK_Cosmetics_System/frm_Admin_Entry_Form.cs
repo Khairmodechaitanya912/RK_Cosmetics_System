@@ -72,11 +72,15 @@ namespace RK_Cosmetics_System
 
         private void btn_LogOut_Click(object sender, EventArgs e)
         {
-            frm_Login_Form LF = new frm_Login_Form();
+            DialogResult Res = MessageBox.Show(" Are You Sure....!!!", "LogOut",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (Res == DialogResult.Yes)
+            {
+                frm_Login_Form LF = new frm_Login_Form();
 
-            LF.Show();
+                LF.Show();
 
-            this.Hide();
+                this.Hide();
+            }
         }
 
         private void btn_Brand_Click(object sender, EventArgs e)

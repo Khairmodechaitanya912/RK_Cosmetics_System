@@ -46,5 +46,18 @@ namespace RK_Cosmetics_System
 
             VSD.Show();
         }
+
+        private void btn_Log_Out_Click(object sender, EventArgs e)
+        {
+            DialogResult Res = MessageBox.Show(" Are You Sure....!!!", "LogOut", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (Res == DialogResult.Yes)
+            {
+                frm_Login_Form LF = new frm_Login_Form();
+
+                LF.Show();
+
+                this.Hide();
+            }
+        }
     }
 }
