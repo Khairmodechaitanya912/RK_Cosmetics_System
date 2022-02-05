@@ -200,6 +200,11 @@ namespace RK_Cosmetics_System
             }
         }
 
+        private void dtp_Date_ValueChanged(object sender, EventArgs e)
+        {
+            dtp_Date.MinDate = dtp_Date.MaxDate = DateTime.Now;
+        }
+
         
         
 

@@ -29,11 +29,9 @@
         private void InitializeComponent()
         {
             this.gb_Stock_Details = new System.Windows.Forms.GroupBox();
-            this.pnl_Stock_Details = new System.Windows.Forms.Panel();
             this.dtp_Expiry_Date = new System.Windows.Forms.DateTimePicker();
-            this.dtp_Mfg_Date = new System.Windows.Forms.DateTimePicker();
             this.lbl_Expiry_Date = new System.Windows.Forms.Label();
-            this.lbl_Mfg_Date = new System.Windows.Forms.Label();
+            this.pnl_Stock_Details = new System.Windows.Forms.Panel();
             this.tb_Product_ID = new System.Windows.Forms.TextBox();
             this.dtp_Date = new System.Windows.Forms.DateTimePicker();
             this.lbl_Date = new System.Windows.Forms.Label();
@@ -42,7 +40,9 @@
             this.cmb_Product_Name = new System.Windows.Forms.ComboBox();
             this.lbl_Brand_Name = new System.Windows.Forms.Label();
             this.lbl_Product_Name = new System.Windows.Forms.Label();
+            this.dtp_Mfg_Date = new System.Windows.Forms.DateTimePicker();
             this.lbl_Current_Stock_Quantity = new System.Windows.Forms.Label();
+            this.lbl_Mfg_Date = new System.Windows.Forms.Label();
             this.lbl_New_Stock_Added = new System.Windows.Forms.Label();
             this.tb_Current_Stock_Quantity = new System.Windows.Forms.TextBox();
             this.tb_New_Stock_Added = new System.Windows.Forms.TextBox();
@@ -71,6 +71,26 @@
             this.gb_Stock_Details.TabStop = false;
             this.gb_Stock_Details.Text = "Stock Details";
             // 
+            // dtp_Expiry_Date
+            // 
+            this.dtp_Expiry_Date.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_Expiry_Date.Location = new System.Drawing.Point(932, 531);
+            this.dtp_Expiry_Date.Name = "dtp_Expiry_Date";
+            this.dtp_Expiry_Date.Size = new System.Drawing.Size(320, 43);
+            this.dtp_Expiry_Date.TabIndex = 6;
+            // 
+            // lbl_Expiry_Date
+            // 
+            this.lbl_Expiry_Date.AutoSize = true;
+            this.lbl_Expiry_Date.BackColor = System.Drawing.Color.Pink;
+            this.lbl_Expiry_Date.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Expiry_Date.ForeColor = System.Drawing.Color.Maroon;
+            this.lbl_Expiry_Date.Location = new System.Drawing.Point(376, 535);
+            this.lbl_Expiry_Date.Name = "lbl_Expiry_Date";
+            this.lbl_Expiry_Date.Size = new System.Drawing.Size(180, 39);
+            this.lbl_Expiry_Date.TabIndex = 46;
+            this.lbl_Expiry_Date.Text = "Expiry Date";
+            // 
             // pnl_Stock_Details
             // 
             this.pnl_Stock_Details.BackColor = System.Drawing.Color.MistyRose;
@@ -86,46 +106,6 @@
             this.pnl_Stock_Details.Name = "pnl_Stock_Details";
             this.pnl_Stock_Details.Size = new System.Drawing.Size(1455, 203);
             this.pnl_Stock_Details.TabIndex = 0;
-            // 
-            // dtp_Expiry_Date
-            // 
-            this.dtp_Expiry_Date.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_Expiry_Date.Location = new System.Drawing.Point(932, 531);
-            this.dtp_Expiry_Date.Name = "dtp_Expiry_Date";
-            this.dtp_Expiry_Date.Size = new System.Drawing.Size(320, 43);
-            this.dtp_Expiry_Date.TabIndex = 6;
-            // 
-            // dtp_Mfg_Date
-            // 
-            this.dtp_Mfg_Date.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_Mfg_Date.Location = new System.Drawing.Point(932, 461);
-            this.dtp_Mfg_Date.Name = "dtp_Mfg_Date";
-            this.dtp_Mfg_Date.Size = new System.Drawing.Size(320, 43);
-            this.dtp_Mfg_Date.TabIndex = 3;
-            // 
-            // lbl_Expiry_Date
-            // 
-            this.lbl_Expiry_Date.AutoSize = true;
-            this.lbl_Expiry_Date.BackColor = System.Drawing.Color.Pink;
-            this.lbl_Expiry_Date.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Expiry_Date.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Expiry_Date.Location = new System.Drawing.Point(376, 535);
-            this.lbl_Expiry_Date.Name = "lbl_Expiry_Date";
-            this.lbl_Expiry_Date.Size = new System.Drawing.Size(180, 39);
-            this.lbl_Expiry_Date.TabIndex = 46;
-            this.lbl_Expiry_Date.Text = "Expiry Date";
-            // 
-            // lbl_Mfg_Date
-            // 
-            this.lbl_Mfg_Date.AutoSize = true;
-            this.lbl_Mfg_Date.BackColor = System.Drawing.Color.Pink;
-            this.lbl_Mfg_Date.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Mfg_Date.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Mfg_Date.Location = new System.Drawing.Point(375, 465);
-            this.lbl_Mfg_Date.Name = "lbl_Mfg_Date";
-            this.lbl_Mfg_Date.Size = new System.Drawing.Size(303, 39);
-            this.lbl_Mfg_Date.TabIndex = 45;
-            this.lbl_Mfg_Date.Text = "Manufacturing Date";
             // 
             // tb_Product_ID
             // 
@@ -144,6 +124,7 @@
             this.dtp_Date.Name = "dtp_Date";
             this.dtp_Date.Size = new System.Drawing.Size(320, 43);
             this.dtp_Date.TabIndex = 4;
+            this.dtp_Date.ValueChanged += new System.EventHandler(this.dtp_Date_ValueChanged);
             // 
             // lbl_Date
             // 
@@ -213,6 +194,14 @@
             this.lbl_Product_Name.TabIndex = 36;
             this.lbl_Product_Name.Text = "Product Name";
             // 
+            // dtp_Mfg_Date
+            // 
+            this.dtp_Mfg_Date.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_Mfg_Date.Location = new System.Drawing.Point(932, 461);
+            this.dtp_Mfg_Date.Name = "dtp_Mfg_Date";
+            this.dtp_Mfg_Date.Size = new System.Drawing.Size(320, 43);
+            this.dtp_Mfg_Date.TabIndex = 3;
+            // 
             // lbl_Current_Stock_Quantity
             // 
             this.lbl_Current_Stock_Quantity.AutoSize = true;
@@ -224,6 +213,18 @@
             this.lbl_Current_Stock_Quantity.Size = new System.Drawing.Size(342, 39);
             this.lbl_Current_Stock_Quantity.TabIndex = 36;
             this.lbl_Current_Stock_Quantity.Text = "Current Stock Quantity";
+            // 
+            // lbl_Mfg_Date
+            // 
+            this.lbl_Mfg_Date.AutoSize = true;
+            this.lbl_Mfg_Date.BackColor = System.Drawing.Color.Pink;
+            this.lbl_Mfg_Date.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Mfg_Date.ForeColor = System.Drawing.Color.Maroon;
+            this.lbl_Mfg_Date.Location = new System.Drawing.Point(375, 465);
+            this.lbl_Mfg_Date.Name = "lbl_Mfg_Date";
+            this.lbl_Mfg_Date.Size = new System.Drawing.Size(303, 39);
+            this.lbl_Mfg_Date.TabIndex = 45;
+            this.lbl_Mfg_Date.Text = "Manufacturing Date";
             // 
             // lbl_New_Stock_Added
             // 

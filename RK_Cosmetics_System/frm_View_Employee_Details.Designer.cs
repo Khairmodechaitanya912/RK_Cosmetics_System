@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.gb_Employee_Details = new System.Windows.Forms.GroupBox();
             this.dgv_View_Employee_Details = new System.Windows.Forms.DataGridView();
+            this.employeeDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_RK_Cosmetics_SystemDataSet1 = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet1();
             this.pnl_Customer_Details = new System.Windows.Forms.Panel();
             this.tb_Employee_ID = new System.Windows.Forms.TextBox();
             this.lbl_Employee_ID = new System.Windows.Forms.Label();
             this.btn_Search = new System.Windows.Forms.Button();
             this.btn_Refresh = new System.Windows.Forms.Button();
-            this.dB_RK_Cosmetics_SystemDataSet1 = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet1();
-            this.employeeDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employee_DetailsTableAdapter = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet1TableAdapters.Employee_DetailsTableAdapter();
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,9 +53,9 @@
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gb_Employee_Details.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_View_Employee_Details)).BeginInit();
-            this.pnl_Customer_Details.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeDetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet1)).BeginInit();
+            this.pnl_Customer_Details.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_Employee_Details
@@ -98,6 +98,16 @@
             this.dgv_View_Employee_Details.RowTemplate.Height = 24;
             this.dgv_View_Employee_Details.Size = new System.Drawing.Size(1721, 441);
             this.dgv_View_Employee_Details.TabIndex = 19;
+            // 
+            // employeeDetailsBindingSource
+            // 
+            this.employeeDetailsBindingSource.DataMember = "Employee_Details";
+            this.employeeDetailsBindingSource.DataSource = this.dB_RK_Cosmetics_SystemDataSet1;
+            // 
+            // dB_RK_Cosmetics_SystemDataSet1
+            // 
+            this.dB_RK_Cosmetics_SystemDataSet1.DataSetName = "DB_RK_Cosmetics_SystemDataSet1";
+            this.dB_RK_Cosmetics_SystemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pnl_Customer_Details
             // 
@@ -157,16 +167,6 @@
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = false;
             this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
-            // 
-            // dB_RK_Cosmetics_SystemDataSet1
-            // 
-            this.dB_RK_Cosmetics_SystemDataSet1.DataSetName = "DB_RK_Cosmetics_SystemDataSet1";
-            this.dB_RK_Cosmetics_SystemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeeDetailsBindingSource
-            // 
-            this.employeeDetailsBindingSource.DataMember = "Employee_Details";
-            this.employeeDetailsBindingSource.DataSource = this.dB_RK_Cosmetics_SystemDataSet1;
             // 
             // employee_DetailsTableAdapter
             // 
@@ -270,10 +270,10 @@
             this.Load += new System.EventHandler(this.frm_View_Employee_Details_Load);
             this.gb_Employee_Details.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_View_Employee_Details)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeDetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet1)).EndInit();
             this.pnl_Customer_Details.ResumeLayout(false);
             this.pnl_Customer_Details.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeDetailsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

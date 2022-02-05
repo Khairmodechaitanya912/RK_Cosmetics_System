@@ -118,6 +118,7 @@
             this.dtp_Date.Name = "dtp_Date";
             this.dtp_Date.Size = new System.Drawing.Size(320, 43);
             this.dtp_Date.TabIndex = 7;
+            this.dtp_Date.ValueChanged += new System.EventHandler(this.dtp_Date_ValueChanged);
             // 
             // tb_Description
             // 

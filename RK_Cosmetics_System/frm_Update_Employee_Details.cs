@@ -47,6 +47,7 @@ namespace RK_Cosmetics_System
             tb_Mobile_No.Clear();
             tb_Alternate_Mobile_No.Clear();
             tb_Address.Clear();
+            tb_Email_ID.Clear();
 
             tb_First_Name.Focus();
 
@@ -73,6 +74,7 @@ namespace RK_Cosmetics_System
                 tb_Address.Text = Obj.GetString(Obj.GetOrdinal("Address"));
                 tb_Mobile_No.Text = (Obj["Mobile_No"].ToString());
                 tb_Alternate_Mobile_No.Text = (Obj["Alternate_Mobile_No"].ToString());
+                tb_Email_ID.Text = Obj.GetString(Obj.GetOrdinal("Email_ID"));
 
                 btn_Update.Enabled = true;
             }
@@ -125,7 +127,7 @@ namespace RK_Cosmetics_System
 
                 Cmd.Connection = Con;
 
-                Cmd.CommandText = "Update Employee_Details Set First_Name = @F_Name, Middle_Name = @M_Name, Last_Name = @L_Name, Mobile_No = @Mob1, Alternate_Mobile_No = @Mob2, Address = @Add Where Employee_ID = @Emp_ID";
+                Cmd.CommandText = "Update Employee_Details Set First_Name = @F_Name, Middle_Name = @M_Name, Last_Name = @L_Name, Mobile_No = @Mob1, Alternate_Mobile_No = @Mob2, Address = @Add , Email_ID = @email Where Employee_ID = @Emp_ID";
 
                 Cmd.Parameters.Add("Emp_ID", SqlDbType.Int).Value = tb_Employee_ID.Text;
                 Cmd.Parameters.Add("F_Name", SqlDbType.VarChar).Value = tb_First_Name.Text;
@@ -134,6 +136,7 @@ namespace RK_Cosmetics_System
                 Cmd.Parameters.Add("Mob1", SqlDbType.Money).Value = tb_Mobile_No.Text;
                 Cmd.Parameters.Add("Mob2", SqlDbType.Money).Value = tb_Alternate_Mobile_No.Text;
                 Cmd.Parameters.Add("Add", SqlDbType.NVarChar).Value = tb_Address.Text;
+                Cmd.Parameters.Add("email", SqlDbType.NVarChar).Value = tb_Email_ID.Text;
 
                 Cmd.ExecuteNonQuery();
 

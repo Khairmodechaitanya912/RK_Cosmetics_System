@@ -84,9 +84,114 @@ namespace RK_Cosmetics_System
             tb_Alternate_Mobile_No.Clear();
             tb_Aadhar_No.Clear();
             tb_PAN_No.Clear();
+            tb_Email_ID.Clear();
             tb_Address.Clear();
 
+            Warn_First_Name.Visible = false;
+            Warn_Middle_Name.Visible = false;
+            Warn_Last_Name.Visible = false;
+            Warn_Gender.Visible = false;
+            Warn_Mobile_Number.Visible = false;
+            Warn_Alternate_Mobile_Number.Visible = false;
+            Warn_Aadhar_Number.Visible = false;
+            Warn_PAN_Number.Visible = false;
+            Warn_Address.Visible = false;
+
             tb_First_Name.Focus();
+
+        }
+
+        private void dtp_Date_Of_Birth_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime from = dtp_Date_Of_Birth.Value;
+            DateTime to = DateTime.Now;
+            TimeSpan tspan = to - from;
+            double days = tspan.TotalDays;
+            tb_Age.Text = (days / 365).ToString("0");
+        }
+
+        void Warning()
+        {
+            if (tb_First_Name.Text == "")
+            {
+                Warn_First_Name.Visible = true;
+                Warn_First_Name.Text = "*Required";
+            }
+            else
+            {
+                Warn_First_Name.Visible = false;
+            }
+
+            if (tb_Middle_Name.Text == "")
+            {
+                Warn_Middle_Name.Visible = true;
+                Warn_Middle_Name.Text = "*Required";
+            }
+            else
+            {
+                Warn_Middle_Name.Visible = false;
+            }
+
+            if (tb_Last_Name.Text == "")
+            {
+                Warn_Last_Name.Visible = true;
+                Warn_Last_Name.Text = "*Required";
+            }
+            else
+            {
+                Warn_Last_Name.Visible = false;
+            }
+
+            if (!rbtn_Female.Checked && !rbtn_Male.Checked)
+            {
+                Warn_Gender.Visible = true;
+                Warn_Gender.Text = "*Required";
+            }
+            else
+            {
+                Warn_Gender.Visible = false;
+            }
+
+            if (tb_Mobile_No.TextLength < 10)
+            {
+                Warn_Mobile_Number.Visible = true;
+                Warn_Mobile_Number.Text = "*Mobile Number Should be Valid";
+            }
+            else
+            {
+                Warn_Mobile_Number.Visible = false;
+            }
+
+
+            if (tb_Aadhar_No.TextLength < 12)
+            {
+                Warn_Aadhar_Number.Visible = true;
+                Warn_Aadhar_Number.Text = "*Aadhar Number Should be Valid";
+            }
+            else
+            {
+                Warn_Aadhar_Number.Visible = false;
+            }
+
+            if (tb_PAN_No.TextLength < 10)
+            {
+                Warn_PAN_Number.Visible = true;
+                Warn_PAN_Number.Text = "*PAN Number Should be Valid";
+            }
+            else
+            {
+                Warn_PAN_Number.Visible = false;
+            }
+
+            if (tb_Address.Text == "")
+            {
+                Warn_Address.Visible = true;
+                Warn_Address.Text = "*Required";
+            }
+            else
+            {
+                Warn_Address.Visible = false;
+            }
 
         }
 
@@ -111,31 +216,9 @@ namespace RK_Cosmetics_System
                 Gender = rbtn_Female.Text;
             }
 
-            if (tb_Mobile_No.TextLength < 10)
-            {
-                MessageBox.Show("Invalid Mobile Number... Please Enter Valid Mobile Number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                tb_Mobile_No.Focus();
+            Warning();
 
-                goto DWN;
-            }
-
-            if (tb_Alternate_Mobile_No.TextLength < 10)
-            {
-                MessageBox.Show("Invalid Mobile Number... Please Enter Valid Mobile Number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                tb_Alternate_Mobile_No.Focus();
-
-                goto DWN;
-            }
-
-            if (tb_Aadhar_No.TextLength < 12)
-            {
-                MessageBox.Show("Invalid Aadhar Number... Please Enter Valid Aadhar Number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                tb_Aadhar_No.Focus();
-
-                goto DWN;
-            }
-
-            if (tb_Employee_ID.Text != "" && tb_First_Name.Text != "" && tb_Middle_Name.Text != "" && tb_Last_Name.Text != "" && tb_Mobile_No.Text != "" && tb_Aadhar_No.Text != "" && tb_PAN_No.Text != "" && tb_Address.Text != "")
+            if (tb_Employee_ID.Text != "" && tb_First_Name.Text != "" && tb_Middle_Name.Text != "" && tb_Last_Name.Text != "" && tb_Mobile_No.Text != "" && tb_Aadhar_No.Text != "" && tb_PAN_No.Text != "" && tb_Address.Text != "" && (rbtn_Female.Checked || rbtn_Male.Checked))
             {
                 Con_Open();
 
@@ -143,7 +226,7 @@ namespace RK_Cosmetics_System
 
                 Cmd.Connection = Con;
 
-                Cmd.CommandText = "Insert into Employee_Details (Employee_ID,First_Name,Middle_Name,Last_Name,Date_Of_Birth,Gender,Joining_Date,Mobile_No,Alternate_Mobile_No,Aadhar_No,PAN_No,Address) Values (@E_Id,@F_Name,@M_Name,@L_Name,@DOB,'" + Gender + "',@JDate,@Mob,@AMob,@Aadhar,@Pan,@Add)";
+                Cmd.CommandText = "Insert into Employee_Details (Employee_ID,First_Name,Middle_Name,Last_Name,Date_Of_Birth,Gender,Joining_Date,Mobile_No,Alternate_Mobile_No,Aadhar_No,PAN_No,Address,Email_ID,Age) Values (@E_Id,@F_Name,@M_Name,@L_Name,@DOB,'" + Gender + "',@JDate,@Mob,@AMob,@Aadhar,@Pan,@Add, @email,@age)";
 
                 Cmd.Parameters.Add("E_ID", SqlDbType.Int).Value = tb_Employee_ID.Text;
                 Cmd.Parameters.Add("F_Name", SqlDbType.VarChar).Value = tb_First_Name.Text;
@@ -152,26 +235,67 @@ namespace RK_Cosmetics_System
                 Cmd.Parameters.Add("DOB", SqlDbType.Date).Value = dtp_Date_Of_Birth.Text;
                 Cmd.Parameters.Add("JDate", SqlDbType.Date).Value = dtp_Joining_Date.Text;
                 Cmd.Parameters.Add("Mob", SqlDbType.Decimal).Value = tb_Mobile_No.Text;
-                Cmd.Parameters.Add("AMob", SqlDbType.Decimal).Value = tb_Alternate_Mobile_No.Text;
+                //Cmd.Parameters.Add("AMob", SqlDbType.Decimal).Value = tb_Alternate_Mobile_No.Text;
                 Cmd.Parameters.Add("Aadhar", SqlDbType.NVarChar).Value = tb_Aadhar_No.Text;
                 Cmd.Parameters.Add("Pan", SqlDbType.NVarChar).Value = tb_PAN_No.Text;
                 Cmd.Parameters.Add("Add", SqlDbType.NVarChar).Value = tb_Address.Text;
+                Cmd.Parameters.Add("age", SqlDbType.Int).Value = tb_Age.Text;
 
-                Cmd.ExecuteNonQuery();
+                if (tb_Alternate_Mobile_No.Text != "")
+                {
+                    Cmd.Parameters.Add("AMob", SqlDbType.Decimal).Value = tb_Alternate_Mobile_No.Text;
+                }
+                else if (tb_Alternate_Mobile_No.Text == "")
+                {
+                    Cmd.Parameters.Add("AMob", SqlDbType.Decimal).Value = "0";
+                    Warn_Alternate_Mobile_Number.Visible = false;
+                }
+                else
+                {
+                    Warn_Alternate_Mobile_Number.Visible = false;
+                }
 
-                MessageBox.Show("Employee Details Saved Successfully !!!", "Saving", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (tb_Email_ID.Text != "")
+                {
+                    Cmd.Parameters.Add("email", SqlDbType.NVarChar).Value = tb_Email_ID.Text;
+                }
+                else
+                {
+                    Cmd.Parameters.Add("email", SqlDbType.NVarChar).Value = "Annonymous";
+                }
 
-                Clear_Control();
 
-                Con_Close();
+                if ((Convert.ToInt32(tb_Age.Text) < 18) || (Convert.ToInt32(tb_Age.Text) > 60))
+                {
+                    MessageBox.Show(tb_First_Name.Text + " is Not Eligible for these Job !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Warning();
+                }
+
+                else if (tb_Mobile_No.Text == tb_Alternate_Mobile_No.Text)
+                {
+                    MessageBox.Show("You can't insert same mobile no !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Warning();
+                }
+                else if (tb_Alternate_Mobile_No.TextLength < 10 && tb_Alternate_Mobile_No.TextLength > 0)
+                {
+                    Warn_Alternate_Mobile_Number.Visible = true;
+                    Warn_Alternate_Mobile_Number.Text = "Enter Valid Mobile No";
+                }
+                else
+                {
+                    Cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Employee Details Saved Successfully !!!", "Saving", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Clear_Control();
+                }
+              
             }
             else
             {
+                Warning();
                 MessageBox.Show("Incomplete Information !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-            DWN:
-            Clear_Control(); 
 
             Con_Close();
         }
@@ -196,6 +320,11 @@ namespace RK_Cosmetics_System
             {
                 e.Handled = true;
             }
+        }
+
+        private void dtp_Joining_Date_ValueChanged(object sender, EventArgs e)
+        {
+            dtp_Joining_Date.MinDate = dtp_Joining_Date.MaxDate = DateTime.Now;
         }
 
 

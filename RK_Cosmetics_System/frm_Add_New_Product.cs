@@ -17,7 +17,7 @@ namespace RK_Cosmetics_System
             InitializeComponent();
         }
 
-          SqlConnection Con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DB_RK_Cosmetics_System;Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DB_RK_Cosmetics_System;Integrated Security=True");
 
         void Con_Open()
         {
@@ -183,6 +183,11 @@ namespace RK_Cosmetics_System
             {
                 e.Handled = true;
             }
+        }
+
+        private void dtp_Date_ValueChanged(object sender, EventArgs e)
+        {
+            dtp_Date.MinDate = dtp_Date.MaxDate = DateTime.Now;
         }
     }
 }
