@@ -111,7 +111,7 @@ namespace RK_Cosmetics_System
 
             DataTable dt = new DataTable();
 
-              SDA.Fill(dt);
+            SDA.Fill(dt);
 
             dgv_View_Stock_Details.DataSource = dt;
             Con_Close();

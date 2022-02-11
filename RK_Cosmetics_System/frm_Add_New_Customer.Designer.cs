@@ -31,7 +31,7 @@
             this.gb_Customer_Details = new System.Windows.Forms.GroupBox();
             this.dtp_Date = new System.Windows.Forms.DateTimePicker();
             this.tb_Customer_Name = new System.Windows.Forms.TextBox();
-            this.tb_Date = new System.Windows.Forms.TextBox();
+            this.tb_Mobile_No = new System.Windows.Forms.TextBox();
             this.tb_Customer_ID = new System.Windows.Forms.TextBox();
             this.lbl_Customer_Name = new System.Windows.Forms.Label();
             this.lbl_Date = new System.Windows.Forms.Label();
@@ -39,7 +39,7 @@
             this.lbl_Customer_ID = new System.Windows.Forms.Label();
             this.gb_Purchase_Details = new System.Windows.Forms.GroupBox();
             this.btn_Add = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_Add_Customer = new System.Windows.Forms.DataGridView();
             this.cmb_Product_Name = new System.Windows.Forms.ComboBox();
             this.cmb_Brand_Name = new System.Windows.Forms.ComboBox();
             this.tb_GST_Applied = new System.Windows.Forms.TextBox();
@@ -63,7 +63,7 @@
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.gb_Customer_Details.SuspendLayout();
             this.gb_Purchase_Details.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Add_Customer)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +71,7 @@
             // 
             this.gb_Customer_Details.Controls.Add(this.dtp_Date);
             this.gb_Customer_Details.Controls.Add(this.tb_Customer_Name);
-            this.gb_Customer_Details.Controls.Add(this.tb_Date);
+            this.gb_Customer_Details.Controls.Add(this.tb_Mobile_No);
             this.gb_Customer_Details.Controls.Add(this.tb_Customer_ID);
             this.gb_Customer_Details.Controls.Add(this.lbl_Customer_Name);
             this.gb_Customer_Details.Controls.Add(this.lbl_Date);
@@ -92,6 +92,7 @@
             this.dtp_Date.Name = "dtp_Date";
             this.dtp_Date.Size = new System.Drawing.Size(320, 43);
             this.dtp_Date.TabIndex = 3;
+            this.dtp_Date.ValueChanged += new System.EventHandler(this.dtp_Date_ValueChanged);
             // 
             // tb_Customer_Name
             // 
@@ -102,17 +103,18 @@
             this.tb_Customer_Name.Size = new System.Drawing.Size(320, 41);
             this.tb_Customer_Name.TabIndex = 2;
             // 
-            // tb_Date
+            // tb_Mobile_No
             // 
-            this.tb_Date.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Date.Location = new System.Drawing.Point(1381, 124);
-            this.tb_Date.MaxLength = 10;
-            this.tb_Date.Name = "tb_Date";
-            this.tb_Date.Size = new System.Drawing.Size(320, 41);
-            this.tb_Date.TabIndex = 4;
+            this.tb_Mobile_No.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Mobile_No.Location = new System.Drawing.Point(1381, 124);
+            this.tb_Mobile_No.MaxLength = 10;
+            this.tb_Mobile_No.Name = "tb_Mobile_No";
+            this.tb_Mobile_No.Size = new System.Drawing.Size(320, 41);
+            this.tb_Mobile_No.TabIndex = 4;
             // 
             // tb_Customer_ID
             // 
+            this.tb_Customer_ID.Enabled = false;
             this.tb_Customer_ID.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Customer_ID.Location = new System.Drawing.Point(466, 56);
             this.tb_Customer_ID.MaxLength = 5;
@@ -171,7 +173,7 @@
             // gb_Purchase_Details
             // 
             this.gb_Purchase_Details.Controls.Add(this.btn_Add);
-            this.gb_Purchase_Details.Controls.Add(this.dataGridView1);
+            this.gb_Purchase_Details.Controls.Add(this.dgv_Add_Customer);
             this.gb_Purchase_Details.Controls.Add(this.cmb_Product_Name);
             this.gb_Purchase_Details.Controls.Add(this.cmb_Brand_Name);
             this.gb_Purchase_Details.Controls.Add(this.tb_GST_Applied);
@@ -202,19 +204,21 @@
             this.btn_Add.TabIndex = 11;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = false;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
-            // dataGridView1
+            // dgv_Add_Customer
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.PeachPuff;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(941, 51);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(912, 317);
-            this.dataGridView1.TabIndex = 17;
+            this.dgv_Add_Customer.BackgroundColor = System.Drawing.Color.PeachPuff;
+            this.dgv_Add_Customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Add_Customer.Location = new System.Drawing.Point(941, 51);
+            this.dgv_Add_Customer.Name = "dgv_Add_Customer";
+            this.dgv_Add_Customer.RowTemplate.Height = 24;
+            this.dgv_Add_Customer.Size = new System.Drawing.Size(912, 317);
+            this.dgv_Add_Customer.TabIndex = 17;
             // 
             // cmb_Product_Name
             // 
+            this.cmb_Product_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Product_Name.FormattingEnabled = true;
             this.cmb_Product_Name.Location = new System.Drawing.Point(427, 107);
             this.cmb_Product_Name.MaxLength = 50;
@@ -224,12 +228,14 @@
             // 
             // cmb_Brand_Name
             // 
+            this.cmb_Brand_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Brand_Name.FormattingEnabled = true;
             this.cmb_Brand_Name.Location = new System.Drawing.Point(428, 51);
             this.cmb_Brand_Name.MaxLength = 20;
             this.cmb_Brand_Name.Name = "cmb_Brand_Name";
             this.cmb_Brand_Name.Size = new System.Drawing.Size(320, 42);
             this.cmb_Brand_Name.TabIndex = 5;
+            this.cmb_Brand_Name.SelectedIndexChanged += new System.EventHandler(this.cmb_Brand_Name_SelectedIndexChanged);
             // 
             // tb_GST_Applied
             // 
@@ -387,6 +393,7 @@
             // 
             // tb_Bill
             // 
+            this.tb_Bill.Enabled = false;
             this.tb_Bill.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Bill.Location = new System.Drawing.Point(245, 36);
             this.tb_Bill.MaxLength = 10;
@@ -428,6 +435,7 @@
             this.btn_Save.TabIndex = 15;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Refresh
             // 
@@ -439,6 +447,7 @@
             this.btn_Refresh.TabIndex = 16;
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // frm_Add_New_Customer
             // 
@@ -454,11 +463,12 @@
             this.Controls.Add(this.gb_Customer_Details);
             this.Name = "frm_Add_New_Customer";
             this.Text = "Add New Customer";
+            this.Load += new System.EventHandler(this.frm_Add_New_Customer_Load);
             this.gb_Customer_Details.ResumeLayout(false);
             this.gb_Customer_Details.PerformLayout();
             this.gb_Purchase_Details.ResumeLayout(false);
             this.gb_Purchase_Details.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Add_Customer)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -470,7 +480,7 @@
         private System.Windows.Forms.GroupBox gb_Customer_Details;
         private System.Windows.Forms.DateTimePicker dtp_Date;
         private System.Windows.Forms.TextBox tb_Customer_Name;
-        private System.Windows.Forms.TextBox tb_Date;
+        private System.Windows.Forms.TextBox tb_Mobile_No;
         private System.Windows.Forms.TextBox tb_Customer_ID;
         private System.Windows.Forms.Label lbl_Customer_Name;
         private System.Windows.Forms.Label lbl_Date;
@@ -489,7 +499,7 @@
         private System.Windows.Forms.Label lbl_Net_Weight;
         private System.Windows.Forms.Label lbl_Product_Name;
         private System.Windows.Forms.Label lbl_Brand_Name;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_Add_Customer;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox tb_Bill;
         private System.Windows.Forms.Label lbl_Final_Bill;
