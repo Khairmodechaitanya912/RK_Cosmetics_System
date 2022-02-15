@@ -60,7 +60,7 @@ namespace RK_Cosmetics_System
 
             else
             {
-                Cnt = 1;
+                Cnt =  1;
             }
 
             Con_Close();
@@ -78,7 +78,7 @@ namespace RK_Cosmetics_System
             tb_Mobile_No.Clear();
             cmb_Brand_Name.SelectedIndex = -1;
             cmb_Product_Name.SelectedIndex = -1;
-            tb_Net_Weight.Clear();
+            tb_Per_Price.Clear();
             tb_Price.Clear();
             tb_Quantity.Clear();
             tb_GST_Applied.Clear();
@@ -141,6 +141,27 @@ namespace RK_Cosmetics_System
             Con_Close();
         }
 
+        private void cmb_Product_Name_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Con_Open();
+
+            SqlCommand Cmd = new SqlCommand();
+
+            Cmd.Connection = Con;
+
+            Cmd.CommandText = "Select Selling_Price from Product_Details where Product_Name = '" + cmb_Product_Name.Text + "'";
+
+            var Obj = Cmd.ExecuteReader();
+
+            while (Obj.Read())
+            {
+                tb_Per_Price.Text = (Obj["Selling_Price"].ToString());
+            }
+
+            Obj.Dispose();
+            Con_Close();
+        }
+
         private void btn_Add_Click(object sender, EventArgs e)
         {
 
@@ -160,5 +181,7 @@ namespace RK_Cosmetics_System
         {
             dtp_Date.MinDate = dtp_Date.MaxDate = DateTime.Now;
         }
+
+        
     }
 }

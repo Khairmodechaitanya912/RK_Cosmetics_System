@@ -69,9 +69,17 @@ namespace RK_Cosmetics_System
 
         private void frm_View_Stock_Details_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dB_RK_Cosmetics_SystemDataSet4.Product_Stock_Details' table. You can move, or remove it, as needed.
-            this.product_Stock_DetailsTableAdapter.Fill(this.dB_RK_Cosmetics_SystemDataSet4.Product_Stock_Details);
+            cmb_Brand_Name.Text = "";
             Clear_Control();
+
+            SqlDataAdapter SDA = new SqlDataAdapter("Select P.Product_ID,P.Brand_Name,P.Product_Name,S.Date,S.Stock,S.Mfg_Date,S.Expiry_Date,S.New_Stock from Product_Details P INNER JOIN Product_Stock_Details S ON P.Product_ID = S.Product_ID", Con);
+
+            DataTable dt = new DataTable();
+
+            SDA.Fill(dt);
+
+            dgv_View_Stock_Details.DataSource = dt;
+
             Bind_Brand_Name_To_Combobox();
         }
 
@@ -107,7 +115,7 @@ namespace RK_Cosmetics_System
         {
             Con_Open();
 
-            SqlDataAdapter SDA = new SqlDataAdapter("Select * from Product_Stock_Details where Product_Name = '" + cmb_Product_Name.Text + "' ", Con);
+            SqlDataAdapter SDA = new SqlDataAdapter("Select P.Product_ID,P.Brand_Name,P.Product_Name,S.Date,S.Mfg_Date,S.Expiry_Date,S.New_Stock,S.Stock from Product_Details P INNER JOIN Product_Stock_Details S ON P.Product_ID = S.Product_ID where Brand_Name = '" + cmb_Brand_Name.Text + "' And Product_Name = '" + cmb_Product_Name.Text + "'", Con);
 
             DataTable dt = new DataTable();
 
@@ -121,7 +129,7 @@ namespace RK_Cosmetics_System
         {
             Clear_Control();
 
-            SqlDataAdapter SDA = new SqlDataAdapter("Select * from Product_Stock_Details", Con);
+            SqlDataAdapter SDA = new SqlDataAdapter("Select P.Product_ID,P.Brand_Name,P.Product_Name,S.Date,S.Mfg_Date,S.Expiry_Date,S.New_Stock,S.Stock from Product_Details P INNER JOIN Product_Stock_Details S ON P.Product_ID = S.Product_ID", Con);
 
             DataTable dt = new DataTable();
 

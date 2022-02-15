@@ -47,9 +47,9 @@
             this.lbl_Price = new System.Windows.Forms.Label();
             this.lbl_GST_Applied = new System.Windows.Forms.Label();
             this.tb_Quantity = new System.Windows.Forms.TextBox();
-            this.tb_Net_Weight = new System.Windows.Forms.TextBox();
+            this.tb_Per_Price = new System.Windows.Forms.TextBox();
             this.lbl_Quantity = new System.Windows.Forms.Label();
-            this.lbl_Net_Weight = new System.Windows.Forms.Label();
+            this.lbl_Per_Price = new System.Windows.Forms.Label();
             this.lbl_Product_Name = new System.Windows.Forms.Label();
             this.lbl_Brand_Name = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -181,9 +181,9 @@
             this.gb_Purchase_Details.Controls.Add(this.lbl_Price);
             this.gb_Purchase_Details.Controls.Add(this.lbl_GST_Applied);
             this.gb_Purchase_Details.Controls.Add(this.tb_Quantity);
-            this.gb_Purchase_Details.Controls.Add(this.tb_Net_Weight);
+            this.gb_Purchase_Details.Controls.Add(this.tb_Per_Price);
             this.gb_Purchase_Details.Controls.Add(this.lbl_Quantity);
-            this.gb_Purchase_Details.Controls.Add(this.lbl_Net_Weight);
+            this.gb_Purchase_Details.Controls.Add(this.lbl_Per_Price);
             this.gb_Purchase_Details.Controls.Add(this.lbl_Product_Name);
             this.gb_Purchase_Details.Controls.Add(this.lbl_Brand_Name);
             this.gb_Purchase_Details.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -197,6 +197,7 @@
             // btn_Add
             // 
             this.btn_Add.BackColor = System.Drawing.Color.Yellow;
+            this.btn_Add.Enabled = false;
             this.btn_Add.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Add.Location = new System.Drawing.Point(792, 317);
             this.btn_Add.Name = "btn_Add";
@@ -225,6 +226,7 @@
             this.cmb_Product_Name.Name = "cmb_Product_Name";
             this.cmb_Product_Name.Size = new System.Drawing.Size(320, 42);
             this.cmb_Product_Name.TabIndex = 6;
+            this.cmb_Product_Name.SelectedIndexChanged += new System.EventHandler(this.cmb_Product_Name_SelectedIndexChanged);
             // 
             // cmb_Brand_Name
             // 
@@ -239,6 +241,7 @@
             // 
             // tb_GST_Applied
             // 
+            this.tb_GST_Applied.Enabled = false;
             this.tb_GST_Applied.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_GST_Applied.Location = new System.Drawing.Point(427, 275);
             this.tb_GST_Applied.MaxLength = 5;
@@ -248,6 +251,7 @@
             // 
             // tb_Price
             // 
+            this.tb_Price.Enabled = false;
             this.tb_Price.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Price.Location = new System.Drawing.Point(427, 330);
             this.tb_Price.MaxLength = 5;
@@ -288,14 +292,15 @@
             this.tb_Quantity.Size = new System.Drawing.Size(320, 41);
             this.tb_Quantity.TabIndex = 8;
             // 
-            // tb_Net_Weight
+            // tb_Per_Price
             // 
-            this.tb_Net_Weight.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Net_Weight.Location = new System.Drawing.Point(427, 163);
-            this.tb_Net_Weight.MaxLength = 20;
-            this.tb_Net_Weight.Name = "tb_Net_Weight";
-            this.tb_Net_Weight.Size = new System.Drawing.Size(320, 41);
-            this.tb_Net_Weight.TabIndex = 7;
+            this.tb_Per_Price.Enabled = false;
+            this.tb_Per_Price.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Per_Price.Location = new System.Drawing.Point(427, 163);
+            this.tb_Per_Price.MaxLength = 20;
+            this.tb_Per_Price.Name = "tb_Per_Price";
+            this.tb_Per_Price.Size = new System.Drawing.Size(320, 41);
+            this.tb_Per_Price.TabIndex = 7;
             // 
             // lbl_Quantity
             // 
@@ -309,17 +314,17 @@
             this.lbl_Quantity.TabIndex = 8;
             this.lbl_Quantity.Text = "Quantity";
             // 
-            // lbl_Net_Weight
+            // lbl_Per_Price
             // 
-            this.lbl_Net_Weight.AutoSize = true;
-            this.lbl_Net_Weight.BackColor = System.Drawing.Color.Pink;
-            this.lbl_Net_Weight.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Net_Weight.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Net_Weight.Location = new System.Drawing.Point(137, 163);
-            this.lbl_Net_Weight.Name = "lbl_Net_Weight";
-            this.lbl_Net_Weight.Size = new System.Drawing.Size(182, 39);
-            this.lbl_Net_Weight.TabIndex = 7;
-            this.lbl_Net_Weight.Text = "Net Weight";
+            this.lbl_Per_Price.AutoSize = true;
+            this.lbl_Per_Price.BackColor = System.Drawing.Color.Pink;
+            this.lbl_Per_Price.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Per_Price.ForeColor = System.Drawing.Color.Maroon;
+            this.lbl_Per_Price.Location = new System.Drawing.Point(137, 163);
+            this.lbl_Per_Price.Name = "lbl_Per_Price";
+            this.lbl_Per_Price.Size = new System.Drawing.Size(141, 39);
+            this.lbl_Per_Price.TabIndex = 7;
+            this.lbl_Per_Price.Text = "Per Price";
             // 
             // lbl_Product_Name
             // 
@@ -384,6 +389,7 @@
             // 
             // tb_Final_Bill
             // 
+            this.tb_Final_Bill.Enabled = false;
             this.tb_Final_Bill.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Final_Bill.Location = new System.Drawing.Point(1533, 35);
             this.tb_Final_Bill.MaxLength = 10;
@@ -494,9 +500,9 @@
         private System.Windows.Forms.Label lbl_Price;
         private System.Windows.Forms.Label lbl_GST_Applied;
         private System.Windows.Forms.TextBox tb_Quantity;
-        private System.Windows.Forms.TextBox tb_Net_Weight;
+        private System.Windows.Forms.TextBox tb_Per_Price;
         private System.Windows.Forms.Label lbl_Quantity;
-        private System.Windows.Forms.Label lbl_Net_Weight;
+        private System.Windows.Forms.Label lbl_Per_Price;
         private System.Windows.Forms.Label lbl_Product_Name;
         private System.Windows.Forms.Label lbl_Brand_Name;
         private System.Windows.Forms.DataGridView dgv_Add_Customer;

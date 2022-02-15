@@ -189,5 +189,6 @@ namespace RK_Cosmetics_System
         {
             dtp_Date.MinDate = dtp_Date.MaxDate = DateTime.Now;
         }
+
     }
 }
