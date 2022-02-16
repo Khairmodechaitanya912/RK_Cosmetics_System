@@ -162,6 +162,31 @@ namespace RK_Cosmetics_System
             Con_Close();
         }
 
+        private void tb_Quantity_TextChanged(object sender, EventArgs e)
+        {
+            double Total_Price = 0;
+
+            if (tb_Quantity.Text != "" && Convert.ToInt32(tb_Quantity.Text) > 0)
+            {
+                Total_Price = Convert.ToDouble(tb_Quantity.Text) * Convert.ToDouble(tb_Per_Price.Text);
+                tb_Price.Text = Convert.ToString(Total_Price);
+
+
+                btn_Add.Enabled = true;
+            }
+        }
+
+        private void tb_Quantity_Leave(object sender, EventArgs e)
+        {
+            if (tb_Quantity.Text == "" || tb_Quantity.Text == "0")
+            {
+                MessageBox.Show("Invalid Quantity!!!");
+                tb_Quantity.Text = "0";
+                tb_Quantity.Focus();
+                btn_Add.Enabled = false;
+            }
+        }
+
         private void btn_Add_Click(object sender, EventArgs e)
         {
 

@@ -291,6 +291,8 @@
             this.tb_Quantity.Name = "tb_Quantity";
             this.tb_Quantity.Size = new System.Drawing.Size(320, 41);
             this.tb_Quantity.TabIndex = 8;
+            this.tb_Quantity.TextChanged += new System.EventHandler(this.tb_Quantity_TextChanged);
+            this.tb_Quantity.Leave += new System.EventHandler(this.tb_Quantity_Leave);
             // 
             // tb_Per_Price
             // 
@@ -370,7 +372,7 @@
             // 
             this.tb_Discount.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Discount.Location = new System.Drawing.Point(917, 36);
-            this.tb_Discount.MaxLength = 5;
+            this.tb_Discount.MaxLength = 3;
             this.tb_Discount.Name = "tb_Discount";
             this.tb_Discount.Size = new System.Drawing.Size(320, 41);
             this.tb_Discount.TabIndex = 13;
