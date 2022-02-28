@@ -149,13 +149,14 @@ namespace RK_Cosmetics_System
 
             Cmd.Connection = Con;
 
-            Cmd.CommandText = "Select Selling_Price from Product_Details where Product_Name = '" + cmb_Product_Name.Text + "'";
+            Cmd.CommandText = "Select Selling_Price , GST from Product_Details where Product_Name = '" + cmb_Product_Name.Text + "'";
 
             var Obj = Cmd.ExecuteReader();
 
             while (Obj.Read())
             {
                 tb_Per_Price.Text = (Obj["Selling_Price"].ToString());
+                tb_GST_Applied.Text = (Obj["GST"].ToString());
             }
 
             Obj.Dispose();
@@ -164,6 +165,7 @@ namespace RK_Cosmetics_System
 
         private void tb_Quantity_TextChanged(object sender, EventArgs e)
         {
+ 
             double Total_Price = 0;
 
             if (tb_Quantity.Text != "" && Convert.ToInt32(tb_Quantity.Text) > 0)
@@ -189,7 +191,7 @@ namespace RK_Cosmetics_System
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
