@@ -209,10 +209,13 @@
             // 
             // dgv_Add_Customer
             // 
+            this.dgv_Add_Customer.AllowUserToAddRows = false;
+            this.dgv_Add_Customer.AllowUserToDeleteRows = false;
             this.dgv_Add_Customer.BackgroundColor = System.Drawing.Color.PeachPuff;
             this.dgv_Add_Customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Add_Customer.Location = new System.Drawing.Point(941, 51);
             this.dgv_Add_Customer.Name = "dgv_Add_Customer";
+            this.dgv_Add_Customer.ReadOnly = true;
             this.dgv_Add_Customer.RowTemplate.Height = 24;
             this.dgv_Add_Customer.Size = new System.Drawing.Size(912, 317);
             this.dgv_Add_Customer.TabIndex = 17;

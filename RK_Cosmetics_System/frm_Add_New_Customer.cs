@@ -17,7 +17,9 @@ namespace RK_Cosmetics_System
             InitializeComponent();
         }
 
-         SqlConnection Con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DB_RK_Cosmetics_System;Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DB_RK_Cosmetics_System;Integrated Security=True");
+
+        int pCnt = 1 , C_Stock = 0;
 
         void Con_Open()
         {
@@ -87,6 +89,9 @@ namespace RK_Cosmetics_System
             tb_Bill.Clear();
             dgv_Add_Customer.Rows.Clear();
 
+            C_Stock = 0;
+            pCnt = 1;
+
             tb_Customer_Name.Focus();
         }
 
@@ -149,7 +154,7 @@ namespace RK_Cosmetics_System
 
             Cmd.Connection = Con;
 
-            Cmd.CommandText = "Select Selling_Price , GST from Product_Details where Product_Name = '" + cmb_Product_Name.Text + "'";
+            Cmd.CommandText = "Select Selling_Price , GST , Stock from Product_Details where Product_Name = '" + cmb_Product_Name.Text + "'";
 
             var Obj = Cmd.ExecuteReader();
 
@@ -157,6 +162,7 @@ namespace RK_Cosmetics_System
             {
                 tb_Per_Price.Text = (Obj["Selling_Price"].ToString());
                 tb_GST_Applied.Text = (Obj["GST"].ToString());
+                C_Stock = Convert.ToInt32(Obj["Stock"]);
             }
 
             Obj.Dispose();
@@ -165,16 +171,19 @@ namespace RK_Cosmetics_System
 
         private void tb_Quantity_TextChanged(object sender, EventArgs e)
         {
- 
-            double Total_Price = 0;
+            double GST = 0;
 
             if (tb_Quantity.Text != "" && Convert.ToInt32(tb_Quantity.Text) > 0)
             {
-                Total_Price = Convert.ToDouble(tb_Quantity.Text) * Convert.ToDouble(tb_Per_Price.Text);
-                tb_Price.Text = Convert.ToString(Total_Price);
-
+                GST = (Convert.ToDouble(tb_Per_Price.Text) * Convert.ToDouble(tb_GST_Applied.Text))/ 100;
+                tb_Price.Text = Convert.ToString( (Convert.ToDouble(tb_Per_Price.Text) + GST  ) * ( Convert.ToDouble(tb_Quantity.Text))) ;
 
                 btn_Add.Enabled = true;
+            }
+
+            if (tb_Quantity.Text == "")
+            {
+                tb_Price.Text = "0";
             }
         }
 
@@ -191,7 +200,63 @@ namespace RK_Cosmetics_System
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            
+            int Flag = -1, Qty = Convert.ToInt32(tb_Quantity.Text);
+
+            for (int i = 0; i <= dgv_Add_Customer.Rows.Count - 1; i++)
+            {
+                if (Convert.ToString(dgv_Add_Customer.Rows[i].Cells[2].Value) == cmb_Brand_Name.Text)
+                {
+                    Flag = 0;
+
+                    Qty += Convert.ToInt32(dgv_Add_Customer.Rows[i].Cells[4].Value);
+
+                    if (C_Stock >= Qty)
+                    {
+                        double Tot_Price = Convert.ToDouble(Qty) * Convert.ToDouble(tb_Per_Price.Text);
+
+                        dgv_Add_Customer.Rows[i].Cells[4].Value = Qty;
+                        dgv_Add_Customer.Rows[i].Cells[5].Value = Tot_Price;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Can't Add More Quantity", "Insufficiant Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        Flag = 1;
+                    }
+                }
+            }
+
+            if (Flag == -1)
+            {
+                if (C_Stock >= Qty)
+                {
+                    dgv_Add_Customer.Rows.Add(pCnt, cmb_Brand_Name.Text, cmb_Product_Name.Text, tb_Per_Price.Text, tb_Quantity.Text, tb_Price.Text);
+
+                    pCnt++;
+                }
+                else
+                {
+                    MessageBox.Show("No Enough Stock Available", "Insufficiant Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Flag = 1;
+                }
+            }
+
+            if (Flag < 1)
+            {
+                double Bill = Convert.ToDouble(tb_Bill.Text) + Convert.ToDouble(tb_Price.Text);
+
+                tb_Bill.Text = Convert.ToString(Bill);
+                tb_Final_Bill.Text = Convert.ToString(Bill);
+            }
+
+            cmb_Brand_Name.SelectedIndex = -1;
+            cmb_Product_Name.SelectedIndex = -1;
+            tb_Per_Price.Clear();
+            tb_Price.Clear();
+            tb_Quantity.Clear();
+            tb_GST_Applied.Clear();
+
+            btn_Add.Enabled = false;
+
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
