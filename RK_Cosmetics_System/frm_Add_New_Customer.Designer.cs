@@ -211,6 +211,7 @@
             // 
             this.dgv_Add_Customer.AllowUserToAddRows = false;
             this.dgv_Add_Customer.AllowUserToDeleteRows = false;
+            this.dgv_Add_Customer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Add_Customer.BackgroundColor = System.Drawing.Color.PeachPuff;
             this.dgv_Add_Customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Add_Customer.Location = new System.Drawing.Point(941, 51);
