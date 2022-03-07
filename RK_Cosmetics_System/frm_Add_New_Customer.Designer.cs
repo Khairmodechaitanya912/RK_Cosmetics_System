@@ -102,6 +102,7 @@
             this.tb_Customer_Name.Name = "tb_Customer_Name";
             this.tb_Customer_Name.Size = new System.Drawing.Size(320, 41);
             this.tb_Customer_Name.TabIndex = 2;
+            this.tb_Customer_Name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Text);
             // 
             // tb_Mobile_No
             // 

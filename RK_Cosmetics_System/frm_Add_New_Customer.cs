@@ -218,6 +218,15 @@ namespace RK_Cosmetics_System
             dtp_Date.MinDate = dtp_Date.MaxDate = DateTime.Now;
         }
 
+        private void Only_Text(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsLetter(e.KeyChar) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space) || (e.KeyChar == (char)Keys.ShiftKey) || (e.KeyChar == (char)Keys.CapsLock)))
+            {
+                e.Handled = true;
+            }
+        }
+
+
         
     }
 }
