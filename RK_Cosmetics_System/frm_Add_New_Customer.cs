@@ -226,6 +226,14 @@ namespace RK_Cosmetics_System
             }
         }
 
+        private void Only_Number(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
+            {
+                e.Handled = true;
+            }
+        }
+
 
         
     }

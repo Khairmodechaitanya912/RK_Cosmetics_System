@@ -112,6 +112,7 @@
             this.tb_Mobile_No.Name = "tb_Mobile_No";
             this.tb_Mobile_No.Size = new System.Drawing.Size(320, 41);
             this.tb_Mobile_No.TabIndex = 4;
+            this.tb_Mobile_No.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Number);
             // 
             // tb_Customer_ID
             // 
@@ -297,6 +298,7 @@
             this.tb_Quantity.Size = new System.Drawing.Size(320, 41);
             this.tb_Quantity.TabIndex = 8;
             this.tb_Quantity.TextChanged += new System.EventHandler(this.tb_Quantity_TextChanged);
+            this.tb_Quantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Number);
             this.tb_Quantity.Leave += new System.EventHandler(this.tb_Quantity_Leave);
             // 
             // tb_Per_Price
