@@ -114,39 +114,6 @@ namespace RK_Cosmetics_System
                 Gender = rbtn_Female.Text;
             }
 
-            if(tb_Mobile_No.TextLength < 10)
-            {
-                MessageBox.Show("Invalid Mobile Number...!!  Please Enter Valid Mobile Number...", "Error",MessageBoxButtons.OK , MessageBoxIcon.Error);
-                tb_Mobile_No.Focus();
-
-                goto DWN;
-
-            }
-            
-            if(tb_Alternate_Mobile_No.TextLength < 10)
-            {
-                MessageBox.Show("Invalid Mobile Number...!!  Please Enter Valid Mobile Number...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                tb_Alternate_Mobile_No.Focus();
-
-                goto DWN;
-            }
-
-            if(tb_Aadhar_No.TextLength < 12)
-            {
-                MessageBox.Show("Invalid Aadhar Number...!!  Please Enter Valid Aadhar Number...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                tb_Aadhar_No.Focus();
-
-                goto DWN;
-            }
-
-            if (tb_PAN_No.TextLength < 10)
-            {
-                MessageBox.Show("Invalid PAN Number...!!  Please Enter Valid PAN Number...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                tb_PAN_No.Focus();
-
-                goto DWN;
-            }
-
             if (tb_Distributor_Id.Text != "" && tb_Name.Text != "" && tb_Address.Text != "" && tb_Registation_No.Text != "" && tb_Aadhar_No.Text != "" && tb_Alternate_Mobile_No.Text != "" && tb_Mobile_No.Text != "" && tb_PAN_No.Text != "")
             {
                 Con_Open();
@@ -181,7 +148,6 @@ namespace RK_Cosmetics_System
                 MessageBox.Show("Incomplete Information....!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            DWN:
             Con_Close();
 
         }
