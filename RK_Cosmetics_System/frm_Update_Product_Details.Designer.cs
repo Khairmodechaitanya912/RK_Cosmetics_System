@@ -36,9 +36,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tb_Product_Name = new System.Windows.Forms.TextBox();
             this.tb_Description = new System.Windows.Forms.TextBox();
-            this.tb_Stock = new System.Windows.Forms.TextBox();
             this.lbl_Description = new System.Windows.Forms.Label();
-            this.lbl_Stock = new System.Windows.Forms.Label();
             this.cmb_Brand_Name = new System.Windows.Forms.ComboBox();
             this.tb_Purchase_Price = new System.Windows.Forms.TextBox();
             this.tb_Selling_Price = new System.Windows.Forms.TextBox();
@@ -116,9 +114,7 @@
             // 
             this.groupBox1.Controls.Add(this.tb_Product_Name);
             this.groupBox1.Controls.Add(this.tb_Description);
-            this.groupBox1.Controls.Add(this.tb_Stock);
             this.groupBox1.Controls.Add(this.lbl_Description);
-            this.groupBox1.Controls.Add(this.lbl_Stock);
             this.groupBox1.Controls.Add(this.cmb_Brand_Name);
             this.groupBox1.Controls.Add(this.tb_Purchase_Price);
             this.groupBox1.Controls.Add(this.tb_Selling_Price);
@@ -147,22 +143,12 @@
             // tb_Description
             // 
             this.tb_Description.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Description.Location = new System.Drawing.Point(1336, 442);
+            this.tb_Description.Location = new System.Drawing.Point(1336, 364);
             this.tb_Description.MaxLength = 50;
             this.tb_Description.Multiline = true;
             this.tb_Description.Name = "tb_Description";
-            this.tb_Description.Size = new System.Drawing.Size(320, 180);
+            this.tb_Description.Size = new System.Drawing.Size(320, 208);
             this.tb_Description.TabIndex = 9;
-            // 
-            // tb_Stock
-            // 
-            this.tb_Stock.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Stock.Location = new System.Drawing.Point(1336, 342);
-            this.tb_Stock.MaxLength = 5;
-            this.tb_Stock.Name = "tb_Stock";
-            this.tb_Stock.Size = new System.Drawing.Size(320, 41);
-            this.tb_Stock.TabIndex = 8;
-            this.tb_Stock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numerics);
             // 
             // lbl_Description
             // 
@@ -170,23 +156,11 @@
             this.lbl_Description.BackColor = System.Drawing.Color.Pink;
             this.lbl_Description.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Description.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Description.Location = new System.Drawing.Point(1034, 446);
+            this.lbl_Description.Location = new System.Drawing.Point(1034, 368);
             this.lbl_Description.Name = "lbl_Description";
             this.lbl_Description.Size = new System.Drawing.Size(180, 39);
             this.lbl_Description.TabIndex = 42;
             this.lbl_Description.Text = "Description";
-            // 
-            // lbl_Stock
-            // 
-            this.lbl_Stock.AutoSize = true;
-            this.lbl_Stock.BackColor = System.Drawing.Color.Pink;
-            this.lbl_Stock.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Stock.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Stock.Location = new System.Drawing.Point(1034, 344);
-            this.lbl_Stock.Name = "lbl_Stock";
-            this.lbl_Stock.Size = new System.Drawing.Size(95, 39);
-            this.lbl_Stock.TabIndex = 43;
-            this.lbl_Stock.Text = "Stock";
             // 
             // cmb_Brand_Name
             // 
@@ -314,9 +288,7 @@
         private System.Windows.Forms.Label lbl_Brand_Name;
         private System.Windows.Forms.Label lbl_Product_Name;
         private System.Windows.Forms.TextBox tb_Description;
-        private System.Windows.Forms.TextBox tb_Stock;
         private System.Windows.Forms.Label lbl_Description;
-        private System.Windows.Forms.Label lbl_Stock;
         private System.Windows.Forms.TextBox tb_Product_Name;
     }
 }

@@ -47,7 +47,6 @@ namespace RK_Cosmetics_System
             tb_Product_Name.Clear();
             tb_Purchase_Price.Clear();
             tb_Selling_Price.Clear();
-            tb_Stock.Clear();
             tb_Description.Clear();
             tb_Product_ID.Clear();
         }
@@ -99,7 +98,6 @@ namespace RK_Cosmetics_System
                 tb_Product_Name.Text = Obj.GetString(Obj.GetOrdinal("Product_Name"));
                 tb_Purchase_Price.Text = (Obj["Purchases_Price"].ToString());
                 tb_Selling_Price.Text = (Obj["Selling_Price"].ToString());
-                tb_Stock.Text = (Obj["Stock"].ToString());
                 tb_Description.Text = Obj.GetString(Obj.GetOrdinal("Description"));
 
                 btn_Update.Enabled = true;
@@ -120,20 +118,19 @@ namespace RK_Cosmetics_System
         {
             Con_Open();
 
-            if (tb_Product_ID.Text != "" && cmb_Brand_Name.Text != "" && tb_Product_Name.Text != "" && tb_Purchase_Price.Text != "" && tb_Selling_Price.Text != "" && tb_Stock.Text != "")
+            if (tb_Product_ID.Text != "" && cmb_Brand_Name.Text != "" && tb_Product_Name.Text != "" && tb_Purchase_Price.Text != "" && tb_Selling_Price.Text != "")
             {
                 SqlCommand Cmd = new SqlCommand();
 
                 Cmd.Connection = Con;
 
-                Cmd.CommandText = "Update Product_Details set Brand_Name = @B_Name, Product_Name = @P_Name, Purchases_Price = @P_Price, Selling_Price = @S_Price, Stock = @Stock, Description = @Des where Product_ID = @P_ID";
+                Cmd.CommandText = "Update Product_Details set Brand_Name = @B_Name, Product_Name = @P_Name, Purchases_Price = @P_Price, Selling_Price = @S_Price, Description = @Des where Product_ID = @P_ID";
 
                 Cmd.Parameters.Add("P_ID", SqlDbType.Int).Value = tb_Product_ID.Text;
                 Cmd.Parameters.Add("B_Name", SqlDbType.NVarChar).Value = cmb_Brand_Name.Text;
                 Cmd.Parameters.Add("P_Name", SqlDbType.NVarChar).Value = tb_Product_Name.Text;
                 Cmd.Parameters.Add("P_Price", SqlDbType.Money).Value = tb_Purchase_Price.Text;
                 Cmd.Parameters.Add("S_Price", SqlDbType.Money).Value = tb_Selling_Price.Text;
-                Cmd.Parameters.Add("Stock", SqlDbType.Int).Value = tb_Stock.Text;
                 Cmd.Parameters.Add("Des", SqlDbType.NVarChar).Value = tb_Description.Text;
 
                 Cmd.ExecuteNonQuery();
@@ -173,5 +170,6 @@ namespace RK_Cosmetics_System
                 e.Handled = true;
             }
         }
+
     }
 }
