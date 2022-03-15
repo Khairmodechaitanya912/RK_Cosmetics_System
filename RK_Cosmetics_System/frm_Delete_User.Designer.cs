@@ -47,6 +47,7 @@
             this.btn_Delete.TabIndex = 3;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Close
             // 
@@ -58,6 +59,7 @@
             this.btn_Close.TabIndex = 4;
             this.btn_Close.Text = "Close";
             this.btn_Close.UseVisualStyleBackColor = false;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
             // tb_Password
             // 
@@ -128,6 +130,7 @@
             this.Name = "frm_Delete_User";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete User";
+            this.Load += new System.EventHandler(this.frm_Delete_User_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

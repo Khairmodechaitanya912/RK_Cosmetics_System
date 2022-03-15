@@ -245,6 +245,7 @@
     <Compile Include="frm_View_Stock_Details.Designer.cs">
       <DependentUpon>frm_View_Stock_Details.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global_Var.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_Add_New_Brand.resx">

@@ -122,6 +122,7 @@
             this.btn_Close.TabIndex = 5;
             this.btn_Close.Text = "Close";
             this.btn_Close.UseVisualStyleBackColor = false;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
             // btn_Save
             // 
@@ -133,6 +134,7 @@
             this.btn_Save.TabIndex = 4;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // frm_Add_New_User
             // 
@@ -153,6 +155,7 @@
             this.Name = "frm_Add_New_User";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New User";
+            this.Load += new System.EventHandler(this.frm_Add_New_User_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

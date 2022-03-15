@@ -49,6 +49,7 @@
             this.btn_Update.TabIndex = 4;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = false;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // btn_Close
             // 
@@ -60,6 +61,7 @@
             this.btn_Close.TabIndex = 5;
             this.btn_Close.Text = "Close";
             this.btn_Close.UseVisualStyleBackColor = false;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
             // tb_New_Password
             // 
@@ -153,6 +155,7 @@
             this.Name = "frm_Change_Password";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Change Password";
+            this.Load += new System.EventHandler(this.frm_Change_Password_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

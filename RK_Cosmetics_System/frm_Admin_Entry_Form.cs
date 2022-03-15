@@ -91,5 +91,10 @@ namespace RK_Cosmetics_System
 
             this.Hide();
         }
+
+        private void frm_Admin_Entry_Form_Load(object sender, EventArgs e)
+        {
+            lbl_Admin.Text = Global_Var.Uname;
+        }
     }
 }

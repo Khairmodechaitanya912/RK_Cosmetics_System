@@ -162,6 +162,8 @@
             this.Controls.Add(this.lbl_Ready_To_Login);
             this.Controls.Add(this.pnl_Login);
             this.Controls.Add(this.pb_Login_Form);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frm_Login_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Form";
