@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DB_RK_Cosmetics_SystemDataSet5" targetNamespace="http://tempuri.org/DB_RK_Cosmetics_SystemDataSet5.xsd" xmlns:mstns="http://tempuri.org/DB_RK_Cosmetics_SystemDataSet5.xsd" xmlns="http://tempuri.org/DB_RK_Cosmetics_SystemDataSet5.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DB_RK_Cosmetics_SystemConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DB_RK_Cosmetics_SystemConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.RK_Cosmetics_System.Properties.Settings.GlobalReference.Default.DB_RK_Cosmetics_SystemConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Customer_DetailsTableAdapter" GeneratorDataComponentClassName="Customer_DetailsTableAdapter" Name="Customer_Details" UserDataComponentName="Customer_DetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DB_RK_Cosmetics_SystemConnectionString (Settings)" DbObjectName="DB_RK_Cosmetics_System.dbo.Customer_Details" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Brand_Name, Product_Name, Per_Price, Quantity, Price FROM dbo.Customer_Details</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Brand_Name" DataSetColumn="Brand_Name" />
+              <Mapping SourceColumn="Product_Name" DataSetColumn="Product_Name" />
+              <Mapping SourceColumn="Per_Price" DataSetColumn="Per_Price" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DB_RK_Cosmetics_SystemDataSet5" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DB_RK_Cosmetics_SystemDataSet5" msprop:Generator_UserDSName="DB_RK_Cosmetics_SystemDataSet5">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Customer_Details" msprop:Generator_TableClassName="Customer_DetailsDataTable" msprop:Generator_TableVarName="tableCustomer_Details" msprop:Generator_TablePropName="Customer_Details" msprop:Generator_RowDeletingName="Customer_DetailsRowDeleting" msprop:Generator_RowChangingName="Customer_DetailsRowChanging" msprop:Generator_RowEvHandlerName="Customer_DetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="Customer_DetailsRowDeleted" msprop:Generator_UserTableName="Customer_Details" msprop:Generator_RowChangedName="Customer_DetailsRowChanged" msprop:Generator_RowEvArgName="Customer_DetailsRowChangeEvent" msprop:Generator_RowClassName="Customer_DetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Brand_Name" msprop:Generator_ColumnVarNameInTable="columnBrand_Name" msprop:Generator_ColumnPropNameInRow="Brand_Name" msprop:Generator_ColumnPropNameInTable="Brand_NameColumn" msprop:Generator_UserColumnName="Brand_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Name" msprop:Generator_ColumnVarNameInTable="columnProduct_Name" msprop:Generator_ColumnPropNameInRow="Product_Name" msprop:Generator_ColumnPropNameInTable="Product_NameColumn" msprop:Generator_UserColumnName="Product_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Per_Price" msprop:Generator_ColumnVarNameInTable="columnPer_Price" msprop:Generator_ColumnPropNameInRow="Per_Price" msprop:Generator_ColumnPropNameInTable="Per_PriceColumn" msprop:Generator_UserColumnName="Per_Price" type="xs:int" />
+              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:int" />
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -71,6 +71,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_RK_Cosmetics_SystemDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DB_RK_Cosmetics_SystemDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_RK_Cosmetics_SystemDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frm_Add_New_Brand.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +136,12 @@
     <Compile Include="frm_Delete_User.Designer.cs">
       <DependentUpon>frm_Delete_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Expences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Expences.Designer.cs">
+      <DependentUpon>frm_Expences.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +171,12 @@
     </Compile>
     <Compile Include="frm_MDI_Employee_Details.Designer.cs">
       <DependentUpon>frm_MDI_Employee_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_MDI_Expences_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_MDI_Expences_Details.Designer.cs">
+      <DependentUpon>frm_MDI_Expences_Details.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_MDI_Product_Details.cs">
       <SubType>Form</SubType>
@@ -233,6 +250,12 @@
     <Compile Include="frm_View_Employee_Details.Designer.cs">
       <DependentUpon>frm_View_Employee_Details.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_View_Expences_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_View_Expences_Details.Designer.cs">
+      <DependentUpon>frm_View_Expences_Details.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_View_Product_Details.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +301,9 @@
     <EmbeddedResource Include="frm_Delete_User.resx">
       <DependentUpon>frm_Delete_User.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_Expences.resx">
+      <DependentUpon>frm_Expences.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Login_Form.resx">
       <DependentUpon>frm_Login_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -292,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_MDI_Employee_Details.resx">
       <DependentUpon>frm_MDI_Employee_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_MDI_Expences_Details.resx">
+      <DependentUpon>frm_MDI_Expences_Details.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_MDI_Product_Details.resx">
       <DependentUpon>frm_MDI_Product_Details.cs</DependentUpon>
@@ -328,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_View_Employee_Details.resx">
       <DependentUpon>frm_View_Employee_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_View_Expences_Details.resx">
+      <DependentUpon>frm_View_Expences_Details.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_View_Product_Details.resx">
       <DependentUpon>frm_View_Product_Details.cs</DependentUpon>
@@ -399,6 +431,17 @@
     </None>
     <None Include="DB_RK_Cosmetics_SystemDataSet4.xss">
       <DependentUpon>DB_RK_Cosmetics_SystemDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DB_RK_Cosmetics_SystemDataSet5.xsc">
+      <DependentUpon>DB_RK_Cosmetics_SystemDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DB_RK_Cosmetics_SystemDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_RK_Cosmetics_SystemDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_RK_Cosmetics_SystemDataSet5.xss">
+      <DependentUpon>DB_RK_Cosmetics_SystemDataSet5.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

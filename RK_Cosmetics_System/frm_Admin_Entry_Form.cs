@@ -96,5 +96,14 @@ namespace RK_Cosmetics_System
         {
             lbl_Admin.Text = Global_Var.Uname;
         }
+
+        private void btn_Expenses_Click(object sender, EventArgs e)
+        {
+            frm_MDI_Expences_Details MED = new frm_MDI_Expences_Details();
+
+            MED.Show();
+
+            this.Hide();
+        }
     }
 }

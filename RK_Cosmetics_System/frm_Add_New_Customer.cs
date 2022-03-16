@@ -118,7 +118,9 @@ namespace RK_Cosmetics_System
         }
 
         private void frm_Add_New_Customer_Load(object sender, EventArgs e)
-        { 
+        {
+            // TODO: This line of code loads data into the 'dB_RK_Cosmetics_SystemDataSet5.Customer_Details' table. You can move, or remove it, as needed.
+            this.customer_DetailsTableAdapter.Fill(this.dB_RK_Cosmetics_SystemDataSet5.Customer_Details);
             Clear_Control();
             Bind_Brand_Name_To_Combobox();
         }

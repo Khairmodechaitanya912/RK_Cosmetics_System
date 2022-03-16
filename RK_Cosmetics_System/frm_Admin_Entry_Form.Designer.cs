@@ -283,6 +283,7 @@
             this.btn_Expenses.TabIndex = 8;
             this.btn_Expenses.Text = "Expenses";
             this.btn_Expenses.UseVisualStyleBackColor = false;
+            this.btn_Expenses.Click += new System.EventHandler(this.btn_Expenses_Click);
             // 
             // btn_Brand
             // 
