@@ -52,16 +52,32 @@ namespace RK_Cosmetics_System
         {
             Con_Open();
 
-            if (tb_Username.Text != "" && tb_Password.Text != "" && tb_Confirm_Password.Text != "" && tb_Password.Text == tb_Confirm_Password.Text)
+            SqlCommand Cmd = new SqlCommand("Select Count(*) from Login_Details where Username = '" + tb_Username.Text + "'", Con);
+
+            int Cnt = Convert.ToInt32(Cmd.ExecuteScalar());
+
+            if (Cnt > 0)
             {
-                SqlCommand Cmd = new SqlCommand();
-                Cmd.Connection = Con;
-                Cmd.CommandText = "Insert Into Login_Details (Username , Password) Values (@UN , @Pass)";
+                MessageBox.Show("Use Different Username..!","Username Already Used",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                Clear_Controls();
+            }
 
-                Cmd.Parameters.Add("UN", SqlDbType.NVarChar).Value = tb_Username.Text;
-                Cmd.Parameters.Add("Pass", SqlDbType.NVarChar).Value = tb_Password.Text;
+            else if (tb_Username.Text == "" || tb_Password.Text == "" || tb_Confirm_Password.Text == "")
+            {
+                MessageBox.Show("Fill Username Or Password First !!!" ,"Fill Data" , MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Clear_Controls();
+            }
 
-                Cmd.ExecuteNonQuery();
+            else if (tb_Password.Text == tb_Confirm_Password.Text)
+            {
+                SqlCommand Cmd1 = new SqlCommand();
+                Cmd1.Connection = Con;
+                Cmd1.CommandText = "Insert Into Login_Details (Username , Password) Values (@UN , @Pass)";
+
+                Cmd1.Parameters.Add("UN", SqlDbType.NVarChar).Value = tb_Username.Text;
+                Cmd1.Parameters.Add("Pass", SqlDbType.NVarChar).Value = tb_Password.Text;
+
+                Cmd1.ExecuteNonQuery();
 
                 MessageBox.Show("User Create Successfully...!!", "Creating", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -69,14 +85,24 @@ namespace RK_Cosmetics_System
             }
             else
             {
-                MessageBox.Show("Incomplete Information !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Password Didn't Match!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             Con_Close();
         }
 
         private void btn_Close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult Res = System.Windows.Forms.DialogResult.Yes;
+
+            if (tb_Username.Text == "" || tb_Password.Text == "" || tb_Confirm_Password.Text == "")
+            {
+                Res = MessageBox.Show("Are You Sure... Data Entered Will Be Lost...?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            }
+
+            if (Res == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
       

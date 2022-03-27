@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace RK_Cosmetics_System
 {
@@ -18,6 +19,8 @@ namespace RK_Cosmetics_System
         }
         
         SqlConnection Con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DB_RK_Cosmetics_System;Integrated Security=True");
+
+        string imgLocation = "";
 
         void Con_Open()
         {
@@ -164,7 +167,9 @@ namespace RK_Cosmetics_System
 
             if (OFD.ShowDialog() == DialogResult.OK)
             {
-                pb_Bill_Image.Image = new Bitmap(OFD.FileName);
+                imgLocation = OFD.FileName.ToString();
+                pb_Bill_Image.ImageLocation = imgLocation;
+               // pb_Bill_Image.Image = new Bitmap(OFD.FileName);
             }
         }
 

@@ -87,6 +87,7 @@
             // 
             // pb_Bill_Image
             // 
+            this.pb_Bill_Image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pb_Bill_Image.Location = new System.Drawing.Point(1074, 157);
             this.pb_Bill_Image.Name = "pb_Bill_Image";
             this.pb_Bill_Image.Size = new System.Drawing.Size(320, 171);

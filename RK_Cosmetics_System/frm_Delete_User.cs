@@ -52,35 +52,64 @@ namespace RK_Cosmetics_System
         {
             Con_Open();
 
-            if (tb_Username.Text != "" && tb_Password.Text != "")
+            if (tb_Username.Text == "" || tb_Password.Text == "")
             {
-                DialogResult Res = MessageBox.Show(" Are You Sure To Delete The User....!!!", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                 MessageBox.Show("Fill All Information...!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                 Clear_Controls();
+            }
 
-                if (Res == DialogResult.Yes)
-                {
-                    SqlCommand Cmd = new SqlCommand();
-                    Cmd.Connection = Con;
-
-                    Cmd.CommandText = "Delete from Login_Details where Username = '" + tb_Username.Text + "'";
-
-                    Cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("User Deleted Successfully...!!", "Deleting", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    Clear_Controls();
-                }
-
-                else
-                {
-                    Clear_Controls();
-                }
-
+            else if (tb_Username.Text == "Admin" || tb_Username.Text == "admin")
+            {
+                 MessageBox.Show("Admin User Can't  Deleted...!!", "Invalid Operation", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                 Clear_Controls();
             }
 
             else
             {
-                MessageBox.Show("Fill All Information...!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Clear_Controls();
+                SqlCommand Cmd = new SqlCommand("Select * from Login_Details where Username = '" + tb_Username.Text + "'" , Con);
+                var Obj = Cmd.ExecuteReader();
+
+                string Pass = "";
+
+                if(Obj.Read())
+                {
+                    Pass = Obj.GetString(Obj.GetOrdinal("Password"));
+                }
+
+                Obj.Dispose();
+                Cmd.Dispose();
+
+                if (tb_Password.Text == Pass)
+                {
+                    DialogResult Res = MessageBox.Show(" Are You Sure To Delete The User....!!!", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (Res == DialogResult.Yes)
+                    {
+                        SqlCommand Cmd1 = new SqlCommand();
+                        Cmd1.Connection = Con;
+
+                        Cmd1.CommandText = "Delete from Login_Details where Username = '" + tb_Username.Text + "'";
+
+                        Cmd1.ExecuteNonQuery();
+
+                        MessageBox.Show("User Deleted Successfully...!!", "Deleting", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        Clear_Controls();
+                    }
+
+                    else
+                    {
+                        Clear_Controls();
+                    }
+                }
+
+                else
+                {
+                        MessageBox.Show("Password Didn't Match!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        tb_Password.Clear();
+                        tb_Password.Focus();
+                }
+
             }
 
             Con_Close();
@@ -88,7 +117,17 @@ namespace RK_Cosmetics_System
 
         private void btn_Close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult Res = System.Windows.Forms.DialogResult.Yes;
+
+            if (tb_Username.Text == "" || tb_Password.Text == "")
+            {
+                Res = MessageBox.Show("Are You Sure... Data Entered Will Be Lost...?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            }
+
+            if (Res == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }
