@@ -202,7 +202,54 @@ namespace RK_Cosmetics_System
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
+            int flag = -1 ,  Qty = Convert.ToInt32(tb_Quantity.Text);
 
+            for (int i = 0; i <= dgv_Add_Customer.Rows.Count - 1; i++)
+            {
+                if (Convert.ToString(dgv_Add_Customer.Rows[i].Cells[2].Value) == cmb_Product_Name.Text)
+                {
+                    flag = 0;
+
+                    Qty += Convert.ToInt32(dgv_Add_Customer.Rows[i].Cells[4].Value);
+
+                    if (C_Stock >= Qty)
+                    {
+                        double Tot_Price = Convert.ToDouble(Qty) * Convert.ToDouble(tb_Price);
+
+                        dgv_Add_Customer.Rows[i].Cells[4].Value = Qty;
+                        dgv_Add_Customer.Rows[i].Cells[5].Value = Tot_Price;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Can't Add More Quantity", "Insufficiant Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        flag = 1;
+                    }
+                }
+            }
+
+            if (flag == -1)
+            {
+               if (C_Stock >= Qty)
+                {
+                    dgv_Add_Customer.Rows.Add(pCnt, cmb_Brand_Name.Text, cmb_Product_Name.Text, tb_Per_Price.Text, tb_Quantity.Text, tb_Price.Text);
+
+                    pCnt++;
+                }
+                else
+                {
+                    MessageBox.Show("No Enough Stock Available", "Insufficiant Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    flag = 1;
+                    tb_Quantity.Clear();
+                } 
+            }
+
+            if (flag < 1)
+            {
+                double Bill = Convert.ToDouble(tb_Bill.Text) + Convert.ToDouble(tb_Price.Text);
+
+                tb_Bill.Text = Convert.ToString(Bill);
+                tb_Final_Bill.Text = Convert.ToString(Bill);
+            }
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
@@ -212,7 +259,17 @@ namespace RK_Cosmetics_System
 
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
-            Clear_Control();
+            DialogResult Res = System.Windows.Forms.DialogResult.Yes;
+
+            if (tb_Customer_Name.Text != "" || tb_Mobile_No.Text != "" || pCnt > 1 || tb_Bill.Text != "" || tb_Final_Bill.Text != ""  || tb_Discount.Text != "")
+            {
+                Res = MessageBox.Show("Are You Sure Data Entered Will Be Lost?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            }
+
+            if (Res == System.Windows.Forms.DialogResult.Yes)
+            {
+                Clear_Control();
+            }
         }
 
         private void dtp_Date_ValueChanged(object sender, EventArgs e)

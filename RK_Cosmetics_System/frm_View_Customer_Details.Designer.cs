@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgv_View_Customer_Details = new System.Windows.Forms.DataGridView();
             this.pnl_Customer_Details = new System.Windows.Forms.Panel();
@@ -37,9 +38,21 @@
             this.dtp_From_Date = new System.Windows.Forms.DateTimePicker();
             this.lbl_From_Date = new System.Windows.Forms.Label();
             this.btn_Refresh = new System.Windows.Forms.Button();
+            this.dB_RK_Cosmetics_SystemDataSet7 = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet7();
+            this.customerBasicDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customer_Basic_DetailsTableAdapter = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet7TableAdapters.Customer_Basic_DetailsTableAdapter();
+            this.customerIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mobileNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.billDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.discountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.finalBillDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_View_Customer_Details)).BeginInit();
             this.pnl_Customer_Details.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBasicDetailsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -57,10 +70,24 @@
             // 
             // dgv_View_Customer_Details
             // 
+            this.dgv_View_Customer_Details.AllowUserToAddRows = false;
+            this.dgv_View_Customer_Details.AllowUserToDeleteRows = false;
+            this.dgv_View_Customer_Details.AutoGenerateColumns = false;
+            this.dgv_View_Customer_Details.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_View_Customer_Details.BackgroundColor = System.Drawing.Color.PeachPuff;
             this.dgv_View_Customer_Details.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_View_Customer_Details.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.customerIdDataGridViewTextBoxColumn,
+            this.customerNameDataGridViewTextBoxColumn,
+            this.mobileNoDataGridViewTextBoxColumn,
+            this.dateDataGridViewTextBoxColumn,
+            this.billDataGridViewTextBoxColumn,
+            this.discountDataGridViewTextBoxColumn,
+            this.finalBillDataGridViewTextBoxColumn});
+            this.dgv_View_Customer_Details.DataSource = this.customerBasicDetailsBindingSource;
             this.dgv_View_Customer_Details.Location = new System.Drawing.Point(48, 207);
             this.dgv_View_Customer_Details.Name = "dgv_View_Customer_Details";
+            this.dgv_View_Customer_Details.ReadOnly = true;
             this.dgv_View_Customer_Details.RowTemplate.Height = 24;
             this.dgv_View_Customer_Details.Size = new System.Drawing.Size(1721, 441);
             this.dgv_View_Customer_Details.TabIndex = 18;
@@ -140,6 +167,69 @@
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = false;
             // 
+            // dB_RK_Cosmetics_SystemDataSet7
+            // 
+            this.dB_RK_Cosmetics_SystemDataSet7.DataSetName = "DB_RK_Cosmetics_SystemDataSet7";
+            this.dB_RK_Cosmetics_SystemDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerBasicDetailsBindingSource
+            // 
+            this.customerBasicDetailsBindingSource.DataMember = "Customer_Basic_Details";
+            this.customerBasicDetailsBindingSource.DataSource = this.dB_RK_Cosmetics_SystemDataSet7;
+            // 
+            // customer_Basic_DetailsTableAdapter
+            // 
+            this.customer_Basic_DetailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // customerIdDataGridViewTextBoxColumn
+            // 
+            this.customerIdDataGridViewTextBoxColumn.DataPropertyName = "Customer_Id";
+            this.customerIdDataGridViewTextBoxColumn.HeaderText = "Customer_Id";
+            this.customerIdDataGridViewTextBoxColumn.Name = "customerIdDataGridViewTextBoxColumn";
+            this.customerIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // customerNameDataGridViewTextBoxColumn
+            // 
+            this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "Customer_Name";
+            this.customerNameDataGridViewTextBoxColumn.HeaderText = "Customer_Name";
+            this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
+            this.customerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // mobileNoDataGridViewTextBoxColumn
+            // 
+            this.mobileNoDataGridViewTextBoxColumn.DataPropertyName = "Mobile_No";
+            this.mobileNoDataGridViewTextBoxColumn.HeaderText = "Mobile_No";
+            this.mobileNoDataGridViewTextBoxColumn.Name = "mobileNoDataGridViewTextBoxColumn";
+            this.mobileNoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // billDataGridViewTextBoxColumn
+            // 
+            this.billDataGridViewTextBoxColumn.DataPropertyName = "Bill";
+            this.billDataGridViewTextBoxColumn.HeaderText = "Bill";
+            this.billDataGridViewTextBoxColumn.Name = "billDataGridViewTextBoxColumn";
+            this.billDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // discountDataGridViewTextBoxColumn
+            // 
+            this.discountDataGridViewTextBoxColumn.DataPropertyName = "Discount";
+            this.discountDataGridViewTextBoxColumn.HeaderText = "Discount";
+            this.discountDataGridViewTextBoxColumn.Name = "discountDataGridViewTextBoxColumn";
+            this.discountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // finalBillDataGridViewTextBoxColumn
+            // 
+            this.finalBillDataGridViewTextBoxColumn.DataPropertyName = "Final_Bill";
+            this.finalBillDataGridViewTextBoxColumn.HeaderText = "Final_Bill";
+            this.finalBillDataGridViewTextBoxColumn.Name = "finalBillDataGridViewTextBoxColumn";
+            this.finalBillDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // frm_View_Customer_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -151,10 +241,13 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_View_Customer_Details";
             this.Text = "View Customer Details";
+            this.Load += new System.EventHandler(this.frm_View_Customer_Details_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_View_Customer_Details)).EndInit();
             this.pnl_Customer_Details.ResumeLayout(false);
             this.pnl_Customer_Details.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBasicDetailsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,6 +263,16 @@
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.DataGridView dgv_View_Customer_Details;
+        private DB_RK_Cosmetics_SystemDataSet7 dB_RK_Cosmetics_SystemDataSet7;
+        private System.Windows.Forms.BindingSource customerBasicDetailsBindingSource;
+        private DB_RK_Cosmetics_SystemDataSet7TableAdapters.Customer_Basic_DetailsTableAdapter customer_Basic_DetailsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mobileNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn billDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn discountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn finalBillDataGridViewTextBoxColumn;
 
 
     }

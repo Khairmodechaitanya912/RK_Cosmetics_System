@@ -41,6 +41,13 @@
             this.gb_Purchase_Details = new System.Windows.Forms.GroupBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.dgv_Add_Customer = new System.Windows.Forms.DataGridView();
+            this.brandNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_RK_Cosmetics_SystemDataSet5 = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet5();
             this.cmb_Product_Name = new System.Windows.Forms.ComboBox();
             this.cmb_Brand_Name = new System.Windows.Forms.ComboBox();
             this.tb_GST_Applied = new System.Windows.Forms.TextBox();
@@ -62,20 +69,13 @@
             this.lbl_Bill = new System.Windows.Forms.Label();
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Refresh = new System.Windows.Forms.Button();
-            this.dB_RK_Cosmetics_SystemDataSet5 = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet5();
-            this.customerDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customer_DetailsTableAdapter = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet5TableAdapters.Customer_DetailsTableAdapter();
-            this.brandNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gb_Customer_Details.SuspendLayout();
             this.gb_Purchase_Details.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Add_Customer)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerDetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet5)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_Customer_Details
@@ -241,6 +241,51 @@
             this.dgv_Add_Customer.RowTemplate.Height = 24;
             this.dgv_Add_Customer.Size = new System.Drawing.Size(958, 317);
             this.dgv_Add_Customer.TabIndex = 17;
+            // 
+            // brandNameDataGridViewTextBoxColumn
+            // 
+            this.brandNameDataGridViewTextBoxColumn.DataPropertyName = "Brand_Name";
+            this.brandNameDataGridViewTextBoxColumn.HeaderText = "Brand_Name";
+            this.brandNameDataGridViewTextBoxColumn.Name = "brandNameDataGridViewTextBoxColumn";
+            this.brandNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productNameDataGridViewTextBoxColumn
+            // 
+            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "Product_Name";
+            this.productNameDataGridViewTextBoxColumn.HeaderText = "Product_Name";
+            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
+            this.productNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // perPriceDataGridViewTextBoxColumn
+            // 
+            this.perPriceDataGridViewTextBoxColumn.DataPropertyName = "Per_Price";
+            this.perPriceDataGridViewTextBoxColumn.HeaderText = "Per_Price";
+            this.perPriceDataGridViewTextBoxColumn.Name = "perPriceDataGridViewTextBoxColumn";
+            this.perPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // customerDetailsBindingSource
+            // 
+            this.customerDetailsBindingSource.DataMember = "Customer_Details";
+            this.customerDetailsBindingSource.DataSource = this.dB_RK_Cosmetics_SystemDataSet5;
+            // 
+            // dB_RK_Cosmetics_SystemDataSet5
+            // 
+            this.dB_RK_Cosmetics_SystemDataSet5.DataSetName = "DB_RK_Cosmetics_SystemDataSet5";
+            this.dB_RK_Cosmetics_SystemDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cmb_Product_Name
             // 
@@ -483,54 +528,9 @@
             this.btn_Refresh.UseVisualStyleBackColor = false;
             this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
-            // dB_RK_Cosmetics_SystemDataSet5
-            // 
-            this.dB_RK_Cosmetics_SystemDataSet5.DataSetName = "DB_RK_Cosmetics_SystemDataSet5";
-            this.dB_RK_Cosmetics_SystemDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customerDetailsBindingSource
-            // 
-            this.customerDetailsBindingSource.DataMember = "Customer_Details";
-            this.customerDetailsBindingSource.DataSource = this.dB_RK_Cosmetics_SystemDataSet5;
-            // 
             // customer_DetailsTableAdapter
             // 
             this.customer_DetailsTableAdapter.ClearBeforeFill = true;
-            // 
-            // brandNameDataGridViewTextBoxColumn
-            // 
-            this.brandNameDataGridViewTextBoxColumn.DataPropertyName = "Brand_Name";
-            this.brandNameDataGridViewTextBoxColumn.HeaderText = "Brand_Name";
-            this.brandNameDataGridViewTextBoxColumn.Name = "brandNameDataGridViewTextBoxColumn";
-            this.brandNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // productNameDataGridViewTextBoxColumn
-            // 
-            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "Product_Name";
-            this.productNameDataGridViewTextBoxColumn.HeaderText = "Product_Name";
-            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            this.productNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // perPriceDataGridViewTextBoxColumn
-            // 
-            this.perPriceDataGridViewTextBoxColumn.DataPropertyName = "Per_Price";
-            this.perPriceDataGridViewTextBoxColumn.HeaderText = "Per_Price";
-            this.perPriceDataGridViewTextBoxColumn.Name = "perPriceDataGridViewTextBoxColumn";
-            this.perPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // frm_Add_New_Customer
             // 
@@ -552,10 +552,10 @@
             this.gb_Purchase_Details.ResumeLayout(false);
             this.gb_Purchase_Details.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Add_Customer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet5)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDetailsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
