@@ -31,27 +31,26 @@
             this.components = new System.ComponentModel.Container();
             this.gb_Expences_Details = new System.Windows.Forms.GroupBox();
             this.dgv_View_Expences_Details = new System.Windows.Forms.DataGridView();
+            this.expencesDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_RK_Cosmetics_SystemDataSet6 = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet6();
             this.pnl_Customer_Details = new System.Windows.Forms.Panel();
             this.btn_Search = new System.Windows.Forms.Button();
             this.dtp_To_Date = new System.Windows.Forms.DateTimePicker();
             this.lbl_To_Date = new System.Windows.Forms.Label();
             this.dtp_From_Date = new System.Windows.Forms.DateTimePicker();
             this.lbl_From_Date = new System.Windows.Forms.Label();
-            this.dB_RK_Cosmetics_SystemDataSet6 = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet6();
-            this.expencesDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.expences_DetailsTableAdapter = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet6TableAdapters.Expences_DetailsTableAdapter();
+            this.btn_Refresh = new System.Windows.Forms.Button();
             this.expencesIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expencesDetailsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountPaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.billImageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.paidByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_Refresh = new System.Windows.Forms.Button();
             this.gb_Expences_Details.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_View_Expences_Details)).BeginInit();
-            this.pnl_Customer_Details.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expencesDetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet6)).BeginInit();
+            this.pnl_Customer_Details.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_Expences_Details
@@ -79,7 +78,6 @@
             this.expencesDetailsDataGridViewTextBoxColumn,
             this.amountPaidDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn,
-            this.billImageDataGridViewImageColumn,
             this.paidByDataGridViewTextBoxColumn});
             this.dgv_View_Expences_Details.DataSource = this.expencesDetailsBindingSource;
             this.dgv_View_Expences_Details.Location = new System.Drawing.Point(48, 207);
@@ -88,6 +86,16 @@
             this.dgv_View_Expences_Details.RowTemplate.Height = 24;
             this.dgv_View_Expences_Details.Size = new System.Drawing.Size(1721, 441);
             this.dgv_View_Expences_Details.TabIndex = 18;
+            // 
+            // expencesDetailsBindingSource
+            // 
+            this.expencesDetailsBindingSource.DataMember = "Expences_Details";
+            this.expencesDetailsBindingSource.DataSource = this.dB_RK_Cosmetics_SystemDataSet6;
+            // 
+            // dB_RK_Cosmetics_SystemDataSet6
+            // 
+            this.dB_RK_Cosmetics_SystemDataSet6.DataSetName = "DB_RK_Cosmetics_SystemDataSet6";
+            this.dB_RK_Cosmetics_SystemDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pnl_Customer_Details
             // 
@@ -154,19 +162,21 @@
             this.lbl_From_Date.TabIndex = 8;
             this.lbl_From_Date.Text = "From Date";
             // 
-            // dB_RK_Cosmetics_SystemDataSet6
-            // 
-            this.dB_RK_Cosmetics_SystemDataSet6.DataSetName = "DB_RK_Cosmetics_SystemDataSet6";
-            this.dB_RK_Cosmetics_SystemDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // expencesDetailsBindingSource
-            // 
-            this.expencesDetailsBindingSource.DataMember = "Expences_Details";
-            this.expencesDetailsBindingSource.DataSource = this.dB_RK_Cosmetics_SystemDataSet6;
-            // 
             // expences_DetailsTableAdapter
             // 
             this.expences_DetailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.BackColor = System.Drawing.Color.Yellow;
+            this.btn_Refresh.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Refresh.Location = new System.Drawing.Point(977, 923);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(142, 52);
+            this.btn_Refresh.TabIndex = 4;
+            this.btn_Refresh.Text = "Refresh";
+            this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // expencesIdDataGridViewTextBoxColumn
             // 
@@ -196,31 +206,12 @@
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // billImageDataGridViewImageColumn
-            // 
-            this.billImageDataGridViewImageColumn.DataPropertyName = "Bill_Image";
-            this.billImageDataGridViewImageColumn.HeaderText = "Bill_Image";
-            this.billImageDataGridViewImageColumn.Name = "billImageDataGridViewImageColumn";
-            this.billImageDataGridViewImageColumn.ReadOnly = true;
-            // 
             // paidByDataGridViewTextBoxColumn
             // 
             this.paidByDataGridViewTextBoxColumn.DataPropertyName = "Paid_By";
             this.paidByDataGridViewTextBoxColumn.HeaderText = "Paid_By";
             this.paidByDataGridViewTextBoxColumn.Name = "paidByDataGridViewTextBoxColumn";
             this.paidByDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // btn_Refresh
-            // 
-            this.btn_Refresh.BackColor = System.Drawing.Color.Yellow;
-            this.btn_Refresh.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Refresh.Location = new System.Drawing.Point(977, 923);
-            this.btn_Refresh.Name = "btn_Refresh";
-            this.btn_Refresh.Size = new System.Drawing.Size(142, 52);
-            this.btn_Refresh.TabIndex = 4;
-            this.btn_Refresh.Text = "Refresh";
-            this.btn_Refresh.UseVisualStyleBackColor = false;
-            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // frm_View_Expences_Details
             // 
@@ -237,10 +228,10 @@
             this.Load += new System.EventHandler(this.frm_View_Expences_Details_Load);
             this.gb_Expences_Details.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_View_Expences_Details)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expencesDetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet6)).EndInit();
             this.pnl_Customer_Details.ResumeLayout(false);
             this.pnl_Customer_Details.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.expencesDetailsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -258,12 +249,11 @@
         private DB_RK_Cosmetics_SystemDataSet6 dB_RK_Cosmetics_SystemDataSet6;
         private System.Windows.Forms.BindingSource expencesDetailsBindingSource;
         private DB_RK_Cosmetics_SystemDataSet6TableAdapters.Expences_DetailsTableAdapter expences_DetailsTableAdapter;
+        private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn expencesIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn expencesDetailsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountPaidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn billImageDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn paidByDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btn_Refresh;
     }
 }

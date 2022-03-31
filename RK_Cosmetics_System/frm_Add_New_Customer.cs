@@ -231,7 +231,7 @@ namespace RK_Cosmetics_System
             {
                if (C_Stock >= Qty)
                 {
-                    dgv_Add_Customer.Rows.Add(pCnt, cmb_Brand_Name.Text, cmb_Product_Name.Text, tb_Per_Price.Text, tb_Quantity.Text, tb_Price.Text);
+                    dgv_Add_Customer.Rows.Add(cmb_Brand_Name.Text, cmb_Product_Name.Text, tb_Per_Price.Text, tb_Quantity.Text, tb_Price.Text);
 
                     pCnt++;
                 }
@@ -254,7 +254,41 @@ namespace RK_Cosmetics_System
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            if (tb_Customer_Name.Text != "" && tb_Mobile_No.Text != "" && pCnt > 1 && tb_Bill.Text != "" && tb_Customer_ID.Text != "" && tb_Discount.Text != "" && tb_Final_Bill.Text != "")
+            {
+                Con_Open();
 
+                SqlCommand Cmd = new SqlCommand("Insert Into Customer_Basic_Details Values(@id, @CName, @Mob, @Date, @Bill, @Dis, @Finalb,)", Con);
+
+                Cmd.Parameters.Add("id", SqlDbType.Int).Value = tb_Customer_ID.Text;
+                Cmd.Parameters.Add("CName", SqlDbType.NVarChar).Value = tb_Customer_Name.Text;
+                Cmd.Parameters.Add("Mob", SqlDbType.Decimal).Value = tb_Mobile_No.Text;
+                Cmd.Parameters.Add("Date", SqlDbType.Date).Value = dtp_Date.Value.Date;
+                Cmd.Parameters.Add("Bill", SqlDbType.Money).Value = tb_Bill.Text;
+                Cmd.Parameters.Add("Dis", SqlDbType.Float).Value = tb_Discount.Text;
+                Cmd.Parameters.Add("Finalb", SqlDbType.Money).Value = tb_Final_Bill.Text;
+
+                Cmd.ExecuteNonQuery();
+                Cmd.Dispose();
+
+                for (int i = 0; i <= dgv_Add_Customer.Rows.Count - 1 ; i++)
+                {
+                    SqlCommand Cmd1 = new SqlCommand("Insert Into Customer_Details Values(@cid, @bName, @pName, @pp, @Qty, @GST, @Price)", Con);
+
+                    Cmd1.Parameters.Add("cid", SqlDbType.Int).Value = tb_Customer_ID.Text;
+                    Cmd1.Parameters.Add("bName", SqlDbType.NVarChar).Value = dgv_Add_Customer.Rows[i].Cells[1].Value;
+                    Cmd1.Parameters.Add("pName", SqlDbType.NVarChar).Value = dgv_Add_Customer.Rows[i].Cells[2].Value;
+                    Cmd1.Parameters.Add("pp", SqlDbType.Money).Value = dgv_Add_Customer.Rows[i].Cells[3].Value;
+                    Cmd1.Parameters.Add("Qty", SqlDbType.Int).Value = dgv_Add_Customer.Rows[i].Cells[4].Value;
+                    Cmd1.Parameters.Add("GST", SqlDbType.Float).Value = dgv_Add_Customer.Rows[i].Cells[5].Value;
+                    Cmd1.Parameters.Add("Price", SqlDbType.Money).Value = dgv_Add_Customer.Rows[i].Cells[6].Value;
+
+                    Cmd1.ExecuteNonQuery();
+                    Cmd1.Dispose();
+
+                }
+                Con_Close();
+            }
         }
 
         private void btn_Refresh_Click(object sender, EventArgs e)

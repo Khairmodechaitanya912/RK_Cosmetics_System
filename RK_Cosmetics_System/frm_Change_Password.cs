@@ -46,7 +46,7 @@ namespace RK_Cosmetics_System
 
         private void frm_Change_Password_Load(object sender, EventArgs e)
         {
-            Clear_Controls();
+             Clear_Controls();
         }
 
         private void btn_Update_Click(object sender, EventArgs e)
