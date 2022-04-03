@@ -47,11 +47,48 @@ namespace RK_Cosmetics_System
 
         private void btn_Sign_In_Click(object sender, EventArgs e)
         {
-            frm_Admin_Entry_Form AEF = new frm_Admin_Entry_Form();
+            Con_Open();
 
-            AEF.Show();
+            SqlCommand Cmd = new SqlCommand();
 
-            this.Hide();
+            Cmd.Connection = Con;
+
+            Cmd.CommandText = "Select * From Login_Details Where Username = @UName And Password = @Pass";
+
+            Cmd.Parameters.Add("UName", SqlDbType.NVarChar).Value = tb_Username.Text;
+            Cmd.Parameters.Add("Pass", SqlDbType.NVarChar).Value = tb_Password.Text;
+
+            string Ret = Convert.ToString(Cmd.ExecuteScalar());
+
+            if (Ret == tb_Username.Text && tb_Username.Text != "")
+            {
+                Global_Var.Uname = tb_Username.Text;
+
+                MessageBox.Show(" Login Successful...!! ", "Opening", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                frm_Admin_Entry_Form AEF = new frm_Admin_Entry_Form();
+
+                AEF.Show();
+
+                this.Hide();
+
+            }
+
+            else
+            {
+
+                MessageBox.Show(" Please Check Username or Password ", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+            tb_Username.Clear();
+            tb_Password.Clear();
+            tb_Username.Focus();
+
+            btn_Sign_In.Enabled = false;
+            tb_Password.Enabled = false;
+
         }
 
     }
