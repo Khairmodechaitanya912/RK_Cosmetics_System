@@ -60,7 +60,7 @@
             this.groupBox1.Controls.Add(this.dgv_View_Product_Details);
             this.groupBox1.Controls.Add(this.pnl_Customer_Details);
             this.groupBox1.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(-3, 229);
+            this.groupBox1.Location = new System.Drawing.Point(21, 229);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(2013, 675);
             this.groupBox1.TabIndex = 0;
@@ -86,7 +86,7 @@
             this.gSTDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn});
             this.dgv_View_Product_Details.DataSource = this.productDetailsBindingSource;
-            this.dgv_View_Product_Details.Location = new System.Drawing.Point(0, 190);
+            this.dgv_View_Product_Details.Location = new System.Drawing.Point(37, 190);
             this.dgv_View_Product_Details.Name = "dgv_View_Product_Details";
             this.dgv_View_Product_Details.ReadOnly = true;
             this.dgv_View_Product_Details.RowTemplate.Height = 24;

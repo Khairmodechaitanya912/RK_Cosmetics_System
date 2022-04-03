@@ -35,6 +35,16 @@ namespace RK_Cosmetics_System
             }
         }
 
+        private void tb_Username_TextChanged(object sender, EventArgs e)
+        {
+            tb_Password.Enabled = true;
+        }
+
+        private void tb_Password_TextChanged(object sender, EventArgs e)
+        {
+            btn_Sign_In.Enabled = true;
+        }
+
         private void btn_Sign_In_Click(object sender, EventArgs e)
         {
             frm_Admin_Entry_Form AEF = new frm_Admin_Entry_Form();
@@ -44,6 +54,5 @@ namespace RK_Cosmetics_System
             this.Hide();
         }
 
-       
     }
 }
