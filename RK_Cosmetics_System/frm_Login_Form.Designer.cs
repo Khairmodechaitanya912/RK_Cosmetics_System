@@ -46,9 +46,11 @@
             // 
             // pb_Login_Form
             // 
+            this.pb_Login_Form.Image = ((System.Drawing.Image)(resources.GetObject("pb_Login_Form.Image")));
             this.pb_Login_Form.Location = new System.Drawing.Point(1, 1);
             this.pb_Login_Form.Name = "pb_Login_Form";
             this.pb_Login_Form.Size = new System.Drawing.Size(617, 725);
+            this.pb_Login_Form.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Login_Form.TabIndex = 0;
             this.pb_Login_Form.TabStop = false;
             // 

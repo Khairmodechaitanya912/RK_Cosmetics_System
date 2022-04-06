@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gb_Customer_Details = new System.Windows.Forms.GroupBox();
             this.dtp_Date = new System.Windows.Forms.DateTimePicker();
             this.tb_Customer_Name = new System.Windows.Forms.TextBox();
@@ -41,11 +43,6 @@
             this.gb_Purchase_Details = new System.Windows.Forms.GroupBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.dgv_Add_Customer = new System.Windows.Forms.DataGridView();
-            this.brandNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_RK_Cosmetics_SystemDataSet5 = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet5();
             this.cmb_Product_Name = new System.Windows.Forms.ComboBox();
@@ -70,6 +67,13 @@
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.customer_DetailsTableAdapter = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet5TableAdapters.Customer_DetailsTableAdapter();
+            this.Total_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GST = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unit_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Brand_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sr_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gb_Customer_Details.SuspendLayout();
             this.gb_Purchase_Details.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Add_Customer)).BeginInit();
@@ -89,7 +93,7 @@
             this.gb_Customer_Details.Controls.Add(this.lbl_Mobile_No);
             this.gb_Customer_Details.Controls.Add(this.lbl_Customer_ID);
             this.gb_Customer_Details.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_Customer_Details.Location = new System.Drawing.Point(59, 174);
+            this.gb_Customer_Details.Location = new System.Drawing.Point(28, 174);
             this.gb_Customer_Details.Name = "gb_Customer_Details";
             this.gb_Customer_Details.Size = new System.Drawing.Size(1900, 200);
             this.gb_Customer_Details.TabIndex = 0;
@@ -108,7 +112,7 @@
             // tb_Customer_Name
             // 
             this.tb_Customer_Name.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Customer_Name.Location = new System.Drawing.Point(466, 124);
+            this.tb_Customer_Name.Location = new System.Drawing.Point(466, 120);
             this.tb_Customer_Name.MaxLength = 50;
             this.tb_Customer_Name.Name = "tb_Customer_Name";
             this.tb_Customer_Name.Size = new System.Drawing.Size(320, 41);
@@ -141,7 +145,7 @@
             this.lbl_Customer_Name.BackColor = System.Drawing.Color.Pink;
             this.lbl_Customer_Name.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Customer_Name.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Customer_Name.Location = new System.Drawing.Point(137, 124);
+            this.lbl_Customer_Name.Location = new System.Drawing.Point(89, 124);
             this.lbl_Customer_Name.Name = "lbl_Customer_Name";
             this.lbl_Customer_Name.Size = new System.Drawing.Size(250, 39);
             this.lbl_Customer_Name.TabIndex = 3;
@@ -200,7 +204,7 @@
             this.gb_Purchase_Details.Controls.Add(this.lbl_Product_Name);
             this.gb_Purchase_Details.Controls.Add(this.lbl_Brand_Name);
             this.gb_Purchase_Details.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_Purchase_Details.Location = new System.Drawing.Point(59, 380);
+            this.gb_Purchase_Details.Location = new System.Drawing.Point(28, 380);
             this.gb_Purchase_Details.Name = "gb_Purchase_Details";
             this.gb_Purchase_Details.Size = new System.Drawing.Size(1900, 392);
             this.gb_Purchase_Details.TabIndex = 1;
@@ -212,7 +216,7 @@
             this.btn_Add.BackColor = System.Drawing.Color.Yellow;
             this.btn_Add.Enabled = false;
             this.btn_Add.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Add.Location = new System.Drawing.Point(772, 317);
+            this.btn_Add.Location = new System.Drawing.Point(723, 317);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(97, 52);
             this.btn_Add.TabIndex = 11;
@@ -224,58 +228,39 @@
             // 
             this.dgv_Add_Customer.AllowUserToAddRows = false;
             this.dgv_Add_Customer.AllowUserToDeleteRows = false;
-            this.dgv_Add_Customer.AutoGenerateColumns = false;
             this.dgv_Add_Customer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Add_Customer.BackgroundColor = System.Drawing.Color.PeachPuff;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Add_Customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Add_Customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Add_Customer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.brandNameDataGridViewTextBoxColumn,
-            this.productNameDataGridViewTextBoxColumn,
-            this.perPriceDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn});
-            this.dgv_Add_Customer.DataSource = this.customerDetailsBindingSource;
-            this.dgv_Add_Customer.Location = new System.Drawing.Point(895, 51);
+            this.Sr_No,
+            this.Brand_Name,
+            this.Product_Name,
+            this.Unit_Price,
+            this.Qty,
+            this.GST,
+            this.Total_Price});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Add_Customer.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_Add_Customer.Location = new System.Drawing.Point(844, 51);
             this.dgv_Add_Customer.Name = "dgv_Add_Customer";
             this.dgv_Add_Customer.ReadOnly = true;
             this.dgv_Add_Customer.RowTemplate.Height = 24;
-            this.dgv_Add_Customer.Size = new System.Drawing.Size(958, 317);
+            this.dgv_Add_Customer.Size = new System.Drawing.Size(1040, 317);
             this.dgv_Add_Customer.TabIndex = 17;
-            // 
-            // brandNameDataGridViewTextBoxColumn
-            // 
-            this.brandNameDataGridViewTextBoxColumn.DataPropertyName = "Brand_Name";
-            this.brandNameDataGridViewTextBoxColumn.HeaderText = "Brand_Name";
-            this.brandNameDataGridViewTextBoxColumn.Name = "brandNameDataGridViewTextBoxColumn";
-            this.brandNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // productNameDataGridViewTextBoxColumn
-            // 
-            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "Product_Name";
-            this.productNameDataGridViewTextBoxColumn.HeaderText = "Product_Name";
-            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            this.productNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // perPriceDataGridViewTextBoxColumn
-            // 
-            this.perPriceDataGridViewTextBoxColumn.DataPropertyName = "Per_Price";
-            this.perPriceDataGridViewTextBoxColumn.HeaderText = "Per_Price";
-            this.perPriceDataGridViewTextBoxColumn.Name = "perPriceDataGridViewTextBoxColumn";
-            this.perPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // customerDetailsBindingSource
             // 
@@ -291,7 +276,7 @@
             // 
             this.cmb_Product_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Product_Name.FormattingEnabled = true;
-            this.cmb_Product_Name.Location = new System.Drawing.Point(427, 107);
+            this.cmb_Product_Name.Location = new System.Drawing.Point(378, 107);
             this.cmb_Product_Name.MaxLength = 50;
             this.cmb_Product_Name.Name = "cmb_Product_Name";
             this.cmb_Product_Name.Size = new System.Drawing.Size(320, 42);
@@ -302,7 +287,7 @@
             // 
             this.cmb_Brand_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Brand_Name.FormattingEnabled = true;
-            this.cmb_Brand_Name.Location = new System.Drawing.Point(428, 51);
+            this.cmb_Brand_Name.Location = new System.Drawing.Point(379, 51);
             this.cmb_Brand_Name.MaxLength = 20;
             this.cmb_Brand_Name.Name = "cmb_Brand_Name";
             this.cmb_Brand_Name.Size = new System.Drawing.Size(320, 42);
@@ -313,7 +298,7 @@
             // 
             this.tb_GST_Applied.Enabled = false;
             this.tb_GST_Applied.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_GST_Applied.Location = new System.Drawing.Point(427, 275);
+            this.tb_GST_Applied.Location = new System.Drawing.Point(378, 275);
             this.tb_GST_Applied.MaxLength = 5;
             this.tb_GST_Applied.Name = "tb_GST_Applied";
             this.tb_GST_Applied.Size = new System.Drawing.Size(320, 41);
@@ -323,7 +308,7 @@
             // 
             this.tb_Price.Enabled = false;
             this.tb_Price.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Price.Location = new System.Drawing.Point(427, 330);
+            this.tb_Price.Location = new System.Drawing.Point(378, 330);
             this.tb_Price.MaxLength = 5;
             this.tb_Price.Name = "tb_Price";
             this.tb_Price.Size = new System.Drawing.Size(320, 41);
@@ -335,7 +320,7 @@
             this.lbl_Price.BackColor = System.Drawing.Color.Pink;
             this.lbl_Price.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Price.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Price.Location = new System.Drawing.Point(137, 330);
+            this.lbl_Price.Location = new System.Drawing.Point(88, 330);
             this.lbl_Price.Name = "lbl_Price";
             this.lbl_Price.Size = new System.Drawing.Size(86, 39);
             this.lbl_Price.TabIndex = 12;
@@ -347,7 +332,7 @@
             this.lbl_GST_Applied.BackColor = System.Drawing.Color.Pink;
             this.lbl_GST_Applied.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_GST_Applied.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_GST_Applied.Location = new System.Drawing.Point(138, 275);
+            this.lbl_GST_Applied.Location = new System.Drawing.Point(89, 275);
             this.lbl_GST_Applied.Name = "lbl_GST_Applied";
             this.lbl_GST_Applied.Size = new System.Drawing.Size(193, 39);
             this.lbl_GST_Applied.TabIndex = 11;
@@ -356,7 +341,7 @@
             // tb_Quantity
             // 
             this.tb_Quantity.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Quantity.Location = new System.Drawing.Point(428, 218);
+            this.tb_Quantity.Location = new System.Drawing.Point(379, 218);
             this.tb_Quantity.MaxLength = 5;
             this.tb_Quantity.Name = "tb_Quantity";
             this.tb_Quantity.Size = new System.Drawing.Size(320, 41);
@@ -369,7 +354,7 @@
             // 
             this.tb_Per_Price.Enabled = false;
             this.tb_Per_Price.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Per_Price.Location = new System.Drawing.Point(427, 163);
+            this.tb_Per_Price.Location = new System.Drawing.Point(378, 163);
             this.tb_Per_Price.MaxLength = 20;
             this.tb_Per_Price.Name = "tb_Per_Price";
             this.tb_Per_Price.Size = new System.Drawing.Size(320, 41);
@@ -381,7 +366,7 @@
             this.lbl_Quantity.BackColor = System.Drawing.Color.Pink;
             this.lbl_Quantity.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Quantity.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Quantity.Location = new System.Drawing.Point(138, 218);
+            this.lbl_Quantity.Location = new System.Drawing.Point(89, 218);
             this.lbl_Quantity.Name = "lbl_Quantity";
             this.lbl_Quantity.Size = new System.Drawing.Size(140, 39);
             this.lbl_Quantity.TabIndex = 8;
@@ -393,7 +378,7 @@
             this.lbl_Per_Price.BackColor = System.Drawing.Color.Pink;
             this.lbl_Per_Price.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Per_Price.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Per_Price.Location = new System.Drawing.Point(137, 163);
+            this.lbl_Per_Price.Location = new System.Drawing.Point(88, 163);
             this.lbl_Per_Price.Name = "lbl_Per_Price";
             this.lbl_Per_Price.Size = new System.Drawing.Size(141, 39);
             this.lbl_Per_Price.TabIndex = 7;
@@ -405,7 +390,7 @@
             this.lbl_Product_Name.BackColor = System.Drawing.Color.Pink;
             this.lbl_Product_Name.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Product_Name.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Product_Name.Location = new System.Drawing.Point(137, 106);
+            this.lbl_Product_Name.Location = new System.Drawing.Point(88, 106);
             this.lbl_Product_Name.Name = "lbl_Product_Name";
             this.lbl_Product_Name.Size = new System.Drawing.Size(223, 39);
             this.lbl_Product_Name.TabIndex = 3;
@@ -417,7 +402,7 @@
             this.lbl_Brand_Name.BackColor = System.Drawing.Color.Pink;
             this.lbl_Brand_Name.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Brand_Name.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Brand_Name.Location = new System.Drawing.Point(137, 50);
+            this.lbl_Brand_Name.Location = new System.Drawing.Point(88, 50);
             this.lbl_Brand_Name.Name = "lbl_Brand_Name";
             this.lbl_Brand_Name.Size = new System.Drawing.Size(196, 39);
             this.lbl_Brand_Name.TabIndex = 0;
@@ -432,7 +417,7 @@
             this.groupBox1.Controls.Add(this.lbl_Final_Bill);
             this.groupBox1.Controls.Add(this.lbl_Bill);
             this.groupBox1.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(59, 778);
+            this.groupBox1.Location = new System.Drawing.Point(28, 778);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1900, 107);
             this.groupBox1.TabIndex = 2;
@@ -447,6 +432,7 @@
             this.tb_Discount.Name = "tb_Discount";
             this.tb_Discount.Size = new System.Drawing.Size(320, 41);
             this.tb_Discount.TabIndex = 13;
+            this.tb_Discount.Text = "0";
             // 
             // lbl_Discount
             // 
@@ -469,16 +455,18 @@
             this.tb_Final_Bill.Name = "tb_Final_Bill";
             this.tb_Final_Bill.Size = new System.Drawing.Size(320, 41);
             this.tb_Final_Bill.TabIndex = 14;
+            this.tb_Final_Bill.Text = "0";
             // 
             // tb_Bill
             // 
             this.tb_Bill.Enabled = false;
             this.tb_Bill.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Bill.Location = new System.Drawing.Point(245, 36);
+            this.tb_Bill.Location = new System.Drawing.Point(287, 36);
             this.tb_Bill.MaxLength = 10;
             this.tb_Bill.Name = "tb_Bill";
             this.tb_Bill.Size = new System.Drawing.Size(320, 41);
             this.tb_Bill.TabIndex = 12;
+            this.tb_Bill.Text = "0";
             // 
             // lbl_Final_Bill
             // 
@@ -498,7 +486,7 @@
             this.lbl_Bill.BackColor = System.Drawing.Color.Pink;
             this.lbl_Bill.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Bill.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Bill.Location = new System.Drawing.Point(129, 38);
+            this.lbl_Bill.Location = new System.Drawing.Point(88, 40);
             this.lbl_Bill.Name = "lbl_Bill";
             this.lbl_Bill.Size = new System.Drawing.Size(60, 39);
             this.lbl_Bill.TabIndex = 0;
@@ -508,7 +496,7 @@
             // 
             this.btn_Save.BackColor = System.Drawing.Color.Yellow;
             this.btn_Save.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.Location = new System.Drawing.Point(525, 900);
+            this.btn_Save.Location = new System.Drawing.Point(433, 900);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(97, 52);
             this.btn_Save.TabIndex = 15;
@@ -520,7 +508,7 @@
             // 
             this.btn_Refresh.BackColor = System.Drawing.Color.Yellow;
             this.btn_Refresh.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Refresh.Location = new System.Drawing.Point(1424, 900);
+            this.btn_Refresh.Location = new System.Drawing.Point(1263, 900);
             this.btn_Refresh.Name = "btn_Refresh";
             this.btn_Refresh.Size = new System.Drawing.Size(140, 52);
             this.btn_Refresh.TabIndex = 16;
@@ -531,6 +519,58 @@
             // customer_DetailsTableAdapter
             // 
             this.customer_DetailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // Total_Price
+            // 
+            this.Total_Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Total_Price.HeaderText = "Total Price";
+            this.Total_Price.Name = "Total_Price";
+            this.Total_Price.ReadOnly = true;
+            this.Total_Price.Width = 129;
+            // 
+            // GST
+            // 
+            this.GST.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.GST.HeaderText = "GST";
+            this.GST.Name = "GST";
+            this.GST.ReadOnly = true;
+            this.GST.Width = 69;
+            // 
+            // Qty
+            // 
+            this.Qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Qty.HeaderText = "Qty";
+            this.Qty.Name = "Qty";
+            this.Qty.ReadOnly = true;
+            this.Qty.Width = 65;
+            // 
+            // Unit_Price
+            // 
+            this.Unit_Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Unit_Price.HeaderText = "Unit Price";
+            this.Unit_Price.Name = "Unit_Price";
+            this.Unit_Price.ReadOnly = true;
+            this.Unit_Price.Width = 122;
+            // 
+            // Product_Name
+            // 
+            this.Product_Name.HeaderText = "Product Name";
+            this.Product_Name.Name = "Product_Name";
+            this.Product_Name.ReadOnly = true;
+            // 
+            // Brand_Name
+            // 
+            this.Brand_Name.HeaderText = "Brand Name";
+            this.Brand_Name.Name = "Brand_Name";
+            this.Brand_Name.ReadOnly = true;
+            // 
+            // Sr_No
+            // 
+            this.Sr_No.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Sr_No.HeaderText = "Sr. No.  ";
+            this.Sr_No.Name = "Sr_No";
+            this.Sr_No.ReadOnly = true;
+            this.Sr_No.Width = 96;
             // 
             // frm_Add_New_Customer
             // 
@@ -598,10 +638,12 @@
         private DB_RK_Cosmetics_SystemDataSet5 dB_RK_Cosmetics_SystemDataSet5;
         private System.Windows.Forms.BindingSource customerDetailsBindingSource;
         private DB_RK_Cosmetics_SystemDataSet5TableAdapters.Customer_DetailsTableAdapter customer_DetailsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn brandNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn perPriceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sr_No;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Brand_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Product_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Unit_Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GST;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total_Price;
     }
 }

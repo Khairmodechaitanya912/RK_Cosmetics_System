@@ -82,12 +82,12 @@ namespace RK_Cosmetics_System
             cmb_Product_Name.SelectedIndex = -1;
             tb_Per_Price.Clear();
             tb_Price.Clear();
-            tb_Quantity.Clear();
+            tb_Quantity.Text = "0";
             tb_GST_Applied.Clear();
-            tb_Final_Bill.Clear();
-            tb_Discount.Clear();
-            tb_Bill.Clear();
-            //dgv_Add_Customer.Rows.Clear();
+            tb_Final_Bill.Text = "0";
+            tb_Discount.Text = "0";
+            tb_Bill.Text = "0"; 
+            dgv_Add_Customer.Rows.Clear();
 
             C_Stock = 0;
             pCnt = 1;
@@ -203,6 +203,7 @@ namespace RK_Cosmetics_System
         private void btn_Add_Click(object sender, EventArgs e)
         {
             int flag = -1 ,  Qty = Convert.ToInt32(tb_Quantity.Text);
+            double Bill = 0.0;
 
             for (int i = 0; i <= dgv_Add_Customer.Rows.Count - 1; i++)
             {
@@ -217,7 +218,7 @@ namespace RK_Cosmetics_System
                         double Tot_Price = Convert.ToDouble(Qty) * Convert.ToDouble(tb_Price);
 
                         dgv_Add_Customer.Rows[i].Cells[4].Value = Qty;
-                        dgv_Add_Customer.Rows[i].Cells[5].Value = Tot_Price;
+                        dgv_Add_Customer.Rows[i].Cells[6].Value = Tot_Price;
                     }
                     else
                     {
@@ -231,7 +232,7 @@ namespace RK_Cosmetics_System
             {
                if (C_Stock >= Qty)
                 {
-                    dgv_Add_Customer.Rows.Add(cmb_Brand_Name.Text, cmb_Product_Name.Text, tb_Per_Price.Text, tb_Quantity.Text, tb_Price.Text);
+                    dgv_Add_Customer.Rows.Add(pCnt, cmb_Brand_Name.Text, cmb_Product_Name.Text, tb_Per_Price.Text, tb_Quantity.Text,tb_GST_Applied.Text, tb_Price.Text);
 
                     pCnt++;
                 }
@@ -245,11 +246,19 @@ namespace RK_Cosmetics_System
 
             if (flag < 1)
             {
-                double Bill = Convert.ToDouble(tb_Bill.Text) + Convert.ToDouble(tb_Price.Text);
+                Bill = Convert.ToDouble(tb_Bill.Text) + Convert.ToDouble(tb_Price.Text);
 
                 tb_Bill.Text = Convert.ToString(Bill);
                 tb_Final_Bill.Text = Convert.ToString(Bill);
             }
+
+            cmb_Brand_Name.SelectedIndex = -1;
+            cmb_Product_Name.SelectedIndex = -1;
+            tb_Per_Price.Clear();
+            tb_Price.Clear();
+            tb_Quantity.Text = "0";
+            tb_GST_Applied.Clear();
+            btn_Add.Enabled = false;
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
@@ -284,7 +293,8 @@ namespace RK_Cosmetics_System
                     Cmd1.Parameters.Add("Price", SqlDbType.Money).Value = dgv_Add_Customer.Rows[i].Cells[6].Value;
 
                     Cmd1.ExecuteNonQuery();
-                    Cmd1.Dispose();
+             
+
 
                 }
                 Con_Close();
