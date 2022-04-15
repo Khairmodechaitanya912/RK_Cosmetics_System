@@ -141,10 +141,10 @@
             // 
             // btn_Sign_In
             // 
-            this.btn_Sign_In.BackColor = System.Drawing.Color.Black;
+            this.btn_Sign_In.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btn_Sign_In.Enabled = false;
             this.btn_Sign_In.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Sign_In.ForeColor = System.Drawing.Color.White;
+            this.btn_Sign_In.ForeColor = System.Drawing.SystemColors.WindowText;
             this.btn_Sign_In.Location = new System.Drawing.Point(835, 606);
             this.btn_Sign_In.Name = "btn_Sign_In";
             this.btn_Sign_In.Size = new System.Drawing.Size(147, 51);

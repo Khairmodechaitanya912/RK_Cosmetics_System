@@ -267,7 +267,7 @@ namespace RK_Cosmetics_System
             {
                 Con_Open();
 
-                SqlCommand Cmd = new SqlCommand("Insert Into Customer_Basic_Details Values(@id, @CName, @Mob, @Date, @Bill, @Dis, @Finalb,)", Con);
+                SqlCommand Cmd = new SqlCommand("Insert Into Customer_Basic_Details Values(@id, @CName, @Mob, @Date, @Bill, @Dis, @Finalb)", Con);
 
                 Cmd.Parameters.Add("id", SqlDbType.Int).Value = tb_Customer_ID.Text;
                 Cmd.Parameters.Add("CName", SqlDbType.NVarChar).Value = tb_Customer_Name.Text;
@@ -280,7 +280,7 @@ namespace RK_Cosmetics_System
                 Cmd.ExecuteNonQuery();
                 Cmd.Dispose();
 
-                for (int i = 0; i <= dgv_Add_Customer.Rows.Count - 1 ; i++)
+                for (int i = 0; i <= dgv_Add_Customer.Rows.Count - 1; i++)
                 {
                     SqlCommand Cmd1 = new SqlCommand("Insert Into Customer_Details Values(@cid, @bName, @pName, @pp, @Qty, @GST, @Price)", Con);
 
@@ -293,13 +293,46 @@ namespace RK_Cosmetics_System
                     Cmd1.Parameters.Add("Price", SqlDbType.Money).Value = dgv_Add_Customer.Rows[i].Cells[6].Value;
 
                     Cmd1.ExecuteNonQuery();
-             
+                    Cmd1.Dispose();
 
+                    int Saled_Qty = Convert.ToInt32(dgv_Add_Customer.Rows[i].Cells[4].Value);
+                    int P_C_Stock = 0;
+                    int P_ID = 0;
+                    int New_Stock = 0;
 
+                    Cmd1.CommandText = "Select Product_ID, Stock From Product_Details where Brand_Name = '" + dgv_Add_Customer.Rows[i].Cells[1].Value + "' And Product_Name = '" + dgv_Add_Customer.Rows[i].Cells[2].Value + "'";
+                    Cmd1.Connection = Con;
+
+                    SqlDataReader obj = Cmd1.ExecuteReader();
+
+                    if (obj.Read())
+                    {
+                        P_ID = Convert.ToInt32((obj["Product_ID"].ToString()));
+                        P_C_Stock = Convert.ToInt32((obj["Stock"].ToString()));
+                    }
+
+                    New_Stock = P_C_Stock - Saled_Qty;
+
+                    obj.Close();
+                    Cmd1.Dispose();
+
+                    SqlDataAdapter sda = new SqlDataAdapter("Update Product_Details Set Stock = " + New_Stock + " where Product_ID = " + P_ID + "", Con);
+
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
                 }
+
+                MessageBox.Show("Customer Details Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Clear_Control();
                 Con_Close();
             }
+            else
+            {
+                MessageBox.Show("Fill Customer & Purchase Details Properly", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+        
 
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
@@ -316,6 +349,31 @@ namespace RK_Cosmetics_System
             }
         }
 
+        private void tb_Discount_TextChanged(object sender, EventArgs e)
+        {
+            if (tb_Discount.Text != "")
+            {
+                double Disc = Convert.ToDouble(tb_Bill.Text) * (Convert.ToDouble(tb_Discount.Text) / 100);
+
+                double Tot_Bill = Convert.ToDouble(tb_Final_Bill.Text) - Disc;
+
+                tb_Final_Bill.Text = Convert.ToString(Tot_Bill);
+            }
+
+            if (tb_Discount.Text == "")
+            {
+                tb_Final_Bill.Text = tb_Bill.Text;
+            }
+        }
+
+        private void tb_Discount_Leave(object sender, EventArgs e)
+        {
+            if (tb_Discount.Text == "")
+            {
+                tb_Discount.Text = "0";
+            }
+        }
+        
         private void dtp_Date_ValueChanged(object sender, EventArgs e)
         {
             dtp_Date.MinDate = dtp_Date.MaxDate = DateTime.Now;
@@ -337,19 +395,5 @@ namespace RK_Cosmetics_System
             }
         }
 
-        private void tb_Discount_TextChanged(object sender, EventArgs e)
-        {
-            if (tb_Discount.Text != "")
-            {
-                double Disc = Convert.ToDouble(tb_Bill.Text) * (Convert.ToDouble(tb_Discount.Text) / 100);
-
-                double Tot_Bill = Convert.ToDouble(tb_Final_Bill.Text) - Disc;
-
-                tb_Final_Bill.Text = Convert.ToString(Tot_Bill);
-            }
-        }
-
-
-        
     }
 }
