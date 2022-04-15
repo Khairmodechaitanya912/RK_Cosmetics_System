@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gb_Customer_Details = new System.Windows.Forms.GroupBox();
             this.dtp_Date = new System.Windows.Forms.DateTimePicker();
             this.tb_Customer_Name = new System.Windows.Forms.TextBox();
@@ -43,8 +43,13 @@
             this.gb_Purchase_Details = new System.Windows.Forms.GroupBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.dgv_Add_Customer = new System.Windows.Forms.DataGridView();
-            this.customerDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dB_RK_Cosmetics_SystemDataSet5 = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet5();
+            this.Sr_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Brand_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unit_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GST = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmb_Product_Name = new System.Windows.Forms.ComboBox();
             this.cmb_Brand_Name = new System.Windows.Forms.ComboBox();
             this.tb_GST_Applied = new System.Windows.Forms.TextBox();
@@ -57,6 +62,8 @@
             this.lbl_Per_Price = new System.Windows.Forms.Label();
             this.lbl_Product_Name = new System.Windows.Forms.Label();
             this.lbl_Brand_Name = new System.Windows.Forms.Label();
+            this.customerDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_RK_Cosmetics_SystemDataSet5 = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet5();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tb_Discount = new System.Windows.Forms.TextBox();
             this.lbl_Discount = new System.Windows.Forms.Label();
@@ -67,13 +74,6 @@
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.customer_DetailsTableAdapter = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet5TableAdapters.Customer_DetailsTableAdapter();
-            this.Total_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GST = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unit_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Brand_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sr_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gb_Customer_Details.SuspendLayout();
             this.gb_Purchase_Details.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Add_Customer)).BeginInit();
@@ -230,14 +230,14 @@
             this.dgv_Add_Customer.AllowUserToDeleteRows = false;
             this.dgv_Add_Customer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Add_Customer.BackgroundColor = System.Drawing.Color.PeachPuff;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Add_Customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Add_Customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Add_Customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Add_Customer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Sr_No,
@@ -247,14 +247,14 @@
             this.Qty,
             this.GST,
             this.Total_Price});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Add_Customer.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Add_Customer.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Add_Customer.Location = new System.Drawing.Point(844, 51);
             this.dgv_Add_Customer.Name = "dgv_Add_Customer";
             this.dgv_Add_Customer.ReadOnly = true;
@@ -262,15 +262,57 @@
             this.dgv_Add_Customer.Size = new System.Drawing.Size(1040, 317);
             this.dgv_Add_Customer.TabIndex = 17;
             // 
-            // customerDetailsBindingSource
+            // Sr_No
             // 
-            this.customerDetailsBindingSource.DataMember = "Customer_Details";
-            this.customerDetailsBindingSource.DataSource = this.dB_RK_Cosmetics_SystemDataSet5;
+            this.Sr_No.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Sr_No.HeaderText = "Sr. No.  ";
+            this.Sr_No.Name = "Sr_No";
+            this.Sr_No.ReadOnly = true;
+            this.Sr_No.Width = 138;
             // 
-            // dB_RK_Cosmetics_SystemDataSet5
+            // Brand_Name
             // 
-            this.dB_RK_Cosmetics_SystemDataSet5.DataSetName = "DB_RK_Cosmetics_SystemDataSet5";
-            this.dB_RK_Cosmetics_SystemDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.Brand_Name.HeaderText = "Brand Name";
+            this.Brand_Name.Name = "Brand_Name";
+            this.Brand_Name.ReadOnly = true;
+            // 
+            // Product_Name
+            // 
+            this.Product_Name.HeaderText = "Product Name";
+            this.Product_Name.Name = "Product_Name";
+            this.Product_Name.ReadOnly = true;
+            // 
+            // Unit_Price
+            // 
+            this.Unit_Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Unit_Price.HeaderText = "Unit Price";
+            this.Unit_Price.Name = "Unit_Price";
+            this.Unit_Price.ReadOnly = true;
+            this.Unit_Price.Width = 152;
+            // 
+            // Qty
+            // 
+            this.Qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Qty.HeaderText = "Qty";
+            this.Qty.Name = "Qty";
+            this.Qty.ReadOnly = true;
+            this.Qty.Width = 85;
+            // 
+            // GST
+            // 
+            this.GST.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.GST.HeaderText = "GST";
+            this.GST.Name = "GST";
+            this.GST.ReadOnly = true;
+            this.GST.Width = 91;
+            // 
+            // Total_Price
+            // 
+            this.Total_Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Total_Price.HeaderText = "Total Price";
+            this.Total_Price.Name = "Total_Price";
+            this.Total_Price.ReadOnly = true;
+            this.Total_Price.Width = 160;
             // 
             // cmb_Product_Name
             // 
@@ -408,6 +450,16 @@
             this.lbl_Brand_Name.TabIndex = 0;
             this.lbl_Brand_Name.Text = "Brand Name";
             // 
+            // customerDetailsBindingSource
+            // 
+            this.customerDetailsBindingSource.DataMember = "Customer_Details";
+            this.customerDetailsBindingSource.DataSource = this.dB_RK_Cosmetics_SystemDataSet5;
+            // 
+            // dB_RK_Cosmetics_SystemDataSet5
+            // 
+            this.dB_RK_Cosmetics_SystemDataSet5.DataSetName = "DB_RK_Cosmetics_SystemDataSet5";
+            this.dB_RK_Cosmetics_SystemDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.tb_Discount);
@@ -433,6 +485,7 @@
             this.tb_Discount.Size = new System.Drawing.Size(320, 41);
             this.tb_Discount.TabIndex = 13;
             this.tb_Discount.Text = "0";
+            this.tb_Discount.TextChanged += new System.EventHandler(this.tb_Discount_TextChanged);
             // 
             // lbl_Discount
             // 
@@ -519,58 +572,6 @@
             // customer_DetailsTableAdapter
             // 
             this.customer_DetailsTableAdapter.ClearBeforeFill = true;
-            // 
-            // Total_Price
-            // 
-            this.Total_Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Total_Price.HeaderText = "Total Price";
-            this.Total_Price.Name = "Total_Price";
-            this.Total_Price.ReadOnly = true;
-            this.Total_Price.Width = 129;
-            // 
-            // GST
-            // 
-            this.GST.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.GST.HeaderText = "GST";
-            this.GST.Name = "GST";
-            this.GST.ReadOnly = true;
-            this.GST.Width = 69;
-            // 
-            // Qty
-            // 
-            this.Qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Qty.HeaderText = "Qty";
-            this.Qty.Name = "Qty";
-            this.Qty.ReadOnly = true;
-            this.Qty.Width = 65;
-            // 
-            // Unit_Price
-            // 
-            this.Unit_Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Unit_Price.HeaderText = "Unit Price";
-            this.Unit_Price.Name = "Unit_Price";
-            this.Unit_Price.ReadOnly = true;
-            this.Unit_Price.Width = 122;
-            // 
-            // Product_Name
-            // 
-            this.Product_Name.HeaderText = "Product Name";
-            this.Product_Name.Name = "Product_Name";
-            this.Product_Name.ReadOnly = true;
-            // 
-            // Brand_Name
-            // 
-            this.Brand_Name.HeaderText = "Brand Name";
-            this.Brand_Name.Name = "Brand_Name";
-            this.Brand_Name.ReadOnly = true;
-            // 
-            // Sr_No
-            // 
-            this.Sr_No.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Sr_No.HeaderText = "Sr. No.  ";
-            this.Sr_No.Name = "Sr_No";
-            this.Sr_No.ReadOnly = true;
-            this.Sr_No.Width = 96;
             // 
             // frm_Add_New_Customer
             // 

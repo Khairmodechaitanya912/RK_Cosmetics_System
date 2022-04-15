@@ -337,6 +337,18 @@ namespace RK_Cosmetics_System
             }
         }
 
+        private void tb_Discount_TextChanged(object sender, EventArgs e)
+        {
+            if (tb_Discount.Text != "")
+            {
+                double Disc = Convert.ToDouble(tb_Bill.Text) * (Convert.ToDouble(tb_Discount.Text) / 100);
+
+                double Tot_Bill = Convert.ToDouble(tb_Final_Bill.Text) - Disc;
+
+                tb_Final_Bill.Text = Convert.ToString(Tot_Bill);
+            }
+        }
+
 
         
     }
