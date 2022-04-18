@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gb_Customer_Details = new System.Windows.Forms.GroupBox();
             this.dtp_Date = new System.Windows.Forms.DateTimePicker();
             this.tb_Customer_Name = new System.Windows.Forms.TextBox();
@@ -62,8 +61,6 @@
             this.lbl_Per_Price = new System.Windows.Forms.Label();
             this.lbl_Product_Name = new System.Windows.Forms.Label();
             this.lbl_Brand_Name = new System.Windows.Forms.Label();
-            this.customerDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dB_RK_Cosmetics_SystemDataSet5 = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet5();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tb_Discount = new System.Windows.Forms.TextBox();
             this.lbl_Discount = new System.Windows.Forms.Label();
@@ -73,12 +70,9 @@
             this.lbl_Bill = new System.Windows.Forms.Label();
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Refresh = new System.Windows.Forms.Button();
-            this.customer_DetailsTableAdapter = new RK_Cosmetics_System.DB_RK_Cosmetics_SystemDataSet5TableAdapters.Customer_DetailsTableAdapter();
             this.gb_Customer_Details.SuspendLayout();
             this.gb_Purchase_Details.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Add_Customer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDetailsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet5)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -230,14 +224,14 @@
             this.dgv_Add_Customer.AllowUserToDeleteRows = false;
             this.dgv_Add_Customer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Add_Customer.BackgroundColor = System.Drawing.Color.PeachPuff;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Add_Customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Add_Customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Add_Customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Add_Customer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Sr_No,
@@ -247,14 +241,14 @@
             this.Qty,
             this.GST,
             this.Total_Price});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Add_Customer.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Add_Customer.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Add_Customer.Location = new System.Drawing.Point(844, 51);
             this.dgv_Add_Customer.Name = "dgv_Add_Customer";
             this.dgv_Add_Customer.ReadOnly = true;
@@ -450,16 +444,6 @@
             this.lbl_Brand_Name.TabIndex = 0;
             this.lbl_Brand_Name.Text = "Brand Name";
             // 
-            // customerDetailsBindingSource
-            // 
-            this.customerDetailsBindingSource.DataMember = "Customer_Details";
-            this.customerDetailsBindingSource.DataSource = this.dB_RK_Cosmetics_SystemDataSet5;
-            // 
-            // dB_RK_Cosmetics_SystemDataSet5
-            // 
-            this.dB_RK_Cosmetics_SystemDataSet5.DataSetName = "DB_RK_Cosmetics_SystemDataSet5";
-            this.dB_RK_Cosmetics_SystemDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.tb_Discount);
@@ -570,10 +554,6 @@
             this.btn_Refresh.UseVisualStyleBackColor = false;
             this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
-            // customer_DetailsTableAdapter
-            // 
-            this.customer_DetailsTableAdapter.ClearBeforeFill = true;
-            // 
             // frm_Add_New_Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -594,8 +574,6 @@
             this.gb_Purchase_Details.ResumeLayout(false);
             this.gb_Purchase_Details.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Add_Customer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDetailsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_RK_Cosmetics_SystemDataSet5)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -637,9 +615,6 @@
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Button btn_Refresh;
-        private DB_RK_Cosmetics_SystemDataSet5 dB_RK_Cosmetics_SystemDataSet5;
-        private System.Windows.Forms.BindingSource customerDetailsBindingSource;
-        private DB_RK_Cosmetics_SystemDataSet5TableAdapters.Customer_DetailsTableAdapter customer_DetailsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sr_No;
         private System.Windows.Forms.DataGridViewTextBoxColumn Brand_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Product_Name;

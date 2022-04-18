@@ -120,7 +120,6 @@ namespace RK_Cosmetics_System
         private void frm_Add_New_Customer_Load(object sender, EventArgs e)
         {
               // TODO: This line of code loads data into the 'dB_RK_Cosmetics_SystemDataSet5.Customer_Details' table. You can move, or remove it, as needed.
-            this.customer_DetailsTableAdapter.Fill(this.dB_RK_Cosmetics_SystemDataSet5.Customer_Details);
             Clear_Control();
             Bind_Brand_Name_To_Combobox();
         }
@@ -205,7 +204,7 @@ namespace RK_Cosmetics_System
             int flag = -1 ,  Qty = Convert.ToInt32(tb_Quantity.Text);
             double Bill = 0.0;
 
-            for (int i = 0; i <= dgv_Add_Customer.Rows.Count - 1; i++)
+             for (int i = 0; i <= dgv_Add_Customer.Rows.Count - 1; i++)
             {
                 if (Convert.ToString(dgv_Add_Customer.Rows[i].Cells[2].Value) == cmb_Product_Name.Text)
                 {
@@ -215,7 +214,7 @@ namespace RK_Cosmetics_System
 
                     if (C_Stock >= Qty)
                     {
-                        double Tot_Price = Convert.ToDouble(Qty) * Convert.ToDouble(tb_Price);
+                        double Tot_Price = Convert.ToDouble(Qty) * Convert.ToDouble(tb_Price.Text);
 
                         dgv_Add_Customer.Rows[i].Cells[4].Value = Qty;
                         dgv_Add_Customer.Rows[i].Cells[6].Value = Tot_Price;

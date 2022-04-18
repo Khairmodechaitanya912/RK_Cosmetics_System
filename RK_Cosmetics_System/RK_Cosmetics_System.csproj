@@ -74,11 +74,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_RK_Cosmetics_SystemDataSet4.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DB_RK_Cosmetics_SystemDataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DB_RK_Cosmetics_SystemDataSet5.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DB_RK_Cosmetics_SystemDataSet6.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -444,17 +439,6 @@
     </None>
     <None Include="DB_RK_Cosmetics_SystemDataSet4.xss">
       <DependentUpon>DB_RK_Cosmetics_SystemDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="DB_RK_Cosmetics_SystemDataSet5.xsc">
-      <DependentUpon>DB_RK_Cosmetics_SystemDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="DB_RK_Cosmetics_SystemDataSet5.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DB_RK_Cosmetics_SystemDataSet5.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DB_RK_Cosmetics_SystemDataSet5.xss">
-      <DependentUpon>DB_RK_Cosmetics_SystemDataSet5.xsd</DependentUpon>
     </None>
     <None Include="DB_RK_Cosmetics_SystemDataSet6.xsc">
       <DependentUpon>DB_RK_Cosmetics_SystemDataSet6.xsd</DependentUpon>
