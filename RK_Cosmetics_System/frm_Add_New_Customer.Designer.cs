@@ -42,13 +42,6 @@
             this.gb_Purchase_Details = new System.Windows.Forms.GroupBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.dgv_Add_Customer = new System.Windows.Forms.DataGridView();
-            this.Sr_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Brand_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unit_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GST = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmb_Product_Name = new System.Windows.Forms.ComboBox();
             this.cmb_Brand_Name = new System.Windows.Forms.ComboBox();
             this.tb_GST_Applied = new System.Windows.Forms.TextBox();
@@ -70,6 +63,13 @@
             this.lbl_Bill = new System.Windows.Forms.Label();
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Refresh = new System.Windows.Forms.Button();
+            this.Sr_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Brand_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unit_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GST = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gb_Customer_Details.SuspendLayout();
             this.gb_Purchase_Details.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Add_Customer)).BeginInit();
@@ -255,58 +255,6 @@
             this.dgv_Add_Customer.RowTemplate.Height = 24;
             this.dgv_Add_Customer.Size = new System.Drawing.Size(1040, 317);
             this.dgv_Add_Customer.TabIndex = 17;
-            // 
-            // Sr_No
-            // 
-            this.Sr_No.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Sr_No.HeaderText = "Sr. No.  ";
-            this.Sr_No.Name = "Sr_No";
-            this.Sr_No.ReadOnly = true;
-            this.Sr_No.Width = 138;
-            // 
-            // Brand_Name
-            // 
-            this.Brand_Name.HeaderText = "Brand Name";
-            this.Brand_Name.Name = "Brand_Name";
-            this.Brand_Name.ReadOnly = true;
-            // 
-            // Product_Name
-            // 
-            this.Product_Name.HeaderText = "Product Name";
-            this.Product_Name.Name = "Product_Name";
-            this.Product_Name.ReadOnly = true;
-            // 
-            // Unit_Price
-            // 
-            this.Unit_Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Unit_Price.HeaderText = "Unit Price";
-            this.Unit_Price.Name = "Unit_Price";
-            this.Unit_Price.ReadOnly = true;
-            this.Unit_Price.Width = 152;
-            // 
-            // Qty
-            // 
-            this.Qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Qty.HeaderText = "Qty";
-            this.Qty.Name = "Qty";
-            this.Qty.ReadOnly = true;
-            this.Qty.Width = 85;
-            // 
-            // GST
-            // 
-            this.GST.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.GST.HeaderText = "GST";
-            this.GST.Name = "GST";
-            this.GST.ReadOnly = true;
-            this.GST.Width = 91;
-            // 
-            // Total_Price
-            // 
-            this.Total_Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Total_Price.HeaderText = "Total Price";
-            this.Total_Price.Name = "Total_Price";
-            this.Total_Price.ReadOnly = true;
-            this.Total_Price.Width = 160;
             // 
             // cmb_Product_Name
             // 
@@ -553,6 +501,58 @@
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = false;
             this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
+            // 
+            // Sr_No
+            // 
+            this.Sr_No.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Sr_No.HeaderText = "Sr. No.  ";
+            this.Sr_No.Name = "Sr_No";
+            this.Sr_No.ReadOnly = true;
+            this.Sr_No.Width = 138;
+            // 
+            // Brand_Name
+            // 
+            this.Brand_Name.HeaderText = "Brand Name";
+            this.Brand_Name.Name = "Brand_Name";
+            this.Brand_Name.ReadOnly = true;
+            // 
+            // Product_Name
+            // 
+            this.Product_Name.HeaderText = "Product Name";
+            this.Product_Name.Name = "Product_Name";
+            this.Product_Name.ReadOnly = true;
+            // 
+            // Unit_Price
+            // 
+            this.Unit_Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Unit_Price.HeaderText = "Unit Price";
+            this.Unit_Price.Name = "Unit_Price";
+            this.Unit_Price.ReadOnly = true;
+            this.Unit_Price.Width = 167;
+            // 
+            // Qty
+            // 
+            this.Qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Qty.HeaderText = "Qty";
+            this.Qty.Name = "Qty";
+            this.Qty.ReadOnly = true;
+            this.Qty.Width = 85;
+            // 
+            // GST
+            // 
+            this.GST.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.GST.HeaderText = "GST";
+            this.GST.Name = "GST";
+            this.GST.ReadOnly = true;
+            this.GST.Width = 91;
+            // 
+            // Total_Price
+            // 
+            this.Total_Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Total_Price.HeaderText = "Total Price";
+            this.Total_Price.Name = "Total_Price";
+            this.Total_Price.ReadOnly = true;
+            this.Total_Price.Width = 176;
             // 
             // frm_Add_New_Customer
             // 

@@ -71,6 +71,7 @@ namespace RK_Cosmetics_System
 
             btn_Search.Enabled = false;
             cmb_Brand_Name.Enabled = true;
+            cmb_Brand_Name.SelectedIndex = -1;
         }
 
         private void frm_View_Product_Details_Load(object sender, EventArgs e)
@@ -92,6 +93,7 @@ namespace RK_Cosmetics_System
 
             dgv_View_Product_Details.DataSource = dt;
             cmb_Brand_Name.Enabled = false;
+            btn_Search.Enabled = false;
             Con_Close();
         }
 

@@ -54,7 +54,9 @@ namespace RK_Cosmetics_System
 
             dgv_View_Distributor_Details.DataSource = dt;
 
-            tb_Distributor_Id.Enabled = true;
+            tb_Distributor_Id.Enabled = false;
+
+            btn_Search.Enabled = false;
 
             Con_Close();
 
@@ -79,6 +81,7 @@ namespace RK_Cosmetics_System
             dgv_View_Distributor_Details.DataSource = dt;
 
             btn_Search.Enabled = false;
+            tb_Distributor_Id.Clear();
             tb_Distributor_Id.Enabled = true;
 
             Con_Close();

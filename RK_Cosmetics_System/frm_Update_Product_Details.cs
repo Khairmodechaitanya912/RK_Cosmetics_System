@@ -145,7 +145,10 @@ namespace RK_Cosmetics_System
             }
 
             Con_Close();
+            
             tb_Product_ID.Enabled = true;
+            btn_Search.Enabled = false;
+            tb_Product_ID.Focus();
         }
 
         private void btn_Refresh_Click(object sender, EventArgs e)

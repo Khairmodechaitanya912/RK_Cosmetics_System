@@ -101,22 +101,6 @@ namespace RK_Cosmetics_System
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            if (tb_Mobile_No.TextLength < 10)
-            {
-                MessageBox.Show("Invalid Mobile Number!!! Please Enter Valid Mobile Number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                tb_Mobile_No.Focus();
-
-                goto DWN;
-            }
-
-            if (tb_Alternate_Mobile_No.TextLength < 10)
-            {
-                MessageBox.Show("Invalid Mobile Number!!! Please Enter Valid Mobile Number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                tb_Alternate_Mobile_No.Focus();
-
-                goto DWN;
-            }
-
             Con_Open();
 
             if (tb_Employee_ID.Text != "" && tb_First_Name.Text != "" && tb_Middle_Name.Text != "" && tb_Last_Name.Text != "" && tb_Mobile_No.Text != "" && tb_Address.Text != "")
@@ -151,6 +135,7 @@ namespace RK_Cosmetics_System
             }
 
             btn_Search.Enabled = false;
+            btn_Update.Enabled = false;
             DWN:
             Con_Close();
         

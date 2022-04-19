@@ -56,6 +56,8 @@ namespace RK_Cosmetics_System
 
             tb_Employee_ID.Enabled = false;
 
+            btn_Search.Enabled = false;
+
             Con_Close();
         }
 

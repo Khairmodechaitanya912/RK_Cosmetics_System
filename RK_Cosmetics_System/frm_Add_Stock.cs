@@ -147,11 +147,11 @@ namespace RK_Cosmetics_System
         {
             Con_Open();
 
-            A_Stocks = Convert.ToInt32(tb_Current_Stock_Quantity.Text) + Convert.ToInt32(tb_New_Stock_Added.Text);
-
             if (cmb_Brand_Name.Text != "" && cmb_Product_Name.Text != "" && tb_Product_ID.Text != "" && tb_Current_Stock_Quantity.Text != "" && tb_New_Stock_Added.Text != "")
             {
                 Con_Open();
+
+                A_Stocks = Convert.ToInt32(tb_Current_Stock_Quantity.Text) + Convert.ToInt32(tb_New_Stock_Added.Text);
 
                 SqlCommand Cmd = new SqlCommand();
 

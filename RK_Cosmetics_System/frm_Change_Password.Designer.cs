@@ -32,11 +32,11 @@
             this.btn_Close = new System.Windows.Forms.Button();
             this.tb_New_Password = new System.Windows.Forms.TextBox();
             this.tb_Current_Password = new System.Windows.Forms.TextBox();
-            this.tb_Username = new System.Windows.Forms.TextBox();
             this.lbl_New_Password = new System.Windows.Forms.Label();
             this.lbl_Current_Password = new System.Windows.Forms.Label();
             this.lbl_Username = new System.Windows.Forms.Label();
             this.lbl_Change_Password = new System.Windows.Forms.Label();
+            this.cmb_Username = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btn_Update
@@ -83,15 +83,6 @@
             this.tb_Current_Password.Size = new System.Drawing.Size(426, 50);
             this.tb_Current_Password.TabIndex = 2;
             // 
-            // tb_Username
-            // 
-            this.tb_Username.Font = new System.Drawing.Font("Microsoft YaHei UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Username.Location = new System.Drawing.Point(1037, 450);
-            this.tb_Username.MaxLength = 20;
-            this.tb_Username.Name = "tb_Username";
-            this.tb_Username.Size = new System.Drawing.Size(426, 50);
-            this.tb_Username.TabIndex = 1;
-            // 
             // lbl_New_Password
             // 
             this.lbl_New_Password.AutoSize = true;
@@ -136,6 +127,16 @@
             this.lbl_Change_Password.TabIndex = 9;
             this.lbl_Change_Password.Text = "Change Password";
             // 
+            // cmb_Username
+            // 
+            this.cmb_Username.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Username.Font = new System.Drawing.Font("Microsoft YaHei UI", 20F);
+            this.cmb_Username.FormattingEnabled = true;
+            this.cmb_Username.Location = new System.Drawing.Point(1037, 450);
+            this.cmb_Username.Name = "cmb_Username";
+            this.cmb_Username.Size = new System.Drawing.Size(426, 51);
+            this.cmb_Username.TabIndex = 13;
+            // 
             // frm_Change_Password
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -143,11 +144,11 @@
             this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(1924, 984);
             this.ControlBox = false;
+            this.Controls.Add(this.cmb_Username);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.tb_New_Password);
             this.Controls.Add(this.tb_Current_Password);
-            this.Controls.Add(this.tb_Username);
             this.Controls.Add(this.lbl_New_Password);
             this.Controls.Add(this.lbl_Current_Password);
             this.Controls.Add(this.lbl_Username);
@@ -167,10 +168,10 @@
         private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.TextBox tb_New_Password;
         private System.Windows.Forms.TextBox tb_Current_Password;
-        private System.Windows.Forms.TextBox tb_Username;
         private System.Windows.Forms.Label lbl_New_Password;
         private System.Windows.Forms.Label lbl_Current_Password;
         private System.Windows.Forms.Label lbl_Username;
         private System.Windows.Forms.Label lbl_Change_Password;
+        private System.Windows.Forms.ComboBox cmb_Username;
     }
 }

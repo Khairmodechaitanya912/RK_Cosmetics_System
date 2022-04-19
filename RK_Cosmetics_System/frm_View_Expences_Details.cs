@@ -46,7 +46,7 @@ namespace RK_Cosmetics_System
         {
             Con_Open();
 
-            SqlDataAdapter SDA = new SqlDataAdapter("Select * from Expences_Details where Date = '" + dtp_From_Date.Text + "' ", Con);
+            SqlDataAdapter SDA = new SqlDataAdapter("Select * from Expences_Details where Date Between '" + dtp_From_Date.Text + "' And '" + dtp_To_Date.Text + "' ", Con);
 
             DataTable dt = new DataTable();
 
@@ -54,12 +54,14 @@ namespace RK_Cosmetics_System
 
             dgv_View_Expences_Details.DataSource = dt;
             
+            
             Con_Close();
         }
 
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
             dtp_From_Date.ResetText();
+            dtp_To_Date.ResetText();
             dtp_From_Date.Focus();
 
             SqlDataAdapter SDA = new SqlDataAdapter("Select * from Expences_Details", Con);
