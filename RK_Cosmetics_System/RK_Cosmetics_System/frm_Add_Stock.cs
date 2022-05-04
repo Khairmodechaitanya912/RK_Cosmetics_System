@@ -107,7 +107,7 @@ namespace RK_Cosmetics_System
 
             Cmd.Connection = Con;
 
-            Cmd.CommandText = "Select Product_ID from Product_Details where Product_Name = '" + cmb_Product_Name.Text + "'";
+            Cmd.CommandText = "Select Product_ID from Product_Details where Product_Name = '" + cmb_Product_Name.Text + "' And Brand_Name = '" + cmb_Brand_Name.Text + "'";
 
             var Obj = Cmd.ExecuteReader();
 
