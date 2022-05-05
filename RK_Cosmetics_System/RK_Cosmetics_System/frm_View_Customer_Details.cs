@@ -19,7 +19,6 @@ namespace RK_Cosmetics_System
 
         SqlConnection Con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DB_RK_Cosmetics_System;Integrated Security=True");
 
-        int pCnt = 1, C_Stock = 0;
 
         void Con_Open()
         {

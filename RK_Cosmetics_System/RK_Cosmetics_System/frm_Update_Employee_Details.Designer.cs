@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.gb_Update_Or_Search_Employee = new System.Windows.Forms.GroupBox();
+            this.tb_Email_ID = new System.Windows.Forms.TextBox();
+            this.lbl_Email_ID = new System.Windows.Forms.Label();
             this.tb_Last_Name = new System.Windows.Forms.TextBox();
             this.lbl_Last_Name = new System.Windows.Forms.Label();
             this.tb_Address = new System.Windows.Forms.TextBox();
@@ -47,14 +49,6 @@
             this.lbl_Mobile_No_2 = new System.Windows.Forms.Label();
             this.lbl_Mobile_No = new System.Windows.Forms.Label();
             this.btn_Refresh = new System.Windows.Forms.Button();
-            this.Warn_First_Name = new System.Windows.Forms.Label();
-            this.Warn_Middle_Name = new System.Windows.Forms.Label();
-            this.Warn_Last_Name = new System.Windows.Forms.Label();
-            this.Warn_Address = new System.Windows.Forms.Label();
-            this.Warn_Mobile_Number = new System.Windows.Forms.Label();
-            this.Warn_Alternate_Mobile_Number = new System.Windows.Forms.Label();
-            this.tb_Email_ID = new System.Windows.Forms.TextBox();
-            this.lbl_Email_ID = new System.Windows.Forms.Label();
             this.gb_Update_Or_Search_Employee.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,12 +57,6 @@
             // 
             this.gb_Update_Or_Search_Employee.Controls.Add(this.tb_Email_ID);
             this.gb_Update_Or_Search_Employee.Controls.Add(this.lbl_Email_ID);
-            this.gb_Update_Or_Search_Employee.Controls.Add(this.Warn_Alternate_Mobile_Number);
-            this.gb_Update_Or_Search_Employee.Controls.Add(this.Warn_Mobile_Number);
-            this.gb_Update_Or_Search_Employee.Controls.Add(this.Warn_Address);
-            this.gb_Update_Or_Search_Employee.Controls.Add(this.Warn_Last_Name);
-            this.gb_Update_Or_Search_Employee.Controls.Add(this.Warn_Middle_Name);
-            this.gb_Update_Or_Search_Employee.Controls.Add(this.Warn_First_Name);
             this.gb_Update_Or_Search_Employee.Controls.Add(this.tb_Last_Name);
             this.gb_Update_Or_Search_Employee.Controls.Add(this.lbl_Last_Name);
             this.gb_Update_Or_Search_Employee.Controls.Add(this.tb_Address);
@@ -89,6 +77,27 @@
             this.gb_Update_Or_Search_Employee.TabIndex = 0;
             this.gb_Update_Or_Search_Employee.TabStop = false;
             this.gb_Update_Or_Search_Employee.Text = "Update Or Search Employee";
+            // 
+            // tb_Email_ID
+            // 
+            this.tb_Email_ID.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Email_ID.Location = new System.Drawing.Point(968, 536);
+            this.tb_Email_ID.MaxLength = 10;
+            this.tb_Email_ID.Name = "tb_Email_ID";
+            this.tb_Email_ID.Size = new System.Drawing.Size(461, 41);
+            this.tb_Email_ID.TabIndex = 55;
+            // 
+            // lbl_Email_ID
+            // 
+            this.lbl_Email_ID.AutoSize = true;
+            this.lbl_Email_ID.BackColor = System.Drawing.Color.Pink;
+            this.lbl_Email_ID.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Email_ID.ForeColor = System.Drawing.Color.Maroon;
+            this.lbl_Email_ID.Location = new System.Drawing.Point(720, 536);
+            this.lbl_Email_ID.Name = "lbl_Email_ID";
+            this.lbl_Email_ID.Size = new System.Drawing.Size(136, 39);
+            this.lbl_Email_ID.TabIndex = 56;
+            this.lbl_Email_ID.Text = "Email ID";
             // 
             // tb_Last_Name
             // 
@@ -292,99 +301,6 @@
             this.btn_Refresh.UseVisualStyleBackColor = false;
             this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
-            // Warn_First_Name
-            // 
-            this.Warn_First_Name.AutoSize = true;
-            this.Warn_First_Name.Font = new System.Drawing.Font("Sitka Small", 10F, System.Drawing.FontStyle.Bold);
-            this.Warn_First_Name.ForeColor = System.Drawing.Color.Red;
-            this.Warn_First_Name.Location = new System.Drawing.Point(722, 312);
-            this.Warn_First_Name.Name = "Warn_First_Name";
-            this.Warn_First_Name.Size = new System.Drawing.Size(118, 25);
-            this.Warn_First_Name.TabIndex = 49;
-            this.Warn_First_Name.Text = "First Name ";
-            this.Warn_First_Name.Visible = false;
-            // 
-            // Warn_Middle_Name
-            // 
-            this.Warn_Middle_Name.AutoSize = true;
-            this.Warn_Middle_Name.Font = new System.Drawing.Font("Sitka Small", 10F, System.Drawing.FontStyle.Bold);
-            this.Warn_Middle_Name.ForeColor = System.Drawing.Color.Red;
-            this.Warn_Middle_Name.Location = new System.Drawing.Point(722, 395);
-            this.Warn_Middle_Name.Name = "Warn_Middle_Name";
-            this.Warn_Middle_Name.Size = new System.Drawing.Size(136, 25);
-            this.Warn_Middle_Name.TabIndex = 50;
-            this.Warn_Middle_Name.Text = "Middle Name ";
-            this.Warn_Middle_Name.Visible = false;
-            // 
-            // Warn_Last_Name
-            // 
-            this.Warn_Last_Name.AutoSize = true;
-            this.Warn_Last_Name.Font = new System.Drawing.Font("Sitka Small", 10F, System.Drawing.FontStyle.Bold);
-            this.Warn_Last_Name.ForeColor = System.Drawing.Color.Red;
-            this.Warn_Last_Name.Location = new System.Drawing.Point(722, 485);
-            this.Warn_Last_Name.Name = "Warn_Last_Name";
-            this.Warn_Last_Name.Size = new System.Drawing.Size(113, 25);
-            this.Warn_Last_Name.TabIndex = 51;
-            this.Warn_Last_Name.Text = "Last Name ";
-            this.Warn_Last_Name.Visible = false;
-            // 
-            // Warn_Address
-            // 
-            this.Warn_Address.AutoSize = true;
-            this.Warn_Address.Font = new System.Drawing.Font("Sitka Small", 10F, System.Drawing.FontStyle.Bold);
-            this.Warn_Address.ForeColor = System.Drawing.Color.Red;
-            this.Warn_Address.Location = new System.Drawing.Point(1639, 312);
-            this.Warn_Address.Name = "Warn_Address";
-            this.Warn_Address.Size = new System.Drawing.Size(83, 25);
-            this.Warn_Address.TabIndex = 52;
-            this.Warn_Address.Text = "Address";
-            this.Warn_Address.Visible = false;
-            // 
-            // Warn_Mobile_Number
-            // 
-            this.Warn_Mobile_Number.AutoSize = true;
-            this.Warn_Mobile_Number.Font = new System.Drawing.Font("Sitka Small", 10F, System.Drawing.FontStyle.Bold);
-            this.Warn_Mobile_Number.ForeColor = System.Drawing.Color.Red;
-            this.Warn_Mobile_Number.Location = new System.Drawing.Point(1639, 395);
-            this.Warn_Mobile_Number.Name = "Warn_Mobile_Number";
-            this.Warn_Mobile_Number.Size = new System.Drawing.Size(152, 25);
-            this.Warn_Mobile_Number.TabIndex = 53;
-            this.Warn_Mobile_Number.Text = "Mobile Number";
-            this.Warn_Mobile_Number.Visible = false;
-            // 
-            // Warn_Alternate_Mobile_Number
-            // 
-            this.Warn_Alternate_Mobile_Number.AutoSize = true;
-            this.Warn_Alternate_Mobile_Number.Font = new System.Drawing.Font("Sitka Small", 10F, System.Drawing.FontStyle.Bold);
-            this.Warn_Alternate_Mobile_Number.ForeColor = System.Drawing.Color.Red;
-            this.Warn_Alternate_Mobile_Number.Location = new System.Drawing.Point(1639, 481);
-            this.Warn_Alternate_Mobile_Number.Name = "Warn_Alternate_Mobile_Number";
-            this.Warn_Alternate_Mobile_Number.Size = new System.Drawing.Size(243, 25);
-            this.Warn_Alternate_Mobile_Number.TabIndex = 54;
-            this.Warn_Alternate_Mobile_Number.Text = "Alternate Mobile Number";
-            this.Warn_Alternate_Mobile_Number.Visible = false;
-            // 
-            // tb_Email_ID
-            // 
-            this.tb_Email_ID.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Email_ID.Location = new System.Drawing.Point(968, 536);
-            this.tb_Email_ID.MaxLength = 10;
-            this.tb_Email_ID.Name = "tb_Email_ID";
-            this.tb_Email_ID.Size = new System.Drawing.Size(461, 41);
-            this.tb_Email_ID.TabIndex = 55;
-            // 
-            // lbl_Email_ID
-            // 
-            this.lbl_Email_ID.AutoSize = true;
-            this.lbl_Email_ID.BackColor = System.Drawing.Color.Pink;
-            this.lbl_Email_ID.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Email_ID.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Email_ID.Location = new System.Drawing.Point(720, 536);
-            this.lbl_Email_ID.Name = "lbl_Email_ID";
-            this.lbl_Email_ID.Size = new System.Drawing.Size(136, 39);
-            this.lbl_Email_ID.TabIndex = 56;
-            this.lbl_Email_ID.Text = "Email ID";
-            // 
             // frm_Update_Employee_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -428,11 +344,5 @@
         private System.Windows.Forms.Label lbl_Last_Name;
         private System.Windows.Forms.TextBox tb_Email_ID;
         private System.Windows.Forms.Label lbl_Email_ID;
-        private System.Windows.Forms.Label Warn_Alternate_Mobile_Number;
-        private System.Windows.Forms.Label Warn_Mobile_Number;
-        private System.Windows.Forms.Label Warn_Address;
-        private System.Windows.Forms.Label Warn_Last_Name;
-        private System.Windows.Forms.Label Warn_Middle_Name;
-        private System.Windows.Forms.Label Warn_First_Name;
     }
 }

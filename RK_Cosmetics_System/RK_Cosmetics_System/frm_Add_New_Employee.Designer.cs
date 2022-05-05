@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.gb_Employee_Details = new System.Windows.Forms.GroupBox();
+            this.tb_Email_ID = new System.Windows.Forms.TextBox();
+            this.lbl_Email_ID = new System.Windows.Forms.Label();
+            this.tb_Age = new System.Windows.Forms.TextBox();
+            this.lbl_Age = new System.Windows.Forms.Label();
             this.gb_Gender = new System.Windows.Forms.GroupBox();
             this.rbtn_Female = new System.Windows.Forms.RadioButton();
             this.rbtn_Male = new System.Windows.Forms.RadioButton();
@@ -57,19 +61,6 @@
             this.lbl_Employee_ID = new System.Windows.Forms.Label();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
-            this.Warn_First_Name = new System.Windows.Forms.Label();
-            this.Warn_Middle_Name = new System.Windows.Forms.Label();
-            this.Warn_Last_Name = new System.Windows.Forms.Label();
-            this.Warn_Mobile_Number = new System.Windows.Forms.Label();
-            this.Warn_Alternate_Mobile_Number = new System.Windows.Forms.Label();
-            this.Warn_Aadhar_Number = new System.Windows.Forms.Label();
-            this.Warn_PAN_Number = new System.Windows.Forms.Label();
-            this.Warn_Address = new System.Windows.Forms.Label();
-            this.Warn_Gender = new System.Windows.Forms.Label();
-            this.tb_Age = new System.Windows.Forms.TextBox();
-            this.lbl_Age = new System.Windows.Forms.Label();
-            this.tb_Email_ID = new System.Windows.Forms.TextBox();
-            this.lbl_Email_ID = new System.Windows.Forms.Label();
             this.gb_Employee_Details.SuspendLayout();
             this.gb_Gender.SuspendLayout();
             this.SuspendLayout();
@@ -80,15 +71,6 @@
             this.gb_Employee_Details.Controls.Add(this.lbl_Email_ID);
             this.gb_Employee_Details.Controls.Add(this.tb_Age);
             this.gb_Employee_Details.Controls.Add(this.lbl_Age);
-            this.gb_Employee_Details.Controls.Add(this.Warn_Gender);
-            this.gb_Employee_Details.Controls.Add(this.Warn_Address);
-            this.gb_Employee_Details.Controls.Add(this.Warn_PAN_Number);
-            this.gb_Employee_Details.Controls.Add(this.Warn_Aadhar_Number);
-            this.gb_Employee_Details.Controls.Add(this.Warn_Alternate_Mobile_Number);
-            this.gb_Employee_Details.Controls.Add(this.Warn_Mobile_Number);
-            this.gb_Employee_Details.Controls.Add(this.Warn_Last_Name);
-            this.gb_Employee_Details.Controls.Add(this.Warn_Middle_Name);
-            this.gb_Employee_Details.Controls.Add(this.Warn_First_Name);
             this.gb_Employee_Details.Controls.Add(this.gb_Gender);
             this.gb_Employee_Details.Controls.Add(this.tb_PAN_No);
             this.gb_Employee_Details.Controls.Add(this.tb_Address);
@@ -120,6 +102,49 @@
             this.gb_Employee_Details.TabIndex = 0;
             this.gb_Employee_Details.TabStop = false;
             this.gb_Employee_Details.Text = "Employee Details";
+            // 
+            // tb_Email_ID
+            // 
+            this.tb_Email_ID.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Email_ID.Location = new System.Drawing.Point(1431, 493);
+            this.tb_Email_ID.MaxLength = 50;
+            this.tb_Email_ID.Name = "tb_Email_ID";
+            this.tb_Email_ID.Size = new System.Drawing.Size(320, 41);
+            this.tb_Email_ID.TabIndex = 12;
+            // 
+            // lbl_Email_ID
+            // 
+            this.lbl_Email_ID.AutoSize = true;
+            this.lbl_Email_ID.BackColor = System.Drawing.Color.Pink;
+            this.lbl_Email_ID.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Email_ID.ForeColor = System.Drawing.Color.Maroon;
+            this.lbl_Email_ID.Location = new System.Drawing.Point(1068, 491);
+            this.lbl_Email_ID.Name = "lbl_Email_ID";
+            this.lbl_Email_ID.Size = new System.Drawing.Size(136, 39);
+            this.lbl_Email_ID.TabIndex = 33;
+            this.lbl_Email_ID.Text = "Email ID";
+            // 
+            // tb_Age
+            // 
+            this.tb_Age.Enabled = false;
+            this.tb_Age.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Age.Location = new System.Drawing.Point(439, 499);
+            this.tb_Age.MaxLength = 4;
+            this.tb_Age.Name = "tb_Age";
+            this.tb_Age.Size = new System.Drawing.Size(320, 41);
+            this.tb_Age.TabIndex = 30;
+            // 
+            // lbl_Age
+            // 
+            this.lbl_Age.AutoSize = true;
+            this.lbl_Age.BackColor = System.Drawing.Color.Pink;
+            this.lbl_Age.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Age.ForeColor = System.Drawing.Color.Maroon;
+            this.lbl_Age.Location = new System.Drawing.Point(137, 495);
+            this.lbl_Age.Name = "lbl_Age";
+            this.lbl_Age.Size = new System.Drawing.Size(74, 39);
+            this.lbl_Age.TabIndex = 31;
+            this.lbl_Age.Text = "Age";
             // 
             // gb_Gender
             // 
@@ -429,157 +454,6 @@
             this.btn_Save.UseVisualStyleBackColor = false;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
-            // Warn_First_Name
-            // 
-            this.Warn_First_Name.AutoSize = true;
-            this.Warn_First_Name.Font = new System.Drawing.Font("Sitka Small", 10F, System.Drawing.FontStyle.Bold);
-            this.Warn_First_Name.ForeColor = System.Drawing.Color.Red;
-            this.Warn_First_Name.Location = new System.Drawing.Point(692, 174);
-            this.Warn_First_Name.Name = "Warn_First_Name";
-            this.Warn_First_Name.Size = new System.Drawing.Size(118, 25);
-            this.Warn_First_Name.TabIndex = 21;
-            this.Warn_First_Name.Text = "First Name ";
-            this.Warn_First_Name.Visible = false;
-            // 
-            // Warn_Middle_Name
-            // 
-            this.Warn_Middle_Name.AutoSize = true;
-            this.Warn_Middle_Name.Font = new System.Drawing.Font("Sitka Small", 10F, System.Drawing.FontStyle.Bold);
-            this.Warn_Middle_Name.ForeColor = System.Drawing.Color.Red;
-            this.Warn_Middle_Name.Location = new System.Drawing.Point(692, 267);
-            this.Warn_Middle_Name.Name = "Warn_Middle_Name";
-            this.Warn_Middle_Name.Size = new System.Drawing.Size(136, 25);
-            this.Warn_Middle_Name.TabIndex = 22;
-            this.Warn_Middle_Name.Text = "Middle Name ";
-            this.Warn_Middle_Name.Visible = false;
-            // 
-            // Warn_Last_Name
-            // 
-            this.Warn_Last_Name.AutoSize = true;
-            this.Warn_Last_Name.Font = new System.Drawing.Font("Sitka Small", 10F, System.Drawing.FontStyle.Bold);
-            this.Warn_Last_Name.ForeColor = System.Drawing.Color.Red;
-            this.Warn_Last_Name.Location = new System.Drawing.Point(692, 360);
-            this.Warn_Last_Name.Name = "Warn_Last_Name";
-            this.Warn_Last_Name.Size = new System.Drawing.Size(113, 25);
-            this.Warn_Last_Name.TabIndex = 23;
-            this.Warn_Last_Name.Text = "Last Name ";
-            this.Warn_Last_Name.Visible = false;
-            // 
-            // Warn_Mobile_Number
-            // 
-            this.Warn_Mobile_Number.AutoSize = true;
-            this.Warn_Mobile_Number.Font = new System.Drawing.Font("Sitka Small", 10F, System.Drawing.FontStyle.Bold);
-            this.Warn_Mobile_Number.ForeColor = System.Drawing.Color.Red;
-            this.Warn_Mobile_Number.Location = new System.Drawing.Point(1691, 174);
-            this.Warn_Mobile_Number.Name = "Warn_Mobile_Number";
-            this.Warn_Mobile_Number.Size = new System.Drawing.Size(152, 25);
-            this.Warn_Mobile_Number.TabIndex = 24;
-            this.Warn_Mobile_Number.Text = "Mobile Number";
-            this.Warn_Mobile_Number.Visible = false;
-            // 
-            // Warn_Alternate_Mobile_Number
-            // 
-            this.Warn_Alternate_Mobile_Number.AutoSize = true;
-            this.Warn_Alternate_Mobile_Number.Font = new System.Drawing.Font("Sitka Small", 10F, System.Drawing.FontStyle.Bold);
-            this.Warn_Alternate_Mobile_Number.ForeColor = System.Drawing.Color.Red;
-            this.Warn_Alternate_Mobile_Number.Location = new System.Drawing.Point(1691, 271);
-            this.Warn_Alternate_Mobile_Number.Name = "Warn_Alternate_Mobile_Number";
-            this.Warn_Alternate_Mobile_Number.Size = new System.Drawing.Size(195, 25);
-            this.Warn_Alternate_Mobile_Number.TabIndex = 25;
-            this.Warn_Alternate_Mobile_Number.Text = "Alternate Mobile No";
-            this.Warn_Alternate_Mobile_Number.Visible = false;
-            // 
-            // Warn_Aadhar_Number
-            // 
-            this.Warn_Aadhar_Number.AutoSize = true;
-            this.Warn_Aadhar_Number.Font = new System.Drawing.Font("Sitka Small", 10F, System.Drawing.FontStyle.Bold);
-            this.Warn_Aadhar_Number.ForeColor = System.Drawing.Color.Red;
-            this.Warn_Aadhar_Number.Location = new System.Drawing.Point(1691, 360);
-            this.Warn_Aadhar_Number.Name = "Warn_Aadhar_Number";
-            this.Warn_Aadhar_Number.Size = new System.Drawing.Size(108, 25);
-            this.Warn_Aadhar_Number.TabIndex = 26;
-            this.Warn_Aadhar_Number.Text = "Aadhar No";
-            this.Warn_Aadhar_Number.Visible = false;
-            // 
-            // Warn_PAN_Number
-            // 
-            this.Warn_PAN_Number.AutoSize = true;
-            this.Warn_PAN_Number.Font = new System.Drawing.Font("Sitka Small", 10F, System.Drawing.FontStyle.Bold);
-            this.Warn_PAN_Number.ForeColor = System.Drawing.Color.Red;
-            this.Warn_PAN_Number.Location = new System.Drawing.Point(1691, 451);
-            this.Warn_PAN_Number.Name = "Warn_PAN_Number";
-            this.Warn_PAN_Number.Size = new System.Drawing.Size(79, 25);
-            this.Warn_PAN_Number.TabIndex = 27;
-            this.Warn_PAN_Number.Text = "PAN No";
-            this.Warn_PAN_Number.Visible = false;
-            // 
-            // Warn_Address
-            // 
-            this.Warn_Address.AutoSize = true;
-            this.Warn_Address.Font = new System.Drawing.Font("Sitka Small", 10F, System.Drawing.FontStyle.Bold);
-            this.Warn_Address.ForeColor = System.Drawing.Color.Red;
-            this.Warn_Address.Location = new System.Drawing.Point(1691, 618);
-            this.Warn_Address.Name = "Warn_Address";
-            this.Warn_Address.Size = new System.Drawing.Size(88, 25);
-            this.Warn_Address.TabIndex = 28;
-            this.Warn_Address.Text = "Address ";
-            this.Warn_Address.Visible = false;
-            // 
-            // Warn_Gender
-            // 
-            this.Warn_Gender.AutoSize = true;
-            this.Warn_Gender.Font = new System.Drawing.Font("Sitka Small", 10F, System.Drawing.FontStyle.Bold);
-            this.Warn_Gender.ForeColor = System.Drawing.Color.Red;
-            this.Warn_Gender.Location = new System.Drawing.Point(692, 627);
-            this.Warn_Gender.Name = "Warn_Gender";
-            this.Warn_Gender.Size = new System.Drawing.Size(77, 25);
-            this.Warn_Gender.TabIndex = 29;
-            this.Warn_Gender.Text = "Gender";
-            this.Warn_Gender.Visible = false;
-            // 
-            // tb_Age
-            // 
-            this.tb_Age.Enabled = false;
-            this.tb_Age.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Age.Location = new System.Drawing.Point(439, 499);
-            this.tb_Age.MaxLength = 4;
-            this.tb_Age.Name = "tb_Age";
-            this.tb_Age.Size = new System.Drawing.Size(320, 41);
-            this.tb_Age.TabIndex = 30;
-            // 
-            // lbl_Age
-            // 
-            this.lbl_Age.AutoSize = true;
-            this.lbl_Age.BackColor = System.Drawing.Color.Pink;
-            this.lbl_Age.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Age.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Age.Location = new System.Drawing.Point(137, 495);
-            this.lbl_Age.Name = "lbl_Age";
-            this.lbl_Age.Size = new System.Drawing.Size(74, 39);
-            this.lbl_Age.TabIndex = 31;
-            this.lbl_Age.Text = "Age";
-            // 
-            // tb_Email_ID
-            // 
-            this.tb_Email_ID.Font = new System.Drawing.Font("Sitka Small", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Email_ID.Location = new System.Drawing.Point(1431, 493);
-            this.tb_Email_ID.MaxLength = 50;
-            this.tb_Email_ID.Name = "tb_Email_ID";
-            this.tb_Email_ID.Size = new System.Drawing.Size(320, 41);
-            this.tb_Email_ID.TabIndex = 12;
-            // 
-            // lbl_Email_ID
-            // 
-            this.lbl_Email_ID.AutoSize = true;
-            this.lbl_Email_ID.BackColor = System.Drawing.Color.Pink;
-            this.lbl_Email_ID.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Email_ID.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Email_ID.Location = new System.Drawing.Point(1068, 491);
-            this.lbl_Email_ID.Name = "lbl_Email_ID";
-            this.lbl_Email_ID.Size = new System.Drawing.Size(136, 39);
-            this.lbl_Email_ID.TabIndex = 33;
-            this.lbl_Email_ID.Text = "Email ID";
-            // 
             // frm_Add_New_Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -632,15 +506,6 @@
         private System.Windows.Forms.TextBox tb_First_Name;
         private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.Button btn_Save;
-        private System.Windows.Forms.Label Warn_Gender;
-        private System.Windows.Forms.Label Warn_Address;
-        private System.Windows.Forms.Label Warn_PAN_Number;
-        private System.Windows.Forms.Label Warn_Aadhar_Number;
-        private System.Windows.Forms.Label Warn_Alternate_Mobile_Number;
-        private System.Windows.Forms.Label Warn_Mobile_Number;
-        private System.Windows.Forms.Label Warn_Last_Name;
-        private System.Windows.Forms.Label Warn_Middle_Name;
-        private System.Windows.Forms.Label Warn_First_Name;
         private System.Windows.Forms.TextBox tb_Email_ID;
         private System.Windows.Forms.Label lbl_Email_ID;
         private System.Windows.Forms.TextBox tb_Age;

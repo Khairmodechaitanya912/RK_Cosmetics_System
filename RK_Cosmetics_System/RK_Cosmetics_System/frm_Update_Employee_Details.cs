@@ -136,7 +136,7 @@ namespace RK_Cosmetics_System
 
             btn_Search.Enabled = false;
             btn_Update.Enabled = false;
-            DWN:
+
             Con_Close();
         
         }

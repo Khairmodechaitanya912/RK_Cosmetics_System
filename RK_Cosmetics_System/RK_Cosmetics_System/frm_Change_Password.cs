@@ -121,7 +121,17 @@ namespace RK_Cosmetics_System
 
         private void btn_Close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult Res = System.Windows.Forms.DialogResult.Yes;
+
+            if (cmb_Username.Text == "" || tb_Current_Password.Text == "" || tb_New_Password.Text == "")
+            {
+                Res = MessageBox.Show("Are You Sure... Data Entered Will Be Lost...?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            }
+
+            if (Res == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }
