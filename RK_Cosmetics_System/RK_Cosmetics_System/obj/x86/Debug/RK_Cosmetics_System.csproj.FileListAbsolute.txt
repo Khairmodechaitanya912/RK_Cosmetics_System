@@ -38,3 +38,4 @@ E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\RK_Cosme
 E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Expences.resources
 E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Expences_Details.resources
 E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Expences_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Frm_Splash_Screen.resources

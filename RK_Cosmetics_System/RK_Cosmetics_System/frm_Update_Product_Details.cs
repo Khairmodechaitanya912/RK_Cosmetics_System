@@ -116,7 +116,7 @@ namespace RK_Cosmetics_System
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            Con_Open();
+             Con_Open();
 
             if (tb_Product_ID.Text != "" && cmb_Brand_Name.Text != "" && tb_Product_Name.Text != "" && tb_Purchase_Price.Text != "" && tb_Selling_Price.Text != "")
             {

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Threading;
 
 namespace RK_Cosmetics_System
 {
@@ -14,9 +15,17 @@ namespace RK_Cosmetics_System
     {
         public frm_Login_Form()
         {
+            //Thread Td = new Thread(new ThreadStart(StartForm));
+            //Td.Start();
+            //Thread.Sleep(8000);
             InitializeComponent();
         }
 
+        public void StartForm()
+        {
+
+            //Application.Run(new Frm_Splash_Screen());
+        }
         SqlConnection Con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DB_RK_Cosmetics_System;Integrated Security=True");
 
         void Con_Open()

@@ -211,6 +211,12 @@
     <Compile Include="frm_Non_Admin_Entry_Form.Designer.cs">
       <DependentUpon>frm_Non_Admin_Entry_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Splash_Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Splash_Screen.Designer.cs">
+      <DependentUpon>Frm_Splash_Screen.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Update_Brand_Details.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -342,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Non_Admin_Entry_Form.resx">
       <DependentUpon>frm_Non_Admin_Entry_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Splash_Screen.resx">
+      <DependentUpon>Frm_Splash_Screen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Update_Brand_Details.resx">
       <DependentUpon>frm_Update_Brand_Details.cs</DependentUpon>
