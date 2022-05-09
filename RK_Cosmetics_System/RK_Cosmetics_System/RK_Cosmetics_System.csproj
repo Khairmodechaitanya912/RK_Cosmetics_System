@@ -188,6 +188,12 @@
     <Compile Include="Other\Frm_Splash_Screen.Designer.cs">
       <DependentUpon>Frm_Splash_Screen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Customer_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Customer_Report.Designer.cs">
+      <DependentUpon>Customer_Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Stock_Details_Report.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,6 +335,9 @@
     <EmbeddedResource Include="Other\Frm_Splash_Screen.resx">
       <DependentUpon>Frm_Splash_Screen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Customer_Report.resx">
+      <DependentUpon>Customer_Report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\Stock_Details_Report.resx">
       <DependentUpon>Stock_Details_Report.cs</DependentUpon>
     </EmbeddedResource>
@@ -385,7 +394,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RPT Files\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
