@@ -98,6 +98,16 @@
     <Compile Include="Add Form\frm_Add_Stock.Designer.cs">
       <DependentUpon>frm_Add_Stock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\Expences_Dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Expences_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Stock_Dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_Dataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Other\frm_Admin_Entry_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +209,12 @@
     </Compile>
     <Compile Include="Report\Stock_Details_Report.Designer.cs">
       <DependentUpon>Stock_Details_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT Files\Stock_Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Update Form\frm_Update_Brand_Details.cs">
       <SubType>Form</SubType>
@@ -341,6 +357,10 @@
     <EmbeddedResource Include="Report\Stock_Details_Report.resx">
       <DependentUpon>Stock_Details_Report.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RPT Files\Stock_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Stock_Report.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Update Form\frm_Update_Brand_Details.resx">
       <DependentUpon>frm_Update_Brand_Details.cs</DependentUpon>
     </EmbeddedResource>
@@ -384,6 +404,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="app.config" />
+    <None Include="Dataset\Expences_Dataset.xsc">
+      <DependentUpon>Expences_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Expences_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Expences_Dataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\Expences_Dataset.xss">
+      <DependentUpon>Expences_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Stock_Dataset.xsc">
+      <DependentUpon>Stock_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Stock_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_Dataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\Stock_Dataset.xss">
+      <DependentUpon>Stock_Dataset.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -397,9 +439,7 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="RPT Files\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
