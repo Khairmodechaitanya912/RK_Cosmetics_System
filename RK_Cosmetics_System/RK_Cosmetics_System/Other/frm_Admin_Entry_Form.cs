@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using RK_Cosmetics_System.Other;
 
 namespace RK_Cosmetics_System
 {
@@ -102,6 +103,15 @@ namespace RK_Cosmetics_System
             frm_MDI_Expences_Details MED = new frm_MDI_Expences_Details();
 
             MED.Show();
+
+            this.Hide();
+        }
+
+        private void btn_Reports_Click(object sender, EventArgs e)
+        {
+            frm_Main_Report MR = new frm_Main_Report();
+
+            MR.Show();
 
             this.Hide();
         }

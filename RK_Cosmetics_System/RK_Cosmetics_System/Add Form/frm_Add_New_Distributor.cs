@@ -130,17 +130,49 @@ namespace RK_Cosmetics_System
                 Cmd.Parameters.Add("R_NO", SqlDbType.Int).Value = tb_Registation_No.Text;
                 Cmd.Parameters.Add("T_DATE", SqlDbType.Date).Value = dtp_TieUp_Date.Value.Date;
                 Cmd.Parameters.Add("MOB_NO", SqlDbType.Decimal).Value = tb_Mobile_No.Text;
-                Cmd.Parameters.Add("A_MOB", SqlDbType.Decimal).Value = tb_Alternate_Mobile_No.Text;
+               // Cmd.Parameters.Add("A_MOB", SqlDbType.Decimal).Value = tb_Alternate_Mobile_No.Text;
                 Cmd.Parameters.Add("A_NO", SqlDbType.NVarChar).Value = tb_Aadhar_No.Text;
                 Cmd.Parameters.Add("P_NO", SqlDbType.NVarChar).Value = tb_PAN_No.Text;
-                Cmd.Parameters.Add("E_ID", SqlDbType.NVarChar).Value = tb_Email_ID.Text;
+                //Cmd.Parameters.Add("E_ID", SqlDbType.NVarChar).Value = tb_Email_ID.Text;
 
-                Cmd.ExecuteNonQuery();
+                if (tb_Alternate_Mobile_No.Text != "")
+                {
+                    Cmd.Parameters.Add("A_MOB", SqlDbType.Decimal).Value = tb_Alternate_Mobile_No.Text;
+                }
+                else if (tb_Alternate_Mobile_No.Text == "")
+                {
+                    Cmd.Parameters.Add("A_MOB", SqlDbType.Decimal).Value = "0";
 
-                MessageBox.Show("Distributor Details Saved Successfully...!!", "Saving", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                Clear_Control();
+                }
 
+                if (tb_Email_ID.Text != "")
+                {
+                    Cmd.Parameters.Add("E_ID", SqlDbType.NVarChar).Value = tb_Email_ID.Text;
+                }
+                else
+                {
+                    Cmd.Parameters.Add("E_ID", SqlDbType.NVarChar).Value = "Annonymous";
+                }
+
+                if (tb_Mobile_No.Text == tb_Alternate_Mobile_No.Text)
+                {
+                    MessageBox.Show("You can't insert same mobile no !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    tb_Alternate_Mobile_No.Clear();
+                    tb_Alternate_Mobile_No.Focus();
+                  
+                }
+                else if (tb_Alternate_Mobile_No.TextLength < 10 && tb_Alternate_Mobile_No.TextLength > 0)
+                {
+                    MessageBox.Show("Mobile No Should be 10 Digit !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    Cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Distributor Details Saved Successfully...!!", "Saving", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Clear_Control();
+                }
             }
 
             else
@@ -149,7 +181,6 @@ namespace RK_Cosmetics_System
             }
 
             Con_Close();
-
         }
 
 

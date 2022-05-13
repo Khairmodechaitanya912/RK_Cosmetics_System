@@ -37,8 +37,14 @@ namespace RK_Cosmetics_System
 
         private void frm_View_Employee_Details_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dB_RK_Cosmetics_SystemDataSet1.Employee_Details' table. You can move, or remove it, as needed.
-            //this.employee_DetailsTableAdapter.Fill(this.dB_RK_Cosmetics_SystemDataSet1.Employee_Details);
+            SqlDataAdapter SDA = new SqlDataAdapter("Select * from Employee_Details", Con);
+
+            DataTable dt = new DataTable();
+
+            SDA.Fill(dt);
+
+            dgv_View_Employee_Details.DataSource = dt;
+
             tb_Employee_ID.Focus();
         }
 

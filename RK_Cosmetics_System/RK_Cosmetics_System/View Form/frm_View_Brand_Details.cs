@@ -38,9 +38,13 @@ namespace RK_Cosmetics_System
 
         private void frm_View_Brand_Details_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dB_RK_Cosmetics_SystemDataSet2.Brand_Details' table. You can move, or remove it, as needed.
-            //this.brand_DetailsTableAdapter.Fill(this.dB_RK_Cosmetics_SystemDataSet2.Brand_Details);
+            SqlDataAdapter SDA = new SqlDataAdapter("Select * from Brand_Details", Con);
 
+            DataTable dt = new DataTable();
+
+            SDA.Fill(dt);
+
+            dgv_View_Brand_Details.DataSource = dt;
         }
 
         private void btn_Search_Click(object sender, EventArgs e)

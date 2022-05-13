@@ -40,3 +40,5 @@ E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_C
 E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Expences_Details.resources
 E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Frm_Splash_Screen.resources
 E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Report.Stock_Details_Report.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Report.Customer_Report.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Other.frm_Main_Report.resources

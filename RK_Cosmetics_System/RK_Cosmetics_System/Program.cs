@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using RK_Cosmetics_System.Report;
 
 namespace RK_Cosmetics_System
 {
@@ -16,7 +17,7 @@ namespace RK_Cosmetics_System
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frm_Login_Form());
-           // Application.Run(new frm_View_Product_Details());
+           // Application.Run(new Stock_Details_Report());
         }
     }
 }

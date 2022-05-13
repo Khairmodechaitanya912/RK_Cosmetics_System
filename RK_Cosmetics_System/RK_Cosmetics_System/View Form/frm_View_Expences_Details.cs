@@ -37,8 +37,13 @@ namespace RK_Cosmetics_System
 
         private void frm_View_Expences_Details_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dB_RK_Cosmetics_SystemDataSet6.Expences_Details' table. You can move, or remove it, as needed.
-           // this.expences_DetailsTableAdapter.Fill(this.dB_RK_Cosmetics_SystemDataSet6.Expences_Details);
+            SqlDataAdapter SDA = new SqlDataAdapter("Select Expences_Id, Expences_Details, Amount_Paid, Date, Paid_By from Expences_Details", Con);
+
+            DataTable dt = new DataTable();
+
+            SDA.Fill(dt);
+
+            dgv_View_Expences_Details.DataSource = dt;
 
         }
 
@@ -46,7 +51,7 @@ namespace RK_Cosmetics_System
         {
             Con_Open();
 
-            SqlDataAdapter SDA = new SqlDataAdapter("Select * from Expences_Details where Date Between '" + dtp_From_Date.Text + "' And '" + dtp_To_Date.Text + "' ", Con);
+            SqlDataAdapter SDA = new SqlDataAdapter("Select Expences_Id, Expences_Details, Amount_Paid, Date, Paid_By  from Expences_Details where Date Between '" + dtp_From_Date.Text + "' And '" + dtp_To_Date.Text + "' ", Con);
 
             DataTable dt = new DataTable();
 
@@ -64,14 +69,13 @@ namespace RK_Cosmetics_System
             dtp_To_Date.ResetText();
             dtp_From_Date.Focus();
 
-            SqlDataAdapter SDA = new SqlDataAdapter("Select * from Expences_Details", Con);
+            SqlDataAdapter SDA = new SqlDataAdapter("Select Expences_Id, Expences_Details, Amount_Paid, Date, Paid_By  from Expences_Details", Con);
 
             DataTable dt = new DataTable();
 
             SDA.Fill(dt);
 
             dgv_View_Expences_Details.DataSource = dt;
-
         }
     }
 }
