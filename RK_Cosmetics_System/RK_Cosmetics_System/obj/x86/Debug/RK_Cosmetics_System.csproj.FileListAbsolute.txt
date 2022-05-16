@@ -1,112 +1,48 @@
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\RK_Cosmetics_System.exe.config
 E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\RK_Cosmetics_System.exe
 E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\RK_Cosmetics_System.pdb
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.csprojResolveAssemblyReference.cache
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_Brand.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_Customer.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_Distributor.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_Employee.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_Product.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_User.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_Stock.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Admin_Entry_Form.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Change_Password.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Delete_User.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Expences.resources
 E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Login_Form.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Brand_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Customer_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Distributor_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Employee_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Expences_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Product_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Stock_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_User_Management.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Other.frm_Main_Report.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Non_Admin_Entry_Form.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Frm_Splash_Screen.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Report.Customer_Report.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Report.Stock_Report.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Update_Brand_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Update_Distributor_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Update_Employee_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Update_Product_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Brand_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Customer_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Distributor_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Employee_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Expences_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Product_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Stock_Details.resources
 E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Properties.Resources.resources
 E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.csproj.GenerateResource.Cache
 E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.exe
 E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.pdb
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Admin_Entry_Form.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Customer_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_Customer.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Customer_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Employee_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_Employee.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Update_Employee_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Employee_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Distributor_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_Distributor.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Update_Distributor_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Distributor_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_Product.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Product_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Update_Product_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Product_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_User_Management.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Stock_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_Stock.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Stock_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_User.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Change_Password.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Delete_User.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Non_Admin_Entry_Form.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_Brand.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Update_Brand_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Brand_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Brand_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\RK_Cosmetics_System.exe.config
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Expences.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Expences_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Expences_Details.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Frm_Splash_Screen.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Report.Stock_Details_Report.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Report.Customer_Report.resources
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Other.frm_Main_Report.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\RK_Cosmetics_System.exe.config
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\RK_Cosmetics_System.exe
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\RK_Cosmetics_System.pdb
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\CrystalDecisions.ReportSource.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\CrystalDecisions.Shared.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\CrystalDecisions.Windows.Forms.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\FlashControlV71.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\Microsoft.ReportViewer.Common.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\Microsoft.ReportViewer.WinForms.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\ShockwaveFlashObjects.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\stdole.dll
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\bin\Debug\Microsoft.ReportViewer.WinForms.xml
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.csproj.AssemblyReference.cache
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_Brand.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_Customer.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_Distributor.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_Employee.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_Product.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_New_User.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Add_Stock.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Admin_Entry_Form.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Change_Password.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Delete_User.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Expences.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Login_Form.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Brand_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Customer_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Distributor_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Employee_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Expences_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Product_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_Stock_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_MDI_User_Management.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Other.frm_Main_Report.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Non_Admin_Entry_Form.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Frm_Splash_Screen.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Report.Customer_Report.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Report.Stock_Details_Report.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Update_Brand_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Update_Distributor_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Update_Employee_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_Update_Product_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Brand_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Customer_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Distributor_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Employee_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Expences_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Product_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.frm_View_Stock_Details.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Properties.Resources.resources
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.csproj.GenerateResource.cache
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.csproj.CoreCompileInputs.cache
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.csproj.CopyComplete
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.exe
-E:\Git Repo\Git RK .NET PROJECT\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.pdb
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.MDI_Form.Frm_MDI_Customer_Report.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.MDI_Form.Frm_MDI_Distributor_Report.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.MDI_Form.Frm_MDI_Employee_Report.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.MDI_Form.Frm_MDI_Expences_Report.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.MDI_Form.Frm_MDI_Stock_Report.resources

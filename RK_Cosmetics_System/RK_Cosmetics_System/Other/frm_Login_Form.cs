@@ -82,7 +82,7 @@ namespace RK_Cosmetics_System
 
                 this.Hide();
 
-            }
+            } 
 
             else
             {

@@ -98,6 +98,45 @@
     <Compile Include="Add Form\frm_Add_Stock.Designer.cs">
       <DependentUpon>frm_Add_Stock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\DS_Stock_Details.cs">
+      <DependentUpon>DS_Stock_Details.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dataset\DS_Stock_Details.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Stock_Details.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MDI Form\Frm_MDI_Customer_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI Form\Frm_MDI_Customer_Report.Designer.cs">
+      <DependentUpon>Frm_MDI_Customer_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI Form\Frm_MDI_Distributor_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI Form\Frm_MDI_Distributor_Report.Designer.cs">
+      <DependentUpon>Frm_MDI_Distributor_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI Form\Frm_MDI_Employee_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI Form\Frm_MDI_Employee_Report.Designer.cs">
+      <DependentUpon>Frm_MDI_Employee_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI Form\Frm_MDI_Expences_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI Form\Frm_MDI_Expences_Report.Designer.cs">
+      <DependentUpon>Frm_MDI_Expences_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI Form\Frm_MDI_Stock_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI Form\Frm_MDI_Stock_Report.Designer.cs">
+      <DependentUpon>Frm_MDI_Stock_Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Other\frm_Admin_Entry_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,11 +239,17 @@
     <Compile Include="Report\Customer_Report.Designer.cs">
       <DependentUpon>Customer_Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\Stock_Details_Report.cs">
+    <Compile Include="Report\Stock_Report.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Report\Stock_Details_Report.Designer.cs">
-      <DependentUpon>Stock_Details_Report.cs</DependentUpon>
+    <Compile Include="Report\Stock_Report.Designer.cs">
+      <DependentUpon>Stock_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Stock_CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Update Form\frm_Update_Brand_Details.cs">
       <SubType>Form</SubType>
@@ -296,6 +341,21 @@
     <EmbeddedResource Include="Add Form\frm_Add_Stock.resx">
       <DependentUpon>frm_Add_Stock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDI Form\Frm_MDI_Customer_Report.resx">
+      <DependentUpon>Frm_MDI_Customer_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI Form\Frm_MDI_Distributor_Report.resx">
+      <DependentUpon>Frm_MDI_Distributor_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI Form\Frm_MDI_Employee_Report.resx">
+      <DependentUpon>Frm_MDI_Employee_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI Form\Frm_MDI_Expences_Report.resx">
+      <DependentUpon>Frm_MDI_Expences_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI Form\Frm_MDI_Stock_Report.resx">
+      <DependentUpon>Frm_MDI_Stock_Report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Other\frm_Admin_Entry_Form.resx">
       <DependentUpon>frm_Admin_Entry_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -347,8 +407,12 @@
     <EmbeddedResource Include="Report\Customer_Report.resx">
       <DependentUpon>Customer_Report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\Stock_Details_Report.resx">
-      <DependentUpon>Stock_Details_Report.cs</DependentUpon>
+    <EmbeddedResource Include="Report\Stock_Report.resx">
+      <DependentUpon>Stock_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Stock_CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Stock_CrystalReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Update Form\frm_Update_Brand_Details.resx">
       <DependentUpon>frm_Update_Brand_Details.cs</DependentUpon>
@@ -393,6 +457,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="app.config" />
+    <None Include="Dataset\DS_Stock_Details.xsc">
+      <DependentUpon>DS_Stock_Details.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DS_Stock_Details.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Stock_Details.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DS_Stock_Details.xss">
+      <DependentUpon>DS_Stock_Details.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -153,6 +153,7 @@
             this.btn_Distributor.TabIndex = 14;
             this.btn_Distributor.Text = "Distributor Reports";
             this.btn_Distributor.UseVisualStyleBackColor = false;
+            this.btn_Distributor.Click += new System.EventHandler(this.btn_Distributor_Click);
             // 
             // btn_Employee
             // 
@@ -164,6 +165,7 @@
             this.btn_Employee.TabIndex = 13;
             this.btn_Employee.Text = "Employee Reports";
             this.btn_Employee.UseVisualStyleBackColor = false;
+            this.btn_Employee.Click += new System.EventHandler(this.btn_Employee_Click);
             // 
             // btn_Customer
             // 
@@ -175,6 +177,7 @@
             this.btn_Customer.TabIndex = 12;
             this.btn_Customer.Text = "Customer Reports";
             this.btn_Customer.UseVisualStyleBackColor = false;
+            this.btn_Customer.Click += new System.EventHandler(this.btn_Customer_Click);
             // 
             // pictureBox8
             // 
@@ -196,6 +199,7 @@
             this.btn_Expenses.TabIndex = 20;
             this.btn_Expenses.Text = "Expenses Reports";
             this.btn_Expenses.UseVisualStyleBackColor = false;
+            this.btn_Expenses.Click += new System.EventHandler(this.btn_Expenses_Click);
             // 
             // pictureBox7
             // 
@@ -217,6 +221,7 @@
             this.btn_Stock.TabIndex = 19;
             this.btn_Stock.Text = "Stock Reports";
             this.btn_Stock.UseVisualStyleBackColor = false;
+            this.btn_Stock.Click += new System.EventHandler(this.btn_Stock_Click);
             // 
             // frm_Main_Report
             // 

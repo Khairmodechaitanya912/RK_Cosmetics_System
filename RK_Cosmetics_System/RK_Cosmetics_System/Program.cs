@@ -17,7 +17,7 @@ namespace RK_Cosmetics_System
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frm_Login_Form());
-           // Application.Run(new Stock_Details_Report());
+            //Application.Run(new Stock_Report());
         }
     }
 }

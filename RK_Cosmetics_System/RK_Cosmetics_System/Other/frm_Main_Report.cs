@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using RK_Cosmetics_System.MDI_Form;
 
 namespace RK_Cosmetics_System.Other
 {
@@ -47,6 +48,51 @@ namespace RK_Cosmetics_System.Other
 
                 this.Hide();
             }
+        }
+
+        private void btn_Customer_Click(object sender, EventArgs e)
+        {
+            Frm_MDI_Customer_Report MCR = new Frm_MDI_Customer_Report();
+
+            MCR.Show();
+
+            this.Hide();
+        }
+
+        private void btn_Distributor_Click(object sender, EventArgs e)
+        {
+            Frm_MDI_Distributor_Report MDR = new Frm_MDI_Distributor_Report();
+
+            MDR.Show();
+
+            this.Hide();
+        }
+
+        private void btn_Employee_Click(object sender, EventArgs e)
+        {
+            Frm_MDI_Employee_Report MER = new Frm_MDI_Employee_Report();
+
+            MER.Show();
+
+            this.Hide();
+        }
+
+        private void btn_Expenses_Click(object sender, EventArgs e)
+        {
+            Frm_MDI_Expences_Report MER = new Frm_MDI_Expences_Report();
+
+            MER.Show();
+
+            this.Hide();
+        }
+
+        private void btn_Stock_Click(object sender, EventArgs e)
+        {
+            Frm_MDI_Stock_Report MSR = new Frm_MDI_Stock_Report();
+
+            MSR.Show();
+
+            this.Hide();
         }
 
 
