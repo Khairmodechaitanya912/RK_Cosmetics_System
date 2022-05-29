@@ -56,5 +56,10 @@ namespace RK_Cosmetics_System.Report
 
             Con_Close();
         }
+
+        private void Stock_Report_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

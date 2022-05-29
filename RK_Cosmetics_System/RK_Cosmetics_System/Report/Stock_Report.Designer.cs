@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lbl_Stock_Details = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_To_Date = new System.Windows.Forms.DateTimePicker();
             this.lbl_To = new System.Windows.Forms.Label();
             this.btn_Search_Report = new System.Windows.Forms.Button();
             this.dtp_Date = new System.Windows.Forms.DateTimePicker();
@@ -50,13 +50,13 @@
             this.lbl_Stock_Details.TabIndex = 52;
             this.lbl_Stock_Details.Text = "Stock Details";
             // 
-            // dateTimePicker1
+            // dtp_To_Date
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(874, 183);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(320, 43);
-            this.dateTimePicker1.TabIndex = 50;
+            this.dtp_To_Date.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_To_Date.Location = new System.Drawing.Point(874, 183);
+            this.dtp_To_Date.Name = "dtp_To_Date";
+            this.dtp_To_Date.Size = new System.Drawing.Size(320, 43);
+            this.dtp_To_Date.TabIndex = 50;
             // 
             // lbl_To
             // 
@@ -122,13 +122,14 @@
             this.ClientSize = new System.Drawing.Size(1619, 840);
             this.Controls.Add(this.Stock_crystalReportViewer);
             this.Controls.Add(this.lbl_Stock_Details);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp_To_Date);
             this.Controls.Add(this.lbl_To);
             this.Controls.Add(this.btn_Search_Report);
             this.Controls.Add(this.dtp_Date);
             this.Controls.Add(this.lbl_Date);
             this.Name = "Stock_Report";
             this.Text = "Stock_Report";
+            this.Load += new System.EventHandler(this.Stock_Report_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,7 +138,7 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_Stock_Details;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_To_Date;
         private System.Windows.Forms.Label lbl_To;
         private System.Windows.Forms.Button btn_Search_Report;
         private System.Windows.Forms.DateTimePicker dtp_Date;

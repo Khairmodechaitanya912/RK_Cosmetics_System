@@ -98,6 +98,11 @@
     <Compile Include="Add Form\frm_Add_Stock.Designer.cs">
       <DependentUpon>frm_Add_Stock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\DS_Product_Details.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Product_Details.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\DS_Stock_Details.cs">
       <DependentUpon>DS_Stock_Details.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -239,11 +244,17 @@
     <Compile Include="Report\Customer_Report.Designer.cs">
       <DependentUpon>Customer_Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\Stock_Details.cs">
+    <Compile Include="Report\Product_CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Product_CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Product_Report.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Report\Stock_Details.Designer.cs">
-      <DependentUpon>Stock_Details.cs</DependentUpon>
+    <Compile Include="Report\Product_Report.Designer.cs">
+      <DependentUpon>Product_Report.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\Stock_Report.cs">
       <SubType>Form</SubType>
@@ -413,8 +424,12 @@
     <EmbeddedResource Include="Report\Customer_Report.resx">
       <DependentUpon>Customer_Report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\Stock_Details.resx">
-      <DependentUpon>Stock_Details.cs</DependentUpon>
+    <EmbeddedResource Include="Report\Product_CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Product_CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Product_Report.resx">
+      <DependentUpon>Product_Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Stock_Report.resx">
       <DependentUpon>Stock_Report.cs</DependentUpon>
@@ -466,6 +481,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="app.config" />
+    <None Include="Dataset\DS_Product_Details.xsc">
+      <DependentUpon>DS_Product_Details.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DS_Product_Details.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Product_Details.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DS_Product_Details.xss">
+      <DependentUpon>DS_Product_Details.xsd</DependentUpon>
+    </None>
     <None Include="Dataset\DS_Stock_Details.xsc">
       <DependentUpon>DS_Stock_Details.xsd</DependentUpon>
     </None>
