@@ -47,4 +47,6 @@ E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_C
 E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.MDI_Form.Frm_MDI_Expences_Report.resources
 E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.MDI_Form.Frm_MDI_Stock_Report.resources
 E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.csprojResolveAssemblyReference.cache
-E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Report.Product_Report.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Report.Distributor_Report.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Report.Employee_Details.resources
+E:\C# Project\Project\RK_Cosmetics_System\RK_Cosmetics_System\obj\x86\Debug\RK_Cosmetics_System.Report.Expences_Report.resources

@@ -98,10 +98,25 @@
     <Compile Include="Add Form\frm_Add_Stock.Designer.cs">
       <DependentUpon>frm_Add_Stock.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dataset\DS_Product_Details.Designer.cs">
+    <Compile Include="Dataset\DS_Customer.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DS_Product_Details.xsd</DependentUpon>
+      <DependentUpon>DS_Customer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DS_Distributor_Details.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Distributor_Details.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DS_Employee_Details.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Employee_Details.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DS_Expences_Details.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Expences_Details.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dataset\DS_Stock_Details.cs">
       <DependentUpon>DS_Stock_Details.xsd</DependentUpon>
@@ -238,23 +253,53 @@
     <Compile Include="Other\Frm_Splash_Screen.Designer.cs">
       <DependentUpon>Frm_Splash_Screen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Customer_CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer_CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report\Customer_Report.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Report\Customer_Report.Designer.cs">
       <DependentUpon>Customer_Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\Product_CrystalReport.cs">
+    <Compile Include="Report\Distributor_CrystalReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Product_CrystalReport.rpt</DependentUpon>
+      <DependentUpon>Distributor_CrystalReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\Product_Report.cs">
+    <Compile Include="Report\Distributor_Report.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Report\Product_Report.Designer.cs">
-      <DependentUpon>Product_Report.cs</DependentUpon>
+    <Compile Include="Report\Distributor_Report.Designer.cs">
+      <DependentUpon>Distributor_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Employee_CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Employee_CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Employee_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Employee_Details.Designer.cs">
+      <DependentUpon>Employee_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Expences_CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Expences_CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Expences_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Expences_Report.Designer.cs">
+      <DependentUpon>Expences_Report.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\Stock_Report.cs">
       <SubType>Form</SubType>
@@ -421,15 +466,33 @@
     <EmbeddedResource Include="Other\Frm_Splash_Screen.resx">
       <DependentUpon>Frm_Splash_Screen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Customer_CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Customer_CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\Customer_Report.resx">
       <DependentUpon>Customer_Report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\Product_CrystalReport.rpt">
+    <EmbeddedResource Include="Report\Distributor_CrystalReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Product_CrystalReport.cs</LastGenOutput>
+      <LastGenOutput>Distributor_CrystalReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\Product_Report.resx">
-      <DependentUpon>Product_Report.cs</DependentUpon>
+    <EmbeddedResource Include="Report\Distributor_Report.resx">
+      <DependentUpon>Distributor_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Employee_CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Employee_CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Employee_Details.resx">
+      <DependentUpon>Employee_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Expences_CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Expences_CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Expences_Report.resx">
+      <DependentUpon>Expences_Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Stock_Report.resx">
       <DependentUpon>Stock_Report.cs</DependentUpon>
@@ -481,16 +544,49 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="app.config" />
-    <None Include="Dataset\DS_Product_Details.xsc">
-      <DependentUpon>DS_Product_Details.xsd</DependentUpon>
+    <None Include="Dataset\DS_Customer.xsc">
+      <DependentUpon>DS_Customer.xsd</DependentUpon>
     </None>
-    <None Include="Dataset\DS_Product_Details.xsd">
+    <None Include="Dataset\DS_Customer.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DS_Product_Details.Designer.cs</LastGenOutput>
+      <LastGenOutput>DS_Customer.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Dataset\DS_Product_Details.xss">
-      <DependentUpon>DS_Product_Details.xsd</DependentUpon>
+    <None Include="Dataset\DS_Customer.xss">
+      <DependentUpon>DS_Customer.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DS_Distributor_Details.xsc">
+      <DependentUpon>DS_Distributor_Details.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DS_Distributor_Details.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Distributor_Details.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DS_Distributor_Details.xss">
+      <DependentUpon>DS_Distributor_Details.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DS_Employee_Details.xsc">
+      <DependentUpon>DS_Employee_Details.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DS_Employee_Details.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Employee_Details.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DS_Employee_Details.xss">
+      <DependentUpon>DS_Employee_Details.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DS_Expences_Details.xsc">
+      <DependentUpon>DS_Expences_Details.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DS_Expences_Details.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Expences_Details.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DS_Expences_Details.xss">
+      <DependentUpon>DS_Expences_Details.xsd</DependentUpon>
     </None>
     <None Include="Dataset\DS_Stock_Details.xsc">
       <DependentUpon>DS_Stock_Details.xsd</DependentUpon>

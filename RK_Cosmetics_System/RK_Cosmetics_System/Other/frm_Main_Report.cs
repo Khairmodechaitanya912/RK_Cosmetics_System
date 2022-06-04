@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using RK_Cosmetics_System.MDI_Form;
+using RK_Cosmetics_System.Report;
 
 namespace RK_Cosmetics_System.Other
 {
@@ -52,47 +53,65 @@ namespace RK_Cosmetics_System.Other
 
         private void btn_Customer_Click(object sender, EventArgs e)
         {
-            Frm_MDI_Customer_Report MCR = new Frm_MDI_Customer_Report();
-
-            MCR.Show();
-
+            Customer_Report cr = new Customer_Report();
+            cr.Show();
             this.Hide();
+            //Frm_MDI_Customer_Report MCR = new Frm_MDI_Customer_Report();
+
+            //MCR.Show();
+
+            //this.Hide();
         }
 
         private void btn_Distributor_Click(object sender, EventArgs e)
         {
-            Frm_MDI_Distributor_Report MDR = new Frm_MDI_Distributor_Report();
 
-            MDR.Show();
+            Distributor_Report dr = new Distributor_Report();
 
+            dr.Show();
             this.Hide();
+            //Frm_MDI_Distributor_Report MDR = new Frm_MDI_Distributor_Report();
+
+            //MDR.Show();
+
+            //this.Hide();
         }
 
         private void btn_Employee_Click(object sender, EventArgs e)
         {
-            Frm_MDI_Employee_Report MER = new Frm_MDI_Employee_Report();
-
-            MER.Show();
-
+            Employee_Details ed = new Employee_Details();
+            ed.Show();
             this.Hide();
+            //Frm_MDI_Employee_Report MER = new Frm_MDI_Employee_Report();
+
+            //MER.Show();
+
+            //this.Hide();
         }
 
         private void btn_Expenses_Click(object sender, EventArgs e)
         {
-            Frm_MDI_Expences_Report MER = new Frm_MDI_Expences_Report();
-
-            MER.Show();
-
+            Expences_Report er = new Expences_Report();
+            er.Show();
             this.Hide();
+            //Frm_MDI_Expences_Report MER = new Frm_MDI_Expences_Report();
+
+            //MER.Show();
+
+            //this.Hide();
         }
 
         private void btn_Stock_Click(object sender, EventArgs e)
         {
-            Frm_MDI_Stock_Report MSR = new Frm_MDI_Stock_Report();
-
-            MSR.Show();
-
+            Stock_Report sr = new Stock_Report();
+            sr.Show();
             this.Hide();
+
+            //Frm_MDI_Stock_Report MSR = new Frm_MDI_Stock_Report();
+
+            //MSR.Show();
+
+            //this.Hide();
         }
 
 

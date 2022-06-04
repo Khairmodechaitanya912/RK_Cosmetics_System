@@ -15,5 +15,23 @@ namespace RK_Cosmetics_System
         {
             InitializeComponent();
         }
+
+        private void Frm_Splash_Screen_Load(object sender, EventArgs e)
+        {
+            this.timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.prgb_Loading.Increment(10);
+
+            if (prgb_Loading.Value >= prgb_Loading.Maximum)
+            {
+                timer1.Stop();
+                this.Hide();
+                frm_Login_Form obj = new frm_Login_Form();
+                obj.Show();
+            }
+        }
     }
 }

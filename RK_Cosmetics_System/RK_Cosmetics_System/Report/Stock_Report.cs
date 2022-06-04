@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using CrystalDecisions.CrystalReports.Engine;
 using System.Data.SqlClient;
+using RK_Cosmetics_System.Other;
 
 namespace RK_Cosmetics_System.Report
 {
@@ -40,6 +41,18 @@ namespace RK_Cosmetics_System.Report
 
         private void btn_Search_Report_Click(object sender, EventArgs e)
         {
+          
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            frm_Main_Report mr = new frm_Main_Report();
+            mr.Show();
+            this.Hide();
+        }
+
+        private void Stock_Report_Load(object sender, EventArgs e)
+        {
             Con_Open();
 
             string Query = "Select * from Product_Stock_Details";
@@ -57,9 +70,5 @@ namespace RK_Cosmetics_System.Report
             Con_Close();
         }
 
-        private void Stock_Report_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
